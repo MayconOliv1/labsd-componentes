@@ -1,0 +1,474 @@
+TimeQuest Timing Analyzer report for Divisor
+Sun Jun 18 18:39:34 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Propagation Delay
+ 12. Minimum Propagation Delay
+ 13. Fast Model Setup Summary
+ 14. Fast Model Hold Summary
+ 15. Fast Model Recovery Summary
+ 16. Fast Model Removal Summary
+ 17. Fast Model Minimum Pulse Width Summary
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Multicorner Timing Analysis Summary
+ 21. Progagation Delay
+ 22. Minimum Progagation Delay
+ 23. Clock Transfers
+ 24. Report TCCS
+ 25. Report RSKM
+ 26. Unconstrained Paths
+ 27. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Divisor                                                           ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+---------------------------
+; Slow Model Fmax Summary ;
+---------------------------
+No paths to report.
+
+
+----------------------------
+; Slow Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Slow Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++---------------------------------------------------------+
+; Propagation Delay                                       ;
++---------------+---------------+-------+----+----+-------+
+; Input Port    ; Output Port   ; RR    ; RF ; FR ; FF    ;
++---------------+---------------+-------+----+----+-------+
+; dividendo[0]  ; quociente[1]  ; 8.588 ;    ;    ; 8.588 ;
+; dividendo[1]  ; quociente[2]  ; 8.847 ;    ;    ; 8.847 ;
+; dividendo[2]  ; quociente[3]  ; 8.150 ;    ;    ; 8.150 ;
+; dividendo[3]  ; quociente[4]  ; 8.860 ;    ;    ; 8.860 ;
+; dividendo[4]  ; quociente[5]  ; 8.864 ;    ;    ; 8.864 ;
+; dividendo[5]  ; quociente[6]  ; 8.601 ;    ;    ; 8.601 ;
+; dividendo[6]  ; quociente[7]  ; 7.936 ;    ;    ; 7.936 ;
+; dividendo[7]  ; quociente[8]  ; 7.934 ;    ;    ; 7.934 ;
+; dividendo[8]  ; quociente[9]  ; 8.580 ;    ;    ; 8.580 ;
+; dividendo[9]  ; quociente[10] ; 8.588 ;    ;    ; 8.588 ;
+; dividendo[10] ; quociente[11] ; 8.728 ;    ;    ; 8.728 ;
+; dividendo[11] ; quociente[12] ; 7.966 ;    ;    ; 7.966 ;
+; dividendo[12] ; quociente[13] ; 8.540 ;    ;    ; 8.540 ;
+; dividendo[13] ; quociente[14] ; 7.956 ;    ;    ; 7.956 ;
+; dividendo[14] ; quociente[15] ; 8.825 ;    ;    ; 8.825 ;
+; dividendo[15] ; quociente[16] ; 8.797 ;    ;    ; 8.797 ;
+; dividendo[16] ; quociente[17] ; 8.854 ;    ;    ; 8.854 ;
+; dividendo[17] ; quociente[18] ; 8.868 ;    ;    ; 8.868 ;
+; dividendo[18] ; quociente[19] ; 8.759 ;    ;    ; 8.759 ;
+; dividendo[19] ; quociente[20] ; 7.990 ;    ;    ; 7.990 ;
+; dividendo[20] ; quociente[21] ; 8.828 ;    ;    ; 8.828 ;
+; dividendo[21] ; quociente[22] ; 7.926 ;    ;    ; 7.926 ;
+; dividendo[22] ; quociente[23] ; 8.000 ;    ;    ; 8.000 ;
+; dividendo[23] ; quociente[24] ; 7.914 ;    ;    ; 7.914 ;
+; dividendo[24] ; quociente[25] ; 8.006 ;    ;    ; 8.006 ;
+; dividendo[25] ; quociente[26] ; 8.904 ;    ;    ; 8.904 ;
+; dividendo[26] ; quociente[27] ; 8.867 ;    ;    ; 8.867 ;
+; dividendo[27] ; quociente[28] ; 8.795 ;    ;    ; 8.795 ;
+; dividendo[28] ; quociente[29] ; 8.869 ;    ;    ; 8.869 ;
+; dividendo[29] ; quociente[30] ; 8.905 ;    ;    ; 8.905 ;
+; dividendo[30] ; quociente[31] ; 8.785 ;    ;    ; 8.785 ;
++---------------+---------------+-------+----+----+-------+
+
+
++---------------------------------------------------------+
+; Minimum Propagation Delay                               ;
++---------------+---------------+-------+----+----+-------+
+; Input Port    ; Output Port   ; RR    ; RF ; FR ; FF    ;
++---------------+---------------+-------+----+----+-------+
+; dividendo[0]  ; quociente[1]  ; 8.588 ;    ;    ; 8.588 ;
+; dividendo[1]  ; quociente[2]  ; 8.847 ;    ;    ; 8.847 ;
+; dividendo[2]  ; quociente[3]  ; 8.150 ;    ;    ; 8.150 ;
+; dividendo[3]  ; quociente[4]  ; 8.860 ;    ;    ; 8.860 ;
+; dividendo[4]  ; quociente[5]  ; 8.864 ;    ;    ; 8.864 ;
+; dividendo[5]  ; quociente[6]  ; 8.601 ;    ;    ; 8.601 ;
+; dividendo[6]  ; quociente[7]  ; 7.936 ;    ;    ; 7.936 ;
+; dividendo[7]  ; quociente[8]  ; 7.934 ;    ;    ; 7.934 ;
+; dividendo[8]  ; quociente[9]  ; 8.580 ;    ;    ; 8.580 ;
+; dividendo[9]  ; quociente[10] ; 8.588 ;    ;    ; 8.588 ;
+; dividendo[10] ; quociente[11] ; 8.728 ;    ;    ; 8.728 ;
+; dividendo[11] ; quociente[12] ; 7.966 ;    ;    ; 7.966 ;
+; dividendo[12] ; quociente[13] ; 8.540 ;    ;    ; 8.540 ;
+; dividendo[13] ; quociente[14] ; 7.956 ;    ;    ; 7.956 ;
+; dividendo[14] ; quociente[15] ; 8.825 ;    ;    ; 8.825 ;
+; dividendo[15] ; quociente[16] ; 8.797 ;    ;    ; 8.797 ;
+; dividendo[16] ; quociente[17] ; 8.854 ;    ;    ; 8.854 ;
+; dividendo[17] ; quociente[18] ; 8.868 ;    ;    ; 8.868 ;
+; dividendo[18] ; quociente[19] ; 8.759 ;    ;    ; 8.759 ;
+; dividendo[19] ; quociente[20] ; 7.990 ;    ;    ; 7.990 ;
+; dividendo[20] ; quociente[21] ; 8.828 ;    ;    ; 8.828 ;
+; dividendo[21] ; quociente[22] ; 7.926 ;    ;    ; 7.926 ;
+; dividendo[22] ; quociente[23] ; 8.000 ;    ;    ; 8.000 ;
+; dividendo[23] ; quociente[24] ; 7.914 ;    ;    ; 7.914 ;
+; dividendo[24] ; quociente[25] ; 8.006 ;    ;    ; 8.006 ;
+; dividendo[25] ; quociente[26] ; 8.904 ;    ;    ; 8.904 ;
+; dividendo[26] ; quociente[27] ; 8.867 ;    ;    ; 8.867 ;
+; dividendo[27] ; quociente[28] ; 8.795 ;    ;    ; 8.795 ;
+; dividendo[28] ; quociente[29] ; 8.869 ;    ;    ; 8.869 ;
+; dividendo[29] ; quociente[30] ; 8.905 ;    ;    ; 8.905 ;
+; dividendo[30] ; quociente[31] ; 8.785 ;    ;    ; 8.785 ;
++---------------+---------------+-------+----+----+-------+
+
+
+----------------------------
+; Fast Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Fast Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Fast Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++---------------------------------------------------------+
+; Propagation Delay                                       ;
++---------------+---------------+-------+----+----+-------+
+; Input Port    ; Output Port   ; RR    ; RF ; FR ; FF    ;
++---------------+---------------+-------+----+----+-------+
+; dividendo[0]  ; quociente[1]  ; 4.909 ;    ;    ; 4.909 ;
+; dividendo[1]  ; quociente[2]  ; 5.046 ;    ;    ; 5.046 ;
+; dividendo[2]  ; quociente[3]  ; 4.690 ;    ;    ; 4.690 ;
+; dividendo[3]  ; quociente[4]  ; 5.044 ;    ;    ; 5.044 ;
+; dividendo[4]  ; quociente[5]  ; 5.042 ;    ;    ; 5.042 ;
+; dividendo[5]  ; quociente[6]  ; 4.922 ;    ;    ; 4.922 ;
+; dividendo[6]  ; quociente[7]  ; 4.590 ;    ;    ; 4.590 ;
+; dividendo[7]  ; quociente[8]  ; 4.592 ;    ;    ; 4.592 ;
+; dividendo[8]  ; quociente[9]  ; 4.902 ;    ;    ; 4.902 ;
+; dividendo[9]  ; quociente[10] ; 4.906 ;    ;    ; 4.906 ;
+; dividendo[10] ; quociente[11] ; 4.937 ;    ;    ; 4.937 ;
+; dividendo[11] ; quociente[12] ; 4.612 ;    ;    ; 4.612 ;
+; dividendo[12] ; quociente[13] ; 4.872 ;    ;    ; 4.872 ;
+; dividendo[13] ; quociente[14] ; 4.610 ;    ;    ; 4.610 ;
+; dividendo[14] ; quociente[15] ; 5.027 ;    ;    ; 5.027 ;
+; dividendo[15] ; quociente[16] ; 5.009 ;    ;    ; 5.009 ;
+; dividendo[16] ; quociente[17] ; 5.025 ;    ;    ; 5.025 ;
+; dividendo[17] ; quociente[18] ; 5.060 ;    ;    ; 5.060 ;
+; dividendo[18] ; quociente[19] ; 4.961 ;    ;    ; 4.961 ;
+; dividendo[19] ; quociente[20] ; 4.636 ;    ;    ; 4.636 ;
+; dividendo[20] ; quociente[21] ; 5.013 ;    ;    ; 5.013 ;
+; dividendo[21] ; quociente[22] ; 4.580 ;    ;    ; 4.580 ;
+; dividendo[22] ; quociente[23] ; 4.646 ;    ;    ; 4.646 ;
+; dividendo[23] ; quociente[24] ; 4.572 ;    ;    ; 4.572 ;
+; dividendo[24] ; quociente[25] ; 4.652 ;    ;    ; 4.652 ;
+; dividendo[25] ; quociente[26] ; 5.076 ;    ;    ; 5.076 ;
+; dividendo[26] ; quociente[27] ; 5.059 ;    ;    ; 5.059 ;
+; dividendo[27] ; quociente[28] ; 5.006 ;    ;    ; 5.006 ;
+; dividendo[28] ; quociente[29] ; 5.061 ;    ;    ; 5.061 ;
+; dividendo[29] ; quociente[30] ; 5.081 ;    ;    ; 5.081 ;
+; dividendo[30] ; quociente[31] ; 4.984 ;    ;    ; 4.984 ;
++---------------+---------------+-------+----+----+-------+
+
+
++---------------------------------------------------------+
+; Minimum Propagation Delay                               ;
++---------------+---------------+-------+----+----+-------+
+; Input Port    ; Output Port   ; RR    ; RF ; FR ; FF    ;
++---------------+---------------+-------+----+----+-------+
+; dividendo[0]  ; quociente[1]  ; 4.909 ;    ;    ; 4.909 ;
+; dividendo[1]  ; quociente[2]  ; 5.046 ;    ;    ; 5.046 ;
+; dividendo[2]  ; quociente[3]  ; 4.690 ;    ;    ; 4.690 ;
+; dividendo[3]  ; quociente[4]  ; 5.044 ;    ;    ; 5.044 ;
+; dividendo[4]  ; quociente[5]  ; 5.042 ;    ;    ; 5.042 ;
+; dividendo[5]  ; quociente[6]  ; 4.922 ;    ;    ; 4.922 ;
+; dividendo[6]  ; quociente[7]  ; 4.590 ;    ;    ; 4.590 ;
+; dividendo[7]  ; quociente[8]  ; 4.592 ;    ;    ; 4.592 ;
+; dividendo[8]  ; quociente[9]  ; 4.902 ;    ;    ; 4.902 ;
+; dividendo[9]  ; quociente[10] ; 4.906 ;    ;    ; 4.906 ;
+; dividendo[10] ; quociente[11] ; 4.937 ;    ;    ; 4.937 ;
+; dividendo[11] ; quociente[12] ; 4.612 ;    ;    ; 4.612 ;
+; dividendo[12] ; quociente[13] ; 4.872 ;    ;    ; 4.872 ;
+; dividendo[13] ; quociente[14] ; 4.610 ;    ;    ; 4.610 ;
+; dividendo[14] ; quociente[15] ; 5.027 ;    ;    ; 5.027 ;
+; dividendo[15] ; quociente[16] ; 5.009 ;    ;    ; 5.009 ;
+; dividendo[16] ; quociente[17] ; 5.025 ;    ;    ; 5.025 ;
+; dividendo[17] ; quociente[18] ; 5.060 ;    ;    ; 5.060 ;
+; dividendo[18] ; quociente[19] ; 4.961 ;    ;    ; 4.961 ;
+; dividendo[19] ; quociente[20] ; 4.636 ;    ;    ; 4.636 ;
+; dividendo[20] ; quociente[21] ; 5.013 ;    ;    ; 5.013 ;
+; dividendo[21] ; quociente[22] ; 4.580 ;    ;    ; 4.580 ;
+; dividendo[22] ; quociente[23] ; 4.646 ;    ;    ; 4.646 ;
+; dividendo[23] ; quociente[24] ; 4.572 ;    ;    ; 4.572 ;
+; dividendo[24] ; quociente[25] ; 4.652 ;    ;    ; 4.652 ;
+; dividendo[25] ; quociente[26] ; 5.076 ;    ;    ; 5.076 ;
+; dividendo[26] ; quociente[27] ; 5.059 ;    ;    ; 5.059 ;
+; dividendo[27] ; quociente[28] ; 5.006 ;    ;    ; 5.006 ;
+; dividendo[28] ; quociente[29] ; 5.061 ;    ;    ; 5.061 ;
+; dividendo[29] ; quociente[30] ; 5.081 ;    ;    ; 5.081 ;
+; dividendo[30] ; quociente[31] ; 4.984 ;    ;    ; 4.984 ;
++---------------+---------------+-------+----+----+-------+
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++---------------------------------------------------------+
+; Progagation Delay                                       ;
++---------------+---------------+-------+----+----+-------+
+; Input Port    ; Output Port   ; RR    ; RF ; FR ; FF    ;
++---------------+---------------+-------+----+----+-------+
+; dividendo[0]  ; quociente[1]  ; 8.588 ;    ;    ; 8.588 ;
+; dividendo[1]  ; quociente[2]  ; 8.847 ;    ;    ; 8.847 ;
+; dividendo[2]  ; quociente[3]  ; 8.150 ;    ;    ; 8.150 ;
+; dividendo[3]  ; quociente[4]  ; 8.860 ;    ;    ; 8.860 ;
+; dividendo[4]  ; quociente[5]  ; 8.864 ;    ;    ; 8.864 ;
+; dividendo[5]  ; quociente[6]  ; 8.601 ;    ;    ; 8.601 ;
+; dividendo[6]  ; quociente[7]  ; 7.936 ;    ;    ; 7.936 ;
+; dividendo[7]  ; quociente[8]  ; 7.934 ;    ;    ; 7.934 ;
+; dividendo[8]  ; quociente[9]  ; 8.580 ;    ;    ; 8.580 ;
+; dividendo[9]  ; quociente[10] ; 8.588 ;    ;    ; 8.588 ;
+; dividendo[10] ; quociente[11] ; 8.728 ;    ;    ; 8.728 ;
+; dividendo[11] ; quociente[12] ; 7.966 ;    ;    ; 7.966 ;
+; dividendo[12] ; quociente[13] ; 8.540 ;    ;    ; 8.540 ;
+; dividendo[13] ; quociente[14] ; 7.956 ;    ;    ; 7.956 ;
+; dividendo[14] ; quociente[15] ; 8.825 ;    ;    ; 8.825 ;
+; dividendo[15] ; quociente[16] ; 8.797 ;    ;    ; 8.797 ;
+; dividendo[16] ; quociente[17] ; 8.854 ;    ;    ; 8.854 ;
+; dividendo[17] ; quociente[18] ; 8.868 ;    ;    ; 8.868 ;
+; dividendo[18] ; quociente[19] ; 8.759 ;    ;    ; 8.759 ;
+; dividendo[19] ; quociente[20] ; 7.990 ;    ;    ; 7.990 ;
+; dividendo[20] ; quociente[21] ; 8.828 ;    ;    ; 8.828 ;
+; dividendo[21] ; quociente[22] ; 7.926 ;    ;    ; 7.926 ;
+; dividendo[22] ; quociente[23] ; 8.000 ;    ;    ; 8.000 ;
+; dividendo[23] ; quociente[24] ; 7.914 ;    ;    ; 7.914 ;
+; dividendo[24] ; quociente[25] ; 8.006 ;    ;    ; 8.006 ;
+; dividendo[25] ; quociente[26] ; 8.904 ;    ;    ; 8.904 ;
+; dividendo[26] ; quociente[27] ; 8.867 ;    ;    ; 8.867 ;
+; dividendo[27] ; quociente[28] ; 8.795 ;    ;    ; 8.795 ;
+; dividendo[28] ; quociente[29] ; 8.869 ;    ;    ; 8.869 ;
+; dividendo[29] ; quociente[30] ; 8.905 ;    ;    ; 8.905 ;
+; dividendo[30] ; quociente[31] ; 8.785 ;    ;    ; 8.785 ;
++---------------+---------------+-------+----+----+-------+
+
+
++---------------------------------------------------------+
+; Minimum Progagation Delay                               ;
++---------------+---------------+-------+----+----+-------+
+; Input Port    ; Output Port   ; RR    ; RF ; FR ; FF    ;
++---------------+---------------+-------+----+----+-------+
+; dividendo[0]  ; quociente[1]  ; 4.909 ;    ;    ; 4.909 ;
+; dividendo[1]  ; quociente[2]  ; 5.046 ;    ;    ; 5.046 ;
+; dividendo[2]  ; quociente[3]  ; 4.690 ;    ;    ; 4.690 ;
+; dividendo[3]  ; quociente[4]  ; 5.044 ;    ;    ; 5.044 ;
+; dividendo[4]  ; quociente[5]  ; 5.042 ;    ;    ; 5.042 ;
+; dividendo[5]  ; quociente[6]  ; 4.922 ;    ;    ; 4.922 ;
+; dividendo[6]  ; quociente[7]  ; 4.590 ;    ;    ; 4.590 ;
+; dividendo[7]  ; quociente[8]  ; 4.592 ;    ;    ; 4.592 ;
+; dividendo[8]  ; quociente[9]  ; 4.902 ;    ;    ; 4.902 ;
+; dividendo[9]  ; quociente[10] ; 4.906 ;    ;    ; 4.906 ;
+; dividendo[10] ; quociente[11] ; 4.937 ;    ;    ; 4.937 ;
+; dividendo[11] ; quociente[12] ; 4.612 ;    ;    ; 4.612 ;
+; dividendo[12] ; quociente[13] ; 4.872 ;    ;    ; 4.872 ;
+; dividendo[13] ; quociente[14] ; 4.610 ;    ;    ; 4.610 ;
+; dividendo[14] ; quociente[15] ; 5.027 ;    ;    ; 5.027 ;
+; dividendo[15] ; quociente[16] ; 5.009 ;    ;    ; 5.009 ;
+; dividendo[16] ; quociente[17] ; 5.025 ;    ;    ; 5.025 ;
+; dividendo[17] ; quociente[18] ; 5.060 ;    ;    ; 5.060 ;
+; dividendo[18] ; quociente[19] ; 4.961 ;    ;    ; 4.961 ;
+; dividendo[19] ; quociente[20] ; 4.636 ;    ;    ; 4.636 ;
+; dividendo[20] ; quociente[21] ; 5.013 ;    ;    ; 5.013 ;
+; dividendo[21] ; quociente[22] ; 4.580 ;    ;    ; 4.580 ;
+; dividendo[22] ; quociente[23] ; 4.646 ;    ;    ; 4.646 ;
+; dividendo[23] ; quociente[24] ; 4.572 ;    ;    ; 4.572 ;
+; dividendo[24] ; quociente[25] ; 4.652 ;    ;    ; 4.652 ;
+; dividendo[25] ; quociente[26] ; 5.076 ;    ;    ; 5.076 ;
+; dividendo[26] ; quociente[27] ; 5.059 ;    ;    ; 5.059 ;
+; dividendo[27] ; quociente[28] ; 5.006 ;    ;    ; 5.006 ;
+; dividendo[28] ; quociente[29] ; 5.061 ;    ;    ; 5.061 ;
+; dividendo[29] ; quociente[30] ; 5.081 ;    ;    ; 5.081 ;
+; dividendo[30] ; quociente[31] ; 4.984 ;    ;    ; 4.984 ;
++---------------+---------------+-------+----+----+-------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 31    ; 31   ;
+; Unconstrained Input Port Paths  ; 31    ; 31   ;
+; Unconstrained Output Ports      ; 31    ; 31   ;
+; Unconstrained Output Port Paths ; 31    ; 31   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Jun 18 18:39:33 2023
+Info: Command: quartus_sta Divisor -c Divisor
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Divisor.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info: Analyzing Slow Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4536 megabytes
+    Info: Processing ended: Sun Jun 18 18:39:34 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

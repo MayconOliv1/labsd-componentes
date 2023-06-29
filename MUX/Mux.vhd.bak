@@ -1,0 +1,10 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Mux is
+	generic (
+		W : natural := 32
+	)
+	port (
+		ENTRADA_1 : in std_logic_vector (W-1 downto 0);
+	)
