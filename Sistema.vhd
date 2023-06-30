@@ -111,6 +111,6 @@ architecture Main of	Sistema is
 	signal fio_loadS, fio_Auto, fio_Ti, fio_ResetCTi, fio_Te, fio_ResetCTe, fio_Ta, fio_ResetCTa, fio_LoadCTa	:	std_logic;
 	
 begin
-	Sistema_Controladora	:	Controladora	port map	(CLOCK, RESET, C, AutoIn, fio_Te, fio_Ti, fio_Ta, fio_Auto, fio_loadS, fio_LoadCTa, fio_ResetCTe, fio_ResetCTi, fio_ResetCTa);
+	Sistema_Controladora	:	Controladora	port map	(CLOCK, RESET, C, AutoIn, fio_Te, fio_Ti, fio_Ta, fio_Auto, fio_loadS, fio_LoadCTa, fio_ResetCTe, fio_ResetCTi, fio_ResetCTa, I);
 	Sistema_Datapath		:	Datapath			port map	(CLOCK, RESET, Sph, Su, St, Srs, Sk, Sn, Sp, Vph, Vu, Vt, Vrs, Vk, Vn, Vp, Kph, Ku, Kt, Krs, Kk, Kn, Kp, Ter, Tir, fio_loadS, fio_Auto, fio_ResetCTi, fio_ResetCTe, fio_ResetCTa, fio_LoadCTa, fio_Ti, fio_Te, fio_Ta);
 end Main;
