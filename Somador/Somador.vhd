@@ -17,5 +17,12 @@ end entity Somador;
 
 architecture Main of Somador is
 begin
-	SOMA <= std_logic_vector(unsigned(A) + unsigned(B));
+	process(CLOCK, RESET, A, B)
+	begin
+		if RESET = '1' then
+			SOMA <= (others => '0');
+		elsif rising_edge(CLOCK) then
+			SOMA <= std_logic_vector(unsigned(A) + unsigned(B));
+		end if;
+	end process;
 end architecture Main;

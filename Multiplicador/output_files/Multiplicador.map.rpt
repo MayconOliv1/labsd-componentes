@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Multiplicador
-Sun Jun 18 23:11:17 2023
+Thu Jun 29 20:37:35 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -45,19 +45,19 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jun 18 23:11:17 2023           ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 29 20:37:35 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Multiplicador                                   ;
 ; Top-level Entity Name              ; Multiplicador                                   ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 80                                              ;
-;     Total combinational functions  ; 80                                              ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 130                                             ;
+; Total logic elements               ; 33                                              ;
+;     Total combinational functions  ; 1                                               ;
+;     Dedicated logic registers      ; 32                                              ;
+; Total registers                    ; 32                                              ;
+; Total pins                         ; 66                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 8                                               ;
+; Embedded Multiplier 9-bit elements ; 2                                               ;
 ; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
 
@@ -170,7 +170,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; multcore.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/multcore.inc          ;         ;
 ; bypassff.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc          ;         ;
 ; altshift.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc          ;         ;
-; db/mult_l8t.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/lucas/Documents/Projetos/LABSD/Multiplicador/db/mult_l8t.tdf   ;         ;
+; db/mult_m8t.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/lucas/Documents/Projetos/LABSD/Multiplicador/db/mult_m8t.tdf   ;         ;
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
 
 
@@ -179,28 +179,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------------------------------------------+
 ; Resource                                    ; Usage                                           ;
 +---------------------------------------------+-------------------------------------------------+
-; Estimated Total logic elements              ; 80                                              ;
+; Estimated Total logic elements              ; 33                                              ;
 ;                                             ;                                                 ;
-; Total combinational functions               ; 80                                              ;
+; Total combinational functions               ; 1                                               ;
 ; Logic element usage by number of LUT inputs ;                                                 ;
 ;     -- 4 input functions                    ; 0                                               ;
-;     -- 3 input functions                    ; 65                                              ;
-;     -- <=2 input functions                  ; 15                                              ;
+;     -- 3 input functions                    ; 0                                               ;
+;     -- <=2 input functions                  ; 1                                               ;
 ;                                             ;                                                 ;
 ; Logic elements by mode                      ;                                                 ;
-;     -- normal mode                          ; 3                                               ;
-;     -- arithmetic mode                      ; 77                                              ;
+;     -- normal mode                          ; 1                                               ;
+;     -- arithmetic mode                      ; 0                                               ;
 ;                                             ;                                                 ;
-; Total registers                             ; 0                                               ;
-;     -- Dedicated logic registers            ; 0                                               ;
+; Total registers                             ; 32                                              ;
+;     -- Dedicated logic registers            ; 32                                              ;
 ;     -- I/O registers                        ; 0                                               ;
 ;                                             ;                                                 ;
-; I/O pins                                    ; 130                                             ;
-; Embedded Multiplier 9-bit elements          ; 8                                               ;
-; Maximum fan-out node                        ; lpm_mult:Mult0|mult_l8t:auto_generated|w513w[0] ;
-; Maximum fan-out                             ; 36                                              ;
-; Total fan-out                               ; 420                                             ;
-; Average fan-out                             ; 1.93                                            ;
+; I/O pins                                    ; 66                                              ;
+; Embedded Multiplier 9-bit elements          ; 2                                               ;
+; Maximum fan-out node                        ; lpm_mult:Mult0|mult_m8t:auto_generated|mac_out2 ;
+; Maximum fan-out                             ; 32                                              ;
+; Total fan-out                               ; 162                                             ;
+; Average fan-out                             ; 1.60                                            ;
 +---------------------------------------------+-------------------------------------------------+
 
 
@@ -209,9 +209,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Library Name ;
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+--------------+
-; |Multiplicador                  ; 80 (1)            ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 130  ; 0            ; |Multiplicador                                        ; work         ;
-;    |lpm_mult:Mult0|             ; 79 (0)            ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |Multiplicador|lpm_mult:Mult0                         ; work         ;
-;       |mult_l8t:auto_generated| ; 79 (79)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |Multiplicador|lpm_mult:Mult0|mult_l8t:auto_generated ; work         ;
+; |Multiplicador                  ; 1 (1)             ; 32 (32)      ; 0           ; 2            ; 0       ; 1         ; 66   ; 0            ; |Multiplicador                                        ; work         ;
+;    |lpm_mult:Mult0|             ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Multiplicador|lpm_mult:Mult0                         ; work         ;
+;       |mult_m8t:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Multiplicador|lpm_mult:Mult0|mult_m8t:auto_generated ; work         ;
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -222,11 +222,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                             ; Number Used ;
 +---------------------------------------+-------------+
 ; Simple Multipliers (9-bit)            ; 0           ;
-; Simple Multipliers (18-bit)           ; 4           ;
+; Simple Multipliers (18-bit)           ; 1           ;
 ; Embedded Multiplier Blocks            ; --          ;
-; Embedded Multiplier 9-bit elements    ; 8           ;
+; Embedded Multiplier 9-bit elements    ; 2           ;
 ; Signed Embedded Multipliers           ; 0           ;
-; Unsigned Embedded Multipliers         ; 4           ;
+; Unsigned Embedded Multipliers         ; 1           ;
 ; Mixed Sign Embedded Multipliers       ; 0           ;
 ; Variable Sign Embedded Multipliers    ; 0           ;
 ; Dedicated Input Shift Register Chains ; 0           ;
@@ -239,10 +239,10 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 32    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 32    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -254,7 +254,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------+-------+------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                 ;
 +----------------+-------+------------------------------------------------------+
-; W              ; 32    ; Signed Integer                                       ;
+; W              ; 16    ; Signed Integer                                       ;
 +----------------+-------+------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -268,10 +268,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY        ;
 ; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE        ;
 ; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 32         ; Untyped             ;
-; LPM_WIDTHB                                     ; 32         ; Untyped             ;
-; LPM_WIDTHP                                     ; 64         ; Untyped             ;
-; LPM_WIDTHR                                     ; 64         ; Untyped             ;
+; LPM_WIDTHA                                     ; 16         ; Untyped             ;
+; LPM_WIDTHB                                     ; 16         ; Untyped             ;
+; LPM_WIDTHP                                     ; 32         ; Untyped             ;
+; LPM_WIDTHR                                     ; 32         ; Untyped             ;
 ; LPM_WIDTHS                                     ; 1          ; Untyped             ;
 ; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped             ;
 ; LPM_PIPELINE                                   ; 0          ; Untyped             ;
@@ -279,14 +279,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped             ;
 ; INPUT_B_IS_CONSTANT                            ; NO         ; Untyped             ;
 ; USE_EAB                                        ; OFF        ; Untyped             ;
-; MAXIMIZE_SPEED                                 ; 5          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6          ; Untyped             ;
 ; DEVICE_FAMILY                                  ; Cyclone II ; Untyped             ;
 ; CARRY_CHAIN                                    ; MANUAL     ; Untyped             ;
 ; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K ;
 ; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_l8t   ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_m8t   ; Untyped             ;
 ; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
 ; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
 ; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
@@ -301,9 +301,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+----------------+
 ; Number of entity instances            ; 1              ;
 ; Entity Instance                       ; lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 32             ;
-;     -- LPM_WIDTHB                     ; 32             ;
-;     -- LPM_WIDTHP                     ; 64             ;
+;     -- LPM_WIDTHA                     ; 16             ;
+;     -- LPM_WIDTHB                     ; 16             ;
+;     -- LPM_WIDTHP                     ; 32             ;
 ;     -- LPM_REPRESENTATION             ; UNSIGNED       ;
 ;     -- INPUT_A_IS_CONSTANT            ; NO             ;
 ;     -- INPUT_B_IS_CONSTANT            ; NO             ;
@@ -329,7 +329,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Jun 18 23:11:15 2023
+    Info: Processing started: Thu Jun 29 20:37:33 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Multiplicador -c Multiplicador
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file multiplicador.vhd
@@ -340,32 +340,27 @@ Info (278001): Inferred 1 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0"
 Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0"
 Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTHA" = "32"
-    Info (12134): Parameter "LPM_WIDTHB" = "32"
-    Info (12134): Parameter "LPM_WIDTHP" = "64"
-    Info (12134): Parameter "LPM_WIDTHR" = "64"
+    Info (12134): Parameter "LPM_WIDTHA" = "16"
+    Info (12134): Parameter "LPM_WIDTHB" = "16"
+    Info (12134): Parameter "LPM_WIDTHP" = "32"
+    Info (12134): Parameter "LPM_WIDTHR" = "32"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
     Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_l8t.tdf
-    Info (12023): Found entity 1: mult_l8t
-Info (13014): Ignored 222 buffer(s)
-    Info (13019): Ignored 222 SOFT buffer(s)
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_m8t.tdf
+    Info (12023): Found entity 1: mult_m8t
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK"
-    Warning (15610): No output dependent on input pin "RESET"
-Info (21057): Implemented 218 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 66 input pins
-    Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 80 logic cells
-    Info (21062): Implemented 8 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4640 megabytes
-    Info: Processing ended: Sun Jun 18 23:11:17 2023
+Info (21057): Implemented 101 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 34 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 33 logic cells
+    Info (21062): Implemented 2 DSP elements
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4654 megabytes
+    Info: Processing ended: Thu Jun 29 20:37:35 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

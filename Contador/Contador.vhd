@@ -17,7 +17,7 @@ end entity Contador;
 architecture Main of Contador is
 	signal COUNT : unsigned (W-1 downto 0) := (others => '0');
 begin
-	process (CLOCK, RESET)
+	process (CLOCK, RESET, FINAL_VALUE)
 	begin
 		if RESET = '1' then
 			COUNT <= (others => '0');

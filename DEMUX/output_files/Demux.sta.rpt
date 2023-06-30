@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Demux
-Thu Jun 29 19:55:36 2023
+Thu Jun 29 20:30:24 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,23 +16,31 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. Slow Model Recovery Summary
   9. Slow Model Removal Summary
  10. Slow Model Minimum Pulse Width Summary
- 11. Propagation Delay
- 12. Minimum Propagation Delay
- 13. Fast Model Setup Summary
- 14. Fast Model Hold Summary
- 15. Fast Model Recovery Summary
- 16. Fast Model Removal Summary
- 17. Fast Model Minimum Pulse Width Summary
- 18. Propagation Delay
- 19. Minimum Propagation Delay
- 20. Multicorner Timing Analysis Summary
- 21. Progagation Delay
- 22. Minimum Progagation Delay
- 23. Clock Transfers
- 24. Report TCCS
- 25. Report RSKM
- 26. Unconstrained Paths
- 27. TimeQuest Timing Analyzer Messages
+ 11. Slow Model Minimum Pulse Width: 'CLOCK'
+ 12. Setup Times
+ 13. Hold Times
+ 14. Clock to Output Times
+ 15. Minimum Clock to Output Times
+ 16. Fast Model Setup Summary
+ 17. Fast Model Hold Summary
+ 18. Fast Model Recovery Summary
+ 19. Fast Model Removal Summary
+ 20. Fast Model Minimum Pulse Width Summary
+ 21. Fast Model Minimum Pulse Width: 'CLOCK'
+ 22. Setup Times
+ 23. Hold Times
+ 24. Clock to Output Times
+ 25. Minimum Clock to Output Times
+ 26. Multicorner Timing Analysis Summary
+ 27. Setup Times
+ 28. Hold Times
+ 29. Clock to Output Times
+ 30. Minimum Clock to Output Times
+ 31. Clock Transfers
+ 32. Report TCCS
+ 33. Report RSKM
+ 34. Unconstrained Paths
+ 35. TimeQuest Timing Analyzer Messages
 
 
 
@@ -79,10 +87,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-----------
-; Clocks ;
-----------
-No clocks to report.
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; CLOCK      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
 
 
 ---------------------------
@@ -115,282 +126,353 @@ No paths to report.
 No paths to report.
 
 
-------------------------------------------
++----------------------------------------+
 ; Slow Model Minimum Pulse Width Summary ;
-------------------------------------------
-No paths to report.
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CLOCK ; -1.380 ; -65.380               ;
++-------+--------+-----------------------+
 
 
-+-------------------------------------------------------------+
-; Propagation Delay                                           ;
-+-------------+-------------+--------+-------+-------+--------+
-; Input Port  ; Output Port ; RR     ; RF    ; FR    ; FF     ;
-+-------------+-------------+--------+-------+-------+--------+
-; ENTRADA[0]  ; SAIDA_1[0]  ; 6.476  ;       ;       ; 6.476  ;
-; ENTRADA[0]  ; SAIDA_2[0]  ; 6.296  ;       ;       ; 6.296  ;
-; ENTRADA[1]  ; SAIDA_1[1]  ; 9.300  ;       ;       ; 9.300  ;
-; ENTRADA[1]  ; SAIDA_2[1]  ; 9.300  ;       ;       ; 9.300  ;
-; ENTRADA[2]  ; SAIDA_1[2]  ; 9.024  ;       ;       ; 9.024  ;
-; ENTRADA[2]  ; SAIDA_2[2]  ; 9.029  ;       ;       ; 9.029  ;
-; ENTRADA[3]  ; SAIDA_1[3]  ; 9.316  ;       ;       ; 9.316  ;
-; ENTRADA[3]  ; SAIDA_2[3]  ; 9.041  ;       ;       ; 9.041  ;
-; ENTRADA[4]  ; SAIDA_1[4]  ; 9.130  ;       ;       ; 9.130  ;
-; ENTRADA[4]  ; SAIDA_2[4]  ; 9.132  ;       ;       ; 9.132  ;
-; ENTRADA[5]  ; SAIDA_1[5]  ; 9.259  ;       ;       ; 9.259  ;
-; ENTRADA[5]  ; SAIDA_2[5]  ; 8.976  ;       ;       ; 8.976  ;
-; ENTRADA[6]  ; SAIDA_1[6]  ; 9.484  ;       ;       ; 9.484  ;
-; ENTRADA[6]  ; SAIDA_2[6]  ; 9.476  ;       ;       ; 9.476  ;
-; ENTRADA[7]  ; SAIDA_1[7]  ; 9.481  ;       ;       ; 9.481  ;
-; ENTRADA[7]  ; SAIDA_2[7]  ; 9.484  ;       ;       ; 9.484  ;
-; ENTRADA[8]  ; SAIDA_1[8]  ; 9.782  ;       ;       ; 9.782  ;
-; ENTRADA[8]  ; SAIDA_2[8]  ; 9.538  ;       ;       ; 9.538  ;
-; ENTRADA[9]  ; SAIDA_1[9]  ; 10.028 ;       ;       ; 10.028 ;
-; ENTRADA[9]  ; SAIDA_2[9]  ; 9.800  ;       ;       ; 9.800  ;
-; ENTRADA[10] ; SAIDA_1[10] ; 9.732  ;       ;       ; 9.732  ;
-; ENTRADA[10] ; SAIDA_2[10] ; 9.683  ;       ;       ; 9.683  ;
-; ENTRADA[11] ; SAIDA_1[11] ; 9.527  ;       ;       ; 9.527  ;
-; ENTRADA[11] ; SAIDA_2[11] ; 9.744  ;       ;       ; 9.744  ;
-; ENTRADA[12] ; SAIDA_1[12] ; 9.941  ;       ;       ; 9.941  ;
-; ENTRADA[12] ; SAIDA_2[12] ; 9.838  ;       ;       ; 9.838  ;
-; ENTRADA[13] ; SAIDA_1[13] ; 9.784  ;       ;       ; 9.784  ;
-; ENTRADA[13] ; SAIDA_2[13] ; 9.487  ;       ;       ; 9.487  ;
-; ENTRADA[14] ; SAIDA_1[14] ; 10.024 ;       ;       ; 10.024 ;
-; ENTRADA[14] ; SAIDA_2[14] ; 10.215 ;       ;       ; 10.215 ;
-; ENTRADA[15] ; SAIDA_1[15] ; 10.080 ;       ;       ; 10.080 ;
-; ENTRADA[15] ; SAIDA_2[15] ; 10.094 ;       ;       ; 10.094 ;
-; ENTRADA[16] ; SAIDA_1[16] ; 9.329  ;       ;       ; 9.329  ;
-; ENTRADA[16] ; SAIDA_2[16] ; 9.110  ;       ;       ; 9.110  ;
-; ENTRADA[17] ; SAIDA_1[17] ; 9.232  ;       ;       ; 9.232  ;
-; ENTRADA[17] ; SAIDA_2[17] ; 9.507  ;       ;       ; 9.507  ;
-; ENTRADA[18] ; SAIDA_1[18] ; 9.917  ;       ;       ; 9.917  ;
-; ENTRADA[18] ; SAIDA_2[18] ; 9.380  ;       ;       ; 9.380  ;
-; ENTRADA[19] ; SAIDA_1[19] ; 9.717  ;       ;       ; 9.717  ;
-; ENTRADA[19] ; SAIDA_2[19] ; 9.418  ;       ;       ; 9.418  ;
-; ENTRADA[20] ; SAIDA_1[20] ; 9.388  ;       ;       ; 9.388  ;
-; ENTRADA[20] ; SAIDA_2[20] ; 9.228  ;       ;       ; 9.228  ;
-; ENTRADA[21] ; SAIDA_1[21] ; 9.847  ;       ;       ; 9.847  ;
-; ENTRADA[21] ; SAIDA_2[21] ; 9.741  ;       ;       ; 9.741  ;
-; ENTRADA[22] ; SAIDA_1[22] ; 9.467  ;       ;       ; 9.467  ;
-; ENTRADA[22] ; SAIDA_2[22] ; 9.293  ;       ;       ; 9.293  ;
-; ENTRADA[23] ; SAIDA_1[23] ; 9.798  ;       ;       ; 9.798  ;
-; ENTRADA[23] ; SAIDA_2[23] ; 9.863  ;       ;       ; 9.863  ;
-; ENTRADA[24] ; SAIDA_1[24] ; 9.398  ;       ;       ; 9.398  ;
-; ENTRADA[24] ; SAIDA_2[24] ; 9.854  ;       ;       ; 9.854  ;
-; ENTRADA[25] ; SAIDA_1[25] ; 10.435 ;       ;       ; 10.435 ;
-; ENTRADA[25] ; SAIDA_2[25] ; 10.230 ;       ;       ; 10.230 ;
-; ENTRADA[26] ; SAIDA_1[26] ; 9.674  ;       ;       ; 9.674  ;
-; ENTRADA[26] ; SAIDA_2[26] ; 9.442  ;       ;       ; 9.442  ;
-; ENTRADA[27] ; SAIDA_1[27] ; 9.149  ;       ;       ; 9.149  ;
-; ENTRADA[27] ; SAIDA_2[27] ; 9.409  ;       ;       ; 9.409  ;
-; ENTRADA[28] ; SAIDA_1[28] ; 10.354 ;       ;       ; 10.354 ;
-; ENTRADA[28] ; SAIDA_2[28] ; 10.114 ;       ;       ; 10.114 ;
-; ENTRADA[29] ; SAIDA_1[29] ; 9.399  ;       ;       ; 9.399  ;
-; ENTRADA[29] ; SAIDA_2[29] ; 9.598  ;       ;       ; 9.598  ;
-; ENTRADA[30] ; SAIDA_1[30] ; 9.585  ;       ;       ; 9.585  ;
-; ENTRADA[30] ; SAIDA_2[30] ; 9.361  ;       ;       ; 9.361  ;
-; ENTRADA[31] ; SAIDA_1[31] ; 9.178  ;       ;       ; 9.178  ;
-; ENTRADA[31] ; SAIDA_2[31] ; 9.128  ;       ;       ; 9.128  ;
-; Sel         ; SAIDA_1[0]  ;        ; 6.546 ; 6.546 ;        ;
-; Sel         ; SAIDA_1[1]  ;        ; 6.522 ; 6.522 ;        ;
-; Sel         ; SAIDA_1[2]  ;        ; 6.259 ; 6.259 ;        ;
-; Sel         ; SAIDA_1[3]  ;        ; 6.552 ; 6.552 ;        ;
-; Sel         ; SAIDA_1[4]  ;        ; 6.516 ; 6.516 ;        ;
-; Sel         ; SAIDA_1[5]  ;        ; 6.535 ; 6.535 ;        ;
-; Sel         ; SAIDA_1[6]  ;        ; 6.509 ; 6.509 ;        ;
-; Sel         ; SAIDA_1[7]  ;        ; 6.519 ; 6.519 ;        ;
-; Sel         ; SAIDA_1[8]  ;        ; 6.360 ; 6.360 ;        ;
-; Sel         ; SAIDA_1[9]  ;        ; 6.572 ; 6.572 ;        ;
-; Sel         ; SAIDA_1[10] ;        ; 6.383 ; 6.383 ;        ;
-; Sel         ; SAIDA_1[11] ;        ; 6.116 ; 6.116 ;        ;
-; Sel         ; SAIDA_1[12] ;        ; 6.380 ; 6.380 ;        ;
-; Sel         ; SAIDA_1[13] ;        ; 6.389 ; 6.389 ;        ;
-; Sel         ; SAIDA_1[14] ;        ; 6.587 ; 6.587 ;        ;
-; Sel         ; SAIDA_1[15] ;        ; 6.568 ; 6.568 ;        ;
-; Sel         ; SAIDA_1[16] ;        ; 7.261 ; 7.261 ;        ;
-; Sel         ; SAIDA_1[17] ;        ; 7.113 ; 7.113 ;        ;
-; Sel         ; SAIDA_1[18] ;        ; 7.284 ; 7.284 ;        ;
-; Sel         ; SAIDA_1[19] ;        ; 7.073 ; 7.073 ;        ;
-; Sel         ; SAIDA_1[20] ;        ; 7.185 ; 7.185 ;        ;
-; Sel         ; SAIDA_1[21] ;        ; 7.182 ; 7.182 ;        ;
-; Sel         ; SAIDA_1[22] ;        ; 7.351 ; 7.351 ;        ;
-; Sel         ; SAIDA_1[23] ;        ; 6.317 ; 6.317 ;        ;
-; Sel         ; SAIDA_1[24] ;        ; 6.140 ; 6.140 ;        ;
-; Sel         ; SAIDA_1[25] ;        ; 6.578 ; 6.578 ;        ;
-; Sel         ; SAIDA_1[26] ;        ; 6.390 ; 6.390 ;        ;
-; Sel         ; SAIDA_1[27] ;        ; 6.139 ; 6.139 ;        ;
-; Sel         ; SAIDA_1[28] ;        ; 6.581 ; 6.581 ;        ;
-; Sel         ; SAIDA_1[29] ;        ; 6.377 ; 6.377 ;        ;
-; Sel         ; SAIDA_1[30] ;        ; 6.363 ; 6.363 ;        ;
-; Sel         ; SAIDA_1[31] ;        ; 7.072 ; 7.072 ;        ;
-; Sel         ; SAIDA_2[0]  ; 6.365  ;       ;       ; 6.365  ;
-; Sel         ; SAIDA_2[1]  ; 6.532  ;       ;       ; 6.532  ;
-; Sel         ; SAIDA_2[2]  ; 6.272  ;       ;       ; 6.272  ;
-; Sel         ; SAIDA_2[3]  ; 6.277  ;       ;       ; 6.277  ;
-; Sel         ; SAIDA_2[4]  ; 6.539  ;       ;       ; 6.539  ;
-; Sel         ; SAIDA_2[5]  ; 6.240  ;       ;       ; 6.240  ;
-; Sel         ; SAIDA_2[6]  ; 6.537  ;       ;       ; 6.537  ;
-; Sel         ; SAIDA_2[7]  ; 6.563  ;       ;       ; 6.563  ;
-; Sel         ; SAIDA_2[8]  ; 6.133  ;       ;       ; 6.133  ;
-; Sel         ; SAIDA_2[9]  ; 6.342  ;       ;       ; 6.342  ;
-; Sel         ; SAIDA_2[10] ; 6.367  ;       ;       ; 6.367  ;
-; Sel         ; SAIDA_2[11] ; 6.329  ;       ;       ; 6.329  ;
-; Sel         ; SAIDA_2[12] ; 6.315  ;       ;       ; 6.315  ;
-; Sel         ; SAIDA_2[13] ; 6.120  ;       ;       ; 6.120  ;
-; Sel         ; SAIDA_2[14] ; 6.780  ;       ;       ; 6.780  ;
-; Sel         ; SAIDA_2[15] ; 6.608  ;       ;       ; 6.608  ;
-; Sel         ; SAIDA_2[16] ; 7.052  ;       ;       ; 7.052  ;
-; Sel         ; SAIDA_2[17] ; 7.440  ;       ;       ; 7.440  ;
-; Sel         ; SAIDA_2[18] ; 6.756  ;       ;       ; 6.756  ;
-; Sel         ; SAIDA_2[19] ; 6.782  ;       ;       ; 6.782  ;
-; Sel         ; SAIDA_2[20] ; 7.050  ;       ;       ; 7.050  ;
-; Sel         ; SAIDA_2[21] ; 7.093  ;       ;       ; 7.093  ;
-; Sel         ; SAIDA_2[22] ; 7.203  ;       ;       ; 7.203  ;
-; Sel         ; SAIDA_2[23] ; 6.395  ;       ;       ; 6.395  ;
-; Sel         ; SAIDA_2[24] ; 6.580  ;       ;       ; 6.580  ;
-; Sel         ; SAIDA_2[25] ; 6.381  ;       ;       ; 6.381  ;
-; Sel         ; SAIDA_2[26] ; 6.154  ;       ;       ; 6.154  ;
-; Sel         ; SAIDA_2[27] ; 6.383  ;       ;       ; 6.383  ;
-; Sel         ; SAIDA_2[28] ; 6.358  ;       ;       ; 6.358  ;
-; Sel         ; SAIDA_2[29] ; 6.586  ;       ;       ; 6.586  ;
-; Sel         ; SAIDA_2[30] ; 6.123  ;       ;       ; 6.123  ;
-; Sel         ; SAIDA_2[31] ; 7.031  ;       ;       ; 7.031  ;
-+-------------+-------------+--------+-------+-------+--------+
++---------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLOCK'                                                           ;
++--------+--------------+----------------+------------------+-------+------------+------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target           ;
++--------+--------------+----------------+------------------+-------+------------+------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK ; Rise       ; CLOCK            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[0]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[0]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[10]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[10]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[11]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[11]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[12]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[12]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[13]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[13]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[14]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[14]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[15]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[15]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[16]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[16]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[17]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[17]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[18]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[18]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[19]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[19]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[1]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[1]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[20]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[20]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[21]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[21]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[22]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[22]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[23]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[23]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[24]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[24]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[25]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[25]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[26]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[26]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[27]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[27]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[28]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[28]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[29]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[29]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[2]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[2]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[30]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[30]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[31]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[31]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[3]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[3]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[4]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[4]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[5]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[5]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[6]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[6]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[7]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[7]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[8]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[8]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[9]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[9]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[0]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[0]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[10]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[10]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[11]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[11]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[12]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[12]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[13]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[13]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[14]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[14]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[15]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[15]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[16]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[16]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[17]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[17]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[18]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[18]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[19]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[19]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[1]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[1]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[20]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[20]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[21]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[21]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[22]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[22]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[23]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[23]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[24]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[24]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[25]~reg0 ;
++--------+--------------+----------------+------------------+-------+------------+------------------+
 
 
-+-------------------------------------------------------------+
-; Minimum Propagation Delay                                   ;
-+-------------+-------------+--------+-------+-------+--------+
-; Input Port  ; Output Port ; RR     ; RF    ; FR    ; FF     ;
-+-------------+-------------+--------+-------+-------+--------+
-; ENTRADA[0]  ; SAIDA_1[0]  ; 6.476  ;       ;       ; 6.476  ;
-; ENTRADA[0]  ; SAIDA_2[0]  ; 6.296  ;       ;       ; 6.296  ;
-; ENTRADA[1]  ; SAIDA_1[1]  ; 9.300  ;       ;       ; 9.300  ;
-; ENTRADA[1]  ; SAIDA_2[1]  ; 9.300  ;       ;       ; 9.300  ;
-; ENTRADA[2]  ; SAIDA_1[2]  ; 9.024  ;       ;       ; 9.024  ;
-; ENTRADA[2]  ; SAIDA_2[2]  ; 9.029  ;       ;       ; 9.029  ;
-; ENTRADA[3]  ; SAIDA_1[3]  ; 9.316  ;       ;       ; 9.316  ;
-; ENTRADA[3]  ; SAIDA_2[3]  ; 9.041  ;       ;       ; 9.041  ;
-; ENTRADA[4]  ; SAIDA_1[4]  ; 9.130  ;       ;       ; 9.130  ;
-; ENTRADA[4]  ; SAIDA_2[4]  ; 9.132  ;       ;       ; 9.132  ;
-; ENTRADA[5]  ; SAIDA_1[5]  ; 9.259  ;       ;       ; 9.259  ;
-; ENTRADA[5]  ; SAIDA_2[5]  ; 8.976  ;       ;       ; 8.976  ;
-; ENTRADA[6]  ; SAIDA_1[6]  ; 9.484  ;       ;       ; 9.484  ;
-; ENTRADA[6]  ; SAIDA_2[6]  ; 9.476  ;       ;       ; 9.476  ;
-; ENTRADA[7]  ; SAIDA_1[7]  ; 9.481  ;       ;       ; 9.481  ;
-; ENTRADA[7]  ; SAIDA_2[7]  ; 9.484  ;       ;       ; 9.484  ;
-; ENTRADA[8]  ; SAIDA_1[8]  ; 9.782  ;       ;       ; 9.782  ;
-; ENTRADA[8]  ; SAIDA_2[8]  ; 9.538  ;       ;       ; 9.538  ;
-; ENTRADA[9]  ; SAIDA_1[9]  ; 10.028 ;       ;       ; 10.028 ;
-; ENTRADA[9]  ; SAIDA_2[9]  ; 9.800  ;       ;       ; 9.800  ;
-; ENTRADA[10] ; SAIDA_1[10] ; 9.732  ;       ;       ; 9.732  ;
-; ENTRADA[10] ; SAIDA_2[10] ; 9.683  ;       ;       ; 9.683  ;
-; ENTRADA[11] ; SAIDA_1[11] ; 9.527  ;       ;       ; 9.527  ;
-; ENTRADA[11] ; SAIDA_2[11] ; 9.744  ;       ;       ; 9.744  ;
-; ENTRADA[12] ; SAIDA_1[12] ; 9.941  ;       ;       ; 9.941  ;
-; ENTRADA[12] ; SAIDA_2[12] ; 9.838  ;       ;       ; 9.838  ;
-; ENTRADA[13] ; SAIDA_1[13] ; 9.784  ;       ;       ; 9.784  ;
-; ENTRADA[13] ; SAIDA_2[13] ; 9.487  ;       ;       ; 9.487  ;
-; ENTRADA[14] ; SAIDA_1[14] ; 10.024 ;       ;       ; 10.024 ;
-; ENTRADA[14] ; SAIDA_2[14] ; 10.215 ;       ;       ; 10.215 ;
-; ENTRADA[15] ; SAIDA_1[15] ; 10.080 ;       ;       ; 10.080 ;
-; ENTRADA[15] ; SAIDA_2[15] ; 10.094 ;       ;       ; 10.094 ;
-; ENTRADA[16] ; SAIDA_1[16] ; 9.329  ;       ;       ; 9.329  ;
-; ENTRADA[16] ; SAIDA_2[16] ; 9.110  ;       ;       ; 9.110  ;
-; ENTRADA[17] ; SAIDA_1[17] ; 9.232  ;       ;       ; 9.232  ;
-; ENTRADA[17] ; SAIDA_2[17] ; 9.507  ;       ;       ; 9.507  ;
-; ENTRADA[18] ; SAIDA_1[18] ; 9.917  ;       ;       ; 9.917  ;
-; ENTRADA[18] ; SAIDA_2[18] ; 9.380  ;       ;       ; 9.380  ;
-; ENTRADA[19] ; SAIDA_1[19] ; 9.717  ;       ;       ; 9.717  ;
-; ENTRADA[19] ; SAIDA_2[19] ; 9.418  ;       ;       ; 9.418  ;
-; ENTRADA[20] ; SAIDA_1[20] ; 9.388  ;       ;       ; 9.388  ;
-; ENTRADA[20] ; SAIDA_2[20] ; 9.228  ;       ;       ; 9.228  ;
-; ENTRADA[21] ; SAIDA_1[21] ; 9.847  ;       ;       ; 9.847  ;
-; ENTRADA[21] ; SAIDA_2[21] ; 9.741  ;       ;       ; 9.741  ;
-; ENTRADA[22] ; SAIDA_1[22] ; 9.467  ;       ;       ; 9.467  ;
-; ENTRADA[22] ; SAIDA_2[22] ; 9.293  ;       ;       ; 9.293  ;
-; ENTRADA[23] ; SAIDA_1[23] ; 9.798  ;       ;       ; 9.798  ;
-; ENTRADA[23] ; SAIDA_2[23] ; 9.863  ;       ;       ; 9.863  ;
-; ENTRADA[24] ; SAIDA_1[24] ; 9.398  ;       ;       ; 9.398  ;
-; ENTRADA[24] ; SAIDA_2[24] ; 9.854  ;       ;       ; 9.854  ;
-; ENTRADA[25] ; SAIDA_1[25] ; 10.435 ;       ;       ; 10.435 ;
-; ENTRADA[25] ; SAIDA_2[25] ; 10.230 ;       ;       ; 10.230 ;
-; ENTRADA[26] ; SAIDA_1[26] ; 9.674  ;       ;       ; 9.674  ;
-; ENTRADA[26] ; SAIDA_2[26] ; 9.442  ;       ;       ; 9.442  ;
-; ENTRADA[27] ; SAIDA_1[27] ; 9.149  ;       ;       ; 9.149  ;
-; ENTRADA[27] ; SAIDA_2[27] ; 9.409  ;       ;       ; 9.409  ;
-; ENTRADA[28] ; SAIDA_1[28] ; 10.354 ;       ;       ; 10.354 ;
-; ENTRADA[28] ; SAIDA_2[28] ; 10.114 ;       ;       ; 10.114 ;
-; ENTRADA[29] ; SAIDA_1[29] ; 9.399  ;       ;       ; 9.399  ;
-; ENTRADA[29] ; SAIDA_2[29] ; 9.598  ;       ;       ; 9.598  ;
-; ENTRADA[30] ; SAIDA_1[30] ; 9.585  ;       ;       ; 9.585  ;
-; ENTRADA[30] ; SAIDA_2[30] ; 9.361  ;       ;       ; 9.361  ;
-; ENTRADA[31] ; SAIDA_1[31] ; 9.178  ;       ;       ; 9.178  ;
-; ENTRADA[31] ; SAIDA_2[31] ; 9.128  ;       ;       ; 9.128  ;
-; Sel         ; SAIDA_1[0]  ;        ; 6.546 ; 6.546 ;        ;
-; Sel         ; SAIDA_1[1]  ;        ; 6.522 ; 6.522 ;        ;
-; Sel         ; SAIDA_1[2]  ;        ; 6.259 ; 6.259 ;        ;
-; Sel         ; SAIDA_1[3]  ;        ; 6.552 ; 6.552 ;        ;
-; Sel         ; SAIDA_1[4]  ;        ; 6.516 ; 6.516 ;        ;
-; Sel         ; SAIDA_1[5]  ;        ; 6.535 ; 6.535 ;        ;
-; Sel         ; SAIDA_1[6]  ;        ; 6.509 ; 6.509 ;        ;
-; Sel         ; SAIDA_1[7]  ;        ; 6.519 ; 6.519 ;        ;
-; Sel         ; SAIDA_1[8]  ;        ; 6.360 ; 6.360 ;        ;
-; Sel         ; SAIDA_1[9]  ;        ; 6.572 ; 6.572 ;        ;
-; Sel         ; SAIDA_1[10] ;        ; 6.383 ; 6.383 ;        ;
-; Sel         ; SAIDA_1[11] ;        ; 6.116 ; 6.116 ;        ;
-; Sel         ; SAIDA_1[12] ;        ; 6.380 ; 6.380 ;        ;
-; Sel         ; SAIDA_1[13] ;        ; 6.389 ; 6.389 ;        ;
-; Sel         ; SAIDA_1[14] ;        ; 6.587 ; 6.587 ;        ;
-; Sel         ; SAIDA_1[15] ;        ; 6.568 ; 6.568 ;        ;
-; Sel         ; SAIDA_1[16] ;        ; 7.261 ; 7.261 ;        ;
-; Sel         ; SAIDA_1[17] ;        ; 7.113 ; 7.113 ;        ;
-; Sel         ; SAIDA_1[18] ;        ; 7.284 ; 7.284 ;        ;
-; Sel         ; SAIDA_1[19] ;        ; 7.073 ; 7.073 ;        ;
-; Sel         ; SAIDA_1[20] ;        ; 7.185 ; 7.185 ;        ;
-; Sel         ; SAIDA_1[21] ;        ; 7.182 ; 7.182 ;        ;
-; Sel         ; SAIDA_1[22] ;        ; 7.351 ; 7.351 ;        ;
-; Sel         ; SAIDA_1[23] ;        ; 6.317 ; 6.317 ;        ;
-; Sel         ; SAIDA_1[24] ;        ; 6.140 ; 6.140 ;        ;
-; Sel         ; SAIDA_1[25] ;        ; 6.578 ; 6.578 ;        ;
-; Sel         ; SAIDA_1[26] ;        ; 6.390 ; 6.390 ;        ;
-; Sel         ; SAIDA_1[27] ;        ; 6.139 ; 6.139 ;        ;
-; Sel         ; SAIDA_1[28] ;        ; 6.581 ; 6.581 ;        ;
-; Sel         ; SAIDA_1[29] ;        ; 6.377 ; 6.377 ;        ;
-; Sel         ; SAIDA_1[30] ;        ; 6.363 ; 6.363 ;        ;
-; Sel         ; SAIDA_1[31] ;        ; 7.072 ; 7.072 ;        ;
-; Sel         ; SAIDA_2[0]  ; 6.365  ;       ;       ; 6.365  ;
-; Sel         ; SAIDA_2[1]  ; 6.532  ;       ;       ; 6.532  ;
-; Sel         ; SAIDA_2[2]  ; 6.272  ;       ;       ; 6.272  ;
-; Sel         ; SAIDA_2[3]  ; 6.277  ;       ;       ; 6.277  ;
-; Sel         ; SAIDA_2[4]  ; 6.539  ;       ;       ; 6.539  ;
-; Sel         ; SAIDA_2[5]  ; 6.240  ;       ;       ; 6.240  ;
-; Sel         ; SAIDA_2[6]  ; 6.537  ;       ;       ; 6.537  ;
-; Sel         ; SAIDA_2[7]  ; 6.563  ;       ;       ; 6.563  ;
-; Sel         ; SAIDA_2[8]  ; 6.133  ;       ;       ; 6.133  ;
-; Sel         ; SAIDA_2[9]  ; 6.342  ;       ;       ; 6.342  ;
-; Sel         ; SAIDA_2[10] ; 6.367  ;       ;       ; 6.367  ;
-; Sel         ; SAIDA_2[11] ; 6.329  ;       ;       ; 6.329  ;
-; Sel         ; SAIDA_2[12] ; 6.315  ;       ;       ; 6.315  ;
-; Sel         ; SAIDA_2[13] ; 6.120  ;       ;       ; 6.120  ;
-; Sel         ; SAIDA_2[14] ; 6.780  ;       ;       ; 6.780  ;
-; Sel         ; SAIDA_2[15] ; 6.608  ;       ;       ; 6.608  ;
-; Sel         ; SAIDA_2[16] ; 7.052  ;       ;       ; 7.052  ;
-; Sel         ; SAIDA_2[17] ; 7.440  ;       ;       ; 7.440  ;
-; Sel         ; SAIDA_2[18] ; 6.756  ;       ;       ; 6.756  ;
-; Sel         ; SAIDA_2[19] ; 6.782  ;       ;       ; 6.782  ;
-; Sel         ; SAIDA_2[20] ; 7.050  ;       ;       ; 7.050  ;
-; Sel         ; SAIDA_2[21] ; 7.093  ;       ;       ; 7.093  ;
-; Sel         ; SAIDA_2[22] ; 7.203  ;       ;       ; 7.203  ;
-; Sel         ; SAIDA_2[23] ; 6.395  ;       ;       ; 6.395  ;
-; Sel         ; SAIDA_2[24] ; 6.580  ;       ;       ; 6.580  ;
-; Sel         ; SAIDA_2[25] ; 6.381  ;       ;       ; 6.381  ;
-; Sel         ; SAIDA_2[26] ; 6.154  ;       ;       ; 6.154  ;
-; Sel         ; SAIDA_2[27] ; 6.383  ;       ;       ; 6.383  ;
-; Sel         ; SAIDA_2[28] ; 6.358  ;       ;       ; 6.358  ;
-; Sel         ; SAIDA_2[29] ; 6.586  ;       ;       ; 6.586  ;
-; Sel         ; SAIDA_2[30] ; 6.123  ;       ;       ; 6.123  ;
-; Sel         ; SAIDA_2[31] ; 7.031  ;       ;       ; 7.031  ;
-+-------------+-------------+--------+-------+-------+--------+
++--------------------------------------------------------------------------+
+; Setup Times                                                              ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; ENTRADA[*]   ; CLOCK      ; 4.041 ; 4.041 ; Rise       ; CLOCK           ;
+;  ENTRADA[0]  ; CLOCK      ; 0.894 ; 0.894 ; Rise       ; CLOCK           ;
+;  ENTRADA[1]  ; CLOCK      ; 3.510 ; 3.510 ; Rise       ; CLOCK           ;
+;  ENTRADA[2]  ; CLOCK      ; 3.285 ; 3.285 ; Rise       ; CLOCK           ;
+;  ENTRADA[3]  ; CLOCK      ; 3.436 ; 3.436 ; Rise       ; CLOCK           ;
+;  ENTRADA[4]  ; CLOCK      ; 3.535 ; 3.535 ; Rise       ; CLOCK           ;
+;  ENTRADA[5]  ; CLOCK      ; 3.255 ; 3.255 ; Rise       ; CLOCK           ;
+;  ENTRADA[6]  ; CLOCK      ; 3.236 ; 3.236 ; Rise       ; CLOCK           ;
+;  ENTRADA[7]  ; CLOCK      ; 3.299 ; 3.299 ; Rise       ; CLOCK           ;
+;  ENTRADA[8]  ; CLOCK      ; 3.417 ; 3.417 ; Rise       ; CLOCK           ;
+;  ENTRADA[9]  ; CLOCK      ; 4.041 ; 4.041 ; Rise       ; CLOCK           ;
+;  ENTRADA[10] ; CLOCK      ; 3.542 ; 3.542 ; Rise       ; CLOCK           ;
+;  ENTRADA[11] ; CLOCK      ; 3.525 ; 3.525 ; Rise       ; CLOCK           ;
+;  ENTRADA[12] ; CLOCK      ; 3.762 ; 3.762 ; Rise       ; CLOCK           ;
+;  ENTRADA[13] ; CLOCK      ; 3.751 ; 3.751 ; Rise       ; CLOCK           ;
+;  ENTRADA[14] ; CLOCK      ; 3.620 ; 3.620 ; Rise       ; CLOCK           ;
+;  ENTRADA[15] ; CLOCK      ; 3.454 ; 3.454 ; Rise       ; CLOCK           ;
+;  ENTRADA[16] ; CLOCK      ; 3.465 ; 3.465 ; Rise       ; CLOCK           ;
+;  ENTRADA[17] ; CLOCK      ; 3.325 ; 3.325 ; Rise       ; CLOCK           ;
+;  ENTRADA[18] ; CLOCK      ; 3.197 ; 3.197 ; Rise       ; CLOCK           ;
+;  ENTRADA[19] ; CLOCK      ; 3.465 ; 3.465 ; Rise       ; CLOCK           ;
+;  ENTRADA[20] ; CLOCK      ; 3.430 ; 3.430 ; Rise       ; CLOCK           ;
+;  ENTRADA[21] ; CLOCK      ; 3.179 ; 3.179 ; Rise       ; CLOCK           ;
+;  ENTRADA[22] ; CLOCK      ; 3.154 ; 3.154 ; Rise       ; CLOCK           ;
+;  ENTRADA[23] ; CLOCK      ; 3.508 ; 3.508 ; Rise       ; CLOCK           ;
+;  ENTRADA[24] ; CLOCK      ; 3.281 ; 3.281 ; Rise       ; CLOCK           ;
+;  ENTRADA[25] ; CLOCK      ; 3.524 ; 3.524 ; Rise       ; CLOCK           ;
+;  ENTRADA[26] ; CLOCK      ; 3.643 ; 3.643 ; Rise       ; CLOCK           ;
+;  ENTRADA[27] ; CLOCK      ; 3.621 ; 3.621 ; Rise       ; CLOCK           ;
+;  ENTRADA[28] ; CLOCK      ; 3.622 ; 3.622 ; Rise       ; CLOCK           ;
+;  ENTRADA[29] ; CLOCK      ; 3.273 ; 3.273 ; Rise       ; CLOCK           ;
+;  ENTRADA[30] ; CLOCK      ; 3.649 ; 3.649 ; Rise       ; CLOCK           ;
+;  ENTRADA[31] ; CLOCK      ; 3.269 ; 3.269 ; Rise       ; CLOCK           ;
+; SEL          ; CLOCK      ; 0.851 ; 0.851 ; Rise       ; CLOCK           ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Hold Times                                                                 ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; ENTRADA[*]   ; CLOCK      ; -0.661 ; -0.661 ; Rise       ; CLOCK           ;
+;  ENTRADA[0]  ; CLOCK      ; -0.661 ; -0.661 ; Rise       ; CLOCK           ;
+;  ENTRADA[1]  ; CLOCK      ; -3.278 ; -3.278 ; Rise       ; CLOCK           ;
+;  ENTRADA[2]  ; CLOCK      ; -3.051 ; -3.051 ; Rise       ; CLOCK           ;
+;  ENTRADA[3]  ; CLOCK      ; -3.181 ; -3.181 ; Rise       ; CLOCK           ;
+;  ENTRADA[4]  ; CLOCK      ; -3.286 ; -3.286 ; Rise       ; CLOCK           ;
+;  ENTRADA[5]  ; CLOCK      ; -3.004 ; -3.004 ; Rise       ; CLOCK           ;
+;  ENTRADA[6]  ; CLOCK      ; -3.004 ; -3.004 ; Rise       ; CLOCK           ;
+;  ENTRADA[7]  ; CLOCK      ; -3.063 ; -3.063 ; Rise       ; CLOCK           ;
+;  ENTRADA[8]  ; CLOCK      ; -3.186 ; -3.186 ; Rise       ; CLOCK           ;
+;  ENTRADA[9]  ; CLOCK      ; -3.809 ; -3.809 ; Rise       ; CLOCK           ;
+;  ENTRADA[10] ; CLOCK      ; -3.311 ; -3.311 ; Rise       ; CLOCK           ;
+;  ENTRADA[11] ; CLOCK      ; -3.293 ; -3.293 ; Rise       ; CLOCK           ;
+;  ENTRADA[12] ; CLOCK      ; -3.527 ; -3.527 ; Rise       ; CLOCK           ;
+;  ENTRADA[13] ; CLOCK      ; -3.518 ; -3.518 ; Rise       ; CLOCK           ;
+;  ENTRADA[14] ; CLOCK      ; -3.390 ; -3.390 ; Rise       ; CLOCK           ;
+;  ENTRADA[15] ; CLOCK      ; -3.224 ; -3.224 ; Rise       ; CLOCK           ;
+;  ENTRADA[16] ; CLOCK      ; -3.232 ; -3.232 ; Rise       ; CLOCK           ;
+;  ENTRADA[17] ; CLOCK      ; -3.095 ; -3.095 ; Rise       ; CLOCK           ;
+;  ENTRADA[18] ; CLOCK      ; -2.966 ; -2.966 ; Rise       ; CLOCK           ;
+;  ENTRADA[19] ; CLOCK      ; -3.235 ; -3.235 ; Rise       ; CLOCK           ;
+;  ENTRADA[20] ; CLOCK      ; -3.199 ; -3.199 ; Rise       ; CLOCK           ;
+;  ENTRADA[21] ; CLOCK      ; -2.946 ; -2.946 ; Rise       ; CLOCK           ;
+;  ENTRADA[22] ; CLOCK      ; -2.921 ; -2.921 ; Rise       ; CLOCK           ;
+;  ENTRADA[23] ; CLOCK      ; -3.277 ; -3.277 ; Rise       ; CLOCK           ;
+;  ENTRADA[24] ; CLOCK      ; -3.049 ; -3.049 ; Rise       ; CLOCK           ;
+;  ENTRADA[25] ; CLOCK      ; -3.294 ; -3.294 ; Rise       ; CLOCK           ;
+;  ENTRADA[26] ; CLOCK      ; -3.412 ; -3.412 ; Rise       ; CLOCK           ;
+;  ENTRADA[27] ; CLOCK      ; -3.390 ; -3.390 ; Rise       ; CLOCK           ;
+;  ENTRADA[28] ; CLOCK      ; -3.388 ; -3.388 ; Rise       ; CLOCK           ;
+;  ENTRADA[29] ; CLOCK      ; -3.042 ; -3.042 ; Rise       ; CLOCK           ;
+;  ENTRADA[30] ; CLOCK      ; -3.417 ; -3.417 ; Rise       ; CLOCK           ;
+;  ENTRADA[31] ; CLOCK      ; -3.039 ; -3.039 ; Rise       ; CLOCK           ;
+; SEL          ; CLOCK      ; 0.646  ; 0.646  ; Rise       ; CLOCK           ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; SAIDA_1[*]   ; CLOCK      ; 6.861 ; 6.861 ; Rise       ; CLOCK           ;
+;  SAIDA_1[0]  ; CLOCK      ; 6.644 ; 6.644 ; Rise       ; CLOCK           ;
+;  SAIDA_1[1]  ; CLOCK      ; 6.078 ; 6.078 ; Rise       ; CLOCK           ;
+;  SAIDA_1[2]  ; CLOCK      ; 6.628 ; 6.628 ; Rise       ; CLOCK           ;
+;  SAIDA_1[3]  ; CLOCK      ; 6.636 ; 6.636 ; Rise       ; CLOCK           ;
+;  SAIDA_1[4]  ; CLOCK      ; 6.354 ; 6.354 ; Rise       ; CLOCK           ;
+;  SAIDA_1[5]  ; CLOCK      ; 6.048 ; 6.048 ; Rise       ; CLOCK           ;
+;  SAIDA_1[6]  ; CLOCK      ; 6.298 ; 6.298 ; Rise       ; CLOCK           ;
+;  SAIDA_1[7]  ; CLOCK      ; 6.348 ; 6.348 ; Rise       ; CLOCK           ;
+;  SAIDA_1[8]  ; CLOCK      ; 6.332 ; 6.332 ; Rise       ; CLOCK           ;
+;  SAIDA_1[9]  ; CLOCK      ; 6.370 ; 6.370 ; Rise       ; CLOCK           ;
+;  SAIDA_1[10] ; CLOCK      ; 6.828 ; 6.828 ; Rise       ; CLOCK           ;
+;  SAIDA_1[11] ; CLOCK      ; 6.356 ; 6.356 ; Rise       ; CLOCK           ;
+;  SAIDA_1[12] ; CLOCK      ; 6.861 ; 6.861 ; Rise       ; CLOCK           ;
+;  SAIDA_1[13] ; CLOCK      ; 6.841 ; 6.841 ; Rise       ; CLOCK           ;
+;  SAIDA_1[14] ; CLOCK      ; 6.842 ; 6.842 ; Rise       ; CLOCK           ;
+;  SAIDA_1[15] ; CLOCK      ; 6.604 ; 6.604 ; Rise       ; CLOCK           ;
+;  SAIDA_1[16] ; CLOCK      ; 6.222 ; 6.222 ; Rise       ; CLOCK           ;
+;  SAIDA_1[17] ; CLOCK      ; 6.079 ; 6.079 ; Rise       ; CLOCK           ;
+;  SAIDA_1[18] ; CLOCK      ; 6.072 ; 6.072 ; Rise       ; CLOCK           ;
+;  SAIDA_1[19] ; CLOCK      ; 6.427 ; 6.427 ; Rise       ; CLOCK           ;
+;  SAIDA_1[20] ; CLOCK      ; 6.406 ; 6.406 ; Rise       ; CLOCK           ;
+;  SAIDA_1[21] ; CLOCK      ; 6.502 ; 6.502 ; Rise       ; CLOCK           ;
+;  SAIDA_1[22] ; CLOCK      ; 6.361 ; 6.361 ; Rise       ; CLOCK           ;
+;  SAIDA_1[23] ; CLOCK      ; 6.774 ; 6.774 ; Rise       ; CLOCK           ;
+;  SAIDA_1[24] ; CLOCK      ; 6.357 ; 6.357 ; Rise       ; CLOCK           ;
+;  SAIDA_1[25] ; CLOCK      ; 6.582 ; 6.582 ; Rise       ; CLOCK           ;
+;  SAIDA_1[26] ; CLOCK      ; 6.566 ; 6.566 ; Rise       ; CLOCK           ;
+;  SAIDA_1[27] ; CLOCK      ; 6.804 ; 6.804 ; Rise       ; CLOCK           ;
+;  SAIDA_1[28] ; CLOCK      ; 6.339 ; 6.339 ; Rise       ; CLOCK           ;
+;  SAIDA_1[29] ; CLOCK      ; 6.778 ; 6.778 ; Rise       ; CLOCK           ;
+;  SAIDA_1[30] ; CLOCK      ; 6.348 ; 6.348 ; Rise       ; CLOCK           ;
+;  SAIDA_1[31] ; CLOCK      ; 6.351 ; 6.351 ; Rise       ; CLOCK           ;
+; SAIDA_2[*]   ; CLOCK      ; 6.854 ; 6.854 ; Rise       ; CLOCK           ;
+;  SAIDA_2[0]  ; CLOCK      ; 6.660 ; 6.660 ; Rise       ; CLOCK           ;
+;  SAIDA_2[1]  ; CLOCK      ; 6.634 ; 6.634 ; Rise       ; CLOCK           ;
+;  SAIDA_2[2]  ; CLOCK      ; 6.051 ; 6.051 ; Rise       ; CLOCK           ;
+;  SAIDA_2[3]  ; CLOCK      ; 6.391 ; 6.391 ; Rise       ; CLOCK           ;
+;  SAIDA_2[4]  ; CLOCK      ; 6.662 ; 6.662 ; Rise       ; CLOCK           ;
+;  SAIDA_2[5]  ; CLOCK      ; 6.338 ; 6.338 ; Rise       ; CLOCK           ;
+;  SAIDA_2[6]  ; CLOCK      ; 6.501 ; 6.501 ; Rise       ; CLOCK           ;
+;  SAIDA_2[7]  ; CLOCK      ; 6.087 ; 6.087 ; Rise       ; CLOCK           ;
+;  SAIDA_2[8]  ; CLOCK      ; 6.592 ; 6.592 ; Rise       ; CLOCK           ;
+;  SAIDA_2[9]  ; CLOCK      ; 6.372 ; 6.372 ; Rise       ; CLOCK           ;
+;  SAIDA_2[10] ; CLOCK      ; 6.404 ; 6.404 ; Rise       ; CLOCK           ;
+;  SAIDA_2[11] ; CLOCK      ; 6.394 ; 6.394 ; Rise       ; CLOCK           ;
+;  SAIDA_2[12] ; CLOCK      ; 6.600 ; 6.600 ; Rise       ; CLOCK           ;
+;  SAIDA_2[13] ; CLOCK      ; 6.830 ; 6.830 ; Rise       ; CLOCK           ;
+;  SAIDA_2[14] ; CLOCK      ; 6.598 ; 6.598 ; Rise       ; CLOCK           ;
+;  SAIDA_2[15] ; CLOCK      ; 6.854 ; 6.854 ; Rise       ; CLOCK           ;
+;  SAIDA_2[16] ; CLOCK      ; 6.097 ; 6.097 ; Rise       ; CLOCK           ;
+;  SAIDA_2[17] ; CLOCK      ; 6.392 ; 6.392 ; Rise       ; CLOCK           ;
+;  SAIDA_2[18] ; CLOCK      ; 6.340 ; 6.340 ; Rise       ; CLOCK           ;
+;  SAIDA_2[19] ; CLOCK      ; 6.375 ; 6.375 ; Rise       ; CLOCK           ;
+;  SAIDA_2[20] ; CLOCK      ; 6.263 ; 6.263 ; Rise       ; CLOCK           ;
+;  SAIDA_2[21] ; CLOCK      ; 6.383 ; 6.383 ; Rise       ; CLOCK           ;
+;  SAIDA_2[22] ; CLOCK      ; 6.367 ; 6.367 ; Rise       ; CLOCK           ;
+;  SAIDA_2[23] ; CLOCK      ; 6.566 ; 6.566 ; Rise       ; CLOCK           ;
+;  SAIDA_2[24] ; CLOCK      ; 6.582 ; 6.582 ; Rise       ; CLOCK           ;
+;  SAIDA_2[25] ; CLOCK      ; 6.576 ; 6.576 ; Rise       ; CLOCK           ;
+;  SAIDA_2[26] ; CLOCK      ; 6.338 ; 6.338 ; Rise       ; CLOCK           ;
+;  SAIDA_2[27] ; CLOCK      ; 6.338 ; 6.338 ; Rise       ; CLOCK           ;
+;  SAIDA_2[28] ; CLOCK      ; 6.554 ; 6.554 ; Rise       ; CLOCK           ;
+;  SAIDA_2[29] ; CLOCK      ; 6.576 ; 6.576 ; Rise       ; CLOCK           ;
+;  SAIDA_2[30] ; CLOCK      ; 6.366 ; 6.366 ; Rise       ; CLOCK           ;
+;  SAIDA_2[31] ; CLOCK      ; 6.420 ; 6.420 ; Rise       ; CLOCK           ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; SAIDA_1[*]   ; CLOCK      ; 6.048 ; 6.048 ; Rise       ; CLOCK           ;
+;  SAIDA_1[0]  ; CLOCK      ; 6.644 ; 6.644 ; Rise       ; CLOCK           ;
+;  SAIDA_1[1]  ; CLOCK      ; 6.078 ; 6.078 ; Rise       ; CLOCK           ;
+;  SAIDA_1[2]  ; CLOCK      ; 6.628 ; 6.628 ; Rise       ; CLOCK           ;
+;  SAIDA_1[3]  ; CLOCK      ; 6.636 ; 6.636 ; Rise       ; CLOCK           ;
+;  SAIDA_1[4]  ; CLOCK      ; 6.354 ; 6.354 ; Rise       ; CLOCK           ;
+;  SAIDA_1[5]  ; CLOCK      ; 6.048 ; 6.048 ; Rise       ; CLOCK           ;
+;  SAIDA_1[6]  ; CLOCK      ; 6.298 ; 6.298 ; Rise       ; CLOCK           ;
+;  SAIDA_1[7]  ; CLOCK      ; 6.348 ; 6.348 ; Rise       ; CLOCK           ;
+;  SAIDA_1[8]  ; CLOCK      ; 6.332 ; 6.332 ; Rise       ; CLOCK           ;
+;  SAIDA_1[9]  ; CLOCK      ; 6.370 ; 6.370 ; Rise       ; CLOCK           ;
+;  SAIDA_1[10] ; CLOCK      ; 6.828 ; 6.828 ; Rise       ; CLOCK           ;
+;  SAIDA_1[11] ; CLOCK      ; 6.356 ; 6.356 ; Rise       ; CLOCK           ;
+;  SAIDA_1[12] ; CLOCK      ; 6.861 ; 6.861 ; Rise       ; CLOCK           ;
+;  SAIDA_1[13] ; CLOCK      ; 6.841 ; 6.841 ; Rise       ; CLOCK           ;
+;  SAIDA_1[14] ; CLOCK      ; 6.842 ; 6.842 ; Rise       ; CLOCK           ;
+;  SAIDA_1[15] ; CLOCK      ; 6.604 ; 6.604 ; Rise       ; CLOCK           ;
+;  SAIDA_1[16] ; CLOCK      ; 6.222 ; 6.222 ; Rise       ; CLOCK           ;
+;  SAIDA_1[17] ; CLOCK      ; 6.079 ; 6.079 ; Rise       ; CLOCK           ;
+;  SAIDA_1[18] ; CLOCK      ; 6.072 ; 6.072 ; Rise       ; CLOCK           ;
+;  SAIDA_1[19] ; CLOCK      ; 6.427 ; 6.427 ; Rise       ; CLOCK           ;
+;  SAIDA_1[20] ; CLOCK      ; 6.406 ; 6.406 ; Rise       ; CLOCK           ;
+;  SAIDA_1[21] ; CLOCK      ; 6.502 ; 6.502 ; Rise       ; CLOCK           ;
+;  SAIDA_1[22] ; CLOCK      ; 6.361 ; 6.361 ; Rise       ; CLOCK           ;
+;  SAIDA_1[23] ; CLOCK      ; 6.774 ; 6.774 ; Rise       ; CLOCK           ;
+;  SAIDA_1[24] ; CLOCK      ; 6.357 ; 6.357 ; Rise       ; CLOCK           ;
+;  SAIDA_1[25] ; CLOCK      ; 6.582 ; 6.582 ; Rise       ; CLOCK           ;
+;  SAIDA_1[26] ; CLOCK      ; 6.566 ; 6.566 ; Rise       ; CLOCK           ;
+;  SAIDA_1[27] ; CLOCK      ; 6.804 ; 6.804 ; Rise       ; CLOCK           ;
+;  SAIDA_1[28] ; CLOCK      ; 6.339 ; 6.339 ; Rise       ; CLOCK           ;
+;  SAIDA_1[29] ; CLOCK      ; 6.778 ; 6.778 ; Rise       ; CLOCK           ;
+;  SAIDA_1[30] ; CLOCK      ; 6.348 ; 6.348 ; Rise       ; CLOCK           ;
+;  SAIDA_1[31] ; CLOCK      ; 6.351 ; 6.351 ; Rise       ; CLOCK           ;
+; SAIDA_2[*]   ; CLOCK      ; 6.051 ; 6.051 ; Rise       ; CLOCK           ;
+;  SAIDA_2[0]  ; CLOCK      ; 6.660 ; 6.660 ; Rise       ; CLOCK           ;
+;  SAIDA_2[1]  ; CLOCK      ; 6.634 ; 6.634 ; Rise       ; CLOCK           ;
+;  SAIDA_2[2]  ; CLOCK      ; 6.051 ; 6.051 ; Rise       ; CLOCK           ;
+;  SAIDA_2[3]  ; CLOCK      ; 6.391 ; 6.391 ; Rise       ; CLOCK           ;
+;  SAIDA_2[4]  ; CLOCK      ; 6.662 ; 6.662 ; Rise       ; CLOCK           ;
+;  SAIDA_2[5]  ; CLOCK      ; 6.338 ; 6.338 ; Rise       ; CLOCK           ;
+;  SAIDA_2[6]  ; CLOCK      ; 6.501 ; 6.501 ; Rise       ; CLOCK           ;
+;  SAIDA_2[7]  ; CLOCK      ; 6.087 ; 6.087 ; Rise       ; CLOCK           ;
+;  SAIDA_2[8]  ; CLOCK      ; 6.592 ; 6.592 ; Rise       ; CLOCK           ;
+;  SAIDA_2[9]  ; CLOCK      ; 6.372 ; 6.372 ; Rise       ; CLOCK           ;
+;  SAIDA_2[10] ; CLOCK      ; 6.404 ; 6.404 ; Rise       ; CLOCK           ;
+;  SAIDA_2[11] ; CLOCK      ; 6.394 ; 6.394 ; Rise       ; CLOCK           ;
+;  SAIDA_2[12] ; CLOCK      ; 6.600 ; 6.600 ; Rise       ; CLOCK           ;
+;  SAIDA_2[13] ; CLOCK      ; 6.830 ; 6.830 ; Rise       ; CLOCK           ;
+;  SAIDA_2[14] ; CLOCK      ; 6.598 ; 6.598 ; Rise       ; CLOCK           ;
+;  SAIDA_2[15] ; CLOCK      ; 6.854 ; 6.854 ; Rise       ; CLOCK           ;
+;  SAIDA_2[16] ; CLOCK      ; 6.097 ; 6.097 ; Rise       ; CLOCK           ;
+;  SAIDA_2[17] ; CLOCK      ; 6.392 ; 6.392 ; Rise       ; CLOCK           ;
+;  SAIDA_2[18] ; CLOCK      ; 6.340 ; 6.340 ; Rise       ; CLOCK           ;
+;  SAIDA_2[19] ; CLOCK      ; 6.375 ; 6.375 ; Rise       ; CLOCK           ;
+;  SAIDA_2[20] ; CLOCK      ; 6.263 ; 6.263 ; Rise       ; CLOCK           ;
+;  SAIDA_2[21] ; CLOCK      ; 6.383 ; 6.383 ; Rise       ; CLOCK           ;
+;  SAIDA_2[22] ; CLOCK      ; 6.367 ; 6.367 ; Rise       ; CLOCK           ;
+;  SAIDA_2[23] ; CLOCK      ; 6.566 ; 6.566 ; Rise       ; CLOCK           ;
+;  SAIDA_2[24] ; CLOCK      ; 6.582 ; 6.582 ; Rise       ; CLOCK           ;
+;  SAIDA_2[25] ; CLOCK      ; 6.576 ; 6.576 ; Rise       ; CLOCK           ;
+;  SAIDA_2[26] ; CLOCK      ; 6.338 ; 6.338 ; Rise       ; CLOCK           ;
+;  SAIDA_2[27] ; CLOCK      ; 6.338 ; 6.338 ; Rise       ; CLOCK           ;
+;  SAIDA_2[28] ; CLOCK      ; 6.554 ; 6.554 ; Rise       ; CLOCK           ;
+;  SAIDA_2[29] ; CLOCK      ; 6.576 ; 6.576 ; Rise       ; CLOCK           ;
+;  SAIDA_2[30] ; CLOCK      ; 6.366 ; 6.366 ; Rise       ; CLOCK           ;
+;  SAIDA_2[31] ; CLOCK      ; 6.420 ; 6.420 ; Rise       ; CLOCK           ;
++--------------+------------+-------+-------+------------+-----------------+
 
 
 ----------------------------
@@ -417,282 +499,353 @@ No paths to report.
 No paths to report.
 
 
-------------------------------------------
++----------------------------------------+
 ; Fast Model Minimum Pulse Width Summary ;
-------------------------------------------
-No paths to report.
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CLOCK ; -1.380 ; -65.380               ;
++-------+--------+-----------------------+
 
 
-+-----------------------------------------------------------+
-; Propagation Delay                                         ;
-+-------------+-------------+-------+-------+-------+-------+
-; Input Port  ; Output Port ; RR    ; RF    ; FR    ; FF    ;
-+-------------+-------------+-------+-------+-------+-------+
-; ENTRADA[0]  ; SAIDA_1[0]  ; 3.357 ;       ;       ; 3.357 ;
-; ENTRADA[0]  ; SAIDA_2[0]  ; 3.258 ;       ;       ; 3.258 ;
-; ENTRADA[1]  ; SAIDA_1[1]  ; 5.221 ;       ;       ; 5.221 ;
-; ENTRADA[1]  ; SAIDA_2[1]  ; 5.223 ;       ;       ; 5.223 ;
-; ENTRADA[2]  ; SAIDA_1[2]  ; 5.105 ;       ;       ; 5.105 ;
-; ENTRADA[2]  ; SAIDA_2[2]  ; 5.112 ;       ;       ; 5.112 ;
-; ENTRADA[3]  ; SAIDA_1[3]  ; 5.232 ;       ;       ; 5.232 ;
-; ENTRADA[3]  ; SAIDA_2[3]  ; 5.113 ;       ;       ; 5.113 ;
-; ENTRADA[4]  ; SAIDA_1[4]  ; 5.113 ;       ;       ; 5.113 ;
-; ENTRADA[4]  ; SAIDA_2[4]  ; 5.142 ;       ;       ; 5.142 ;
-; ENTRADA[5]  ; SAIDA_1[5]  ; 5.184 ;       ;       ; 5.184 ;
-; ENTRADA[5]  ; SAIDA_2[5]  ; 5.062 ;       ;       ; 5.062 ;
-; ENTRADA[6]  ; SAIDA_1[6]  ; 5.299 ;       ;       ; 5.299 ;
-; ENTRADA[6]  ; SAIDA_2[6]  ; 5.312 ;       ;       ; 5.312 ;
-; ENTRADA[7]  ; SAIDA_1[7]  ; 5.300 ;       ;       ; 5.300 ;
-; ENTRADA[7]  ; SAIDA_2[7]  ; 5.319 ;       ;       ; 5.319 ;
-; ENTRADA[8]  ; SAIDA_1[8]  ; 5.455 ;       ;       ; 5.455 ;
-; ENTRADA[8]  ; SAIDA_2[8]  ; 5.344 ;       ;       ; 5.344 ;
-; ENTRADA[9]  ; SAIDA_1[9]  ; 5.586 ;       ;       ; 5.586 ;
-; ENTRADA[9]  ; SAIDA_2[9]  ; 5.485 ;       ;       ; 5.485 ;
-; ENTRADA[10] ; SAIDA_1[10] ; 5.414 ;       ;       ; 5.414 ;
-; ENTRADA[10] ; SAIDA_2[10] ; 5.388 ;       ;       ; 5.388 ;
-; ENTRADA[11] ; SAIDA_1[11] ; 5.331 ;       ;       ; 5.331 ;
-; ENTRADA[11] ; SAIDA_2[11] ; 5.428 ;       ;       ; 5.428 ;
-; ENTRADA[12] ; SAIDA_1[12] ; 5.517 ;       ;       ; 5.517 ;
-; ENTRADA[12] ; SAIDA_2[12] ; 5.454 ;       ;       ; 5.454 ;
-; ENTRADA[13] ; SAIDA_1[13] ; 5.476 ;       ;       ; 5.476 ;
-; ENTRADA[13] ; SAIDA_2[13] ; 5.312 ;       ;       ; 5.312 ;
-; ENTRADA[14] ; SAIDA_1[14] ; 5.584 ;       ;       ; 5.584 ;
-; ENTRADA[14] ; SAIDA_2[14] ; 5.651 ;       ;       ; 5.651 ;
-; ENTRADA[15] ; SAIDA_1[15] ; 5.603 ;       ;       ; 5.603 ;
-; ENTRADA[15] ; SAIDA_2[15] ; 5.628 ;       ;       ; 5.628 ;
-; ENTRADA[16] ; SAIDA_1[16] ; 5.239 ;       ;       ; 5.239 ;
-; ENTRADA[16] ; SAIDA_2[16] ; 5.103 ;       ;       ; 5.103 ;
-; ENTRADA[17] ; SAIDA_1[17] ; 5.179 ;       ;       ; 5.179 ;
-; ENTRADA[17] ; SAIDA_2[17] ; 5.347 ;       ;       ; 5.347 ;
-; ENTRADA[18] ; SAIDA_1[18] ; 5.561 ;       ;       ; 5.561 ;
-; ENTRADA[18] ; SAIDA_2[18] ; 5.277 ;       ;       ; 5.277 ;
-; ENTRADA[19] ; SAIDA_1[19] ; 5.441 ;       ;       ; 5.441 ;
-; ENTRADA[19] ; SAIDA_2[19] ; 5.300 ;       ;       ; 5.300 ;
-; ENTRADA[20] ; SAIDA_1[20] ; 5.275 ;       ;       ; 5.275 ;
-; ENTRADA[20] ; SAIDA_2[20] ; 5.190 ;       ;       ; 5.190 ;
-; ENTRADA[21] ; SAIDA_1[21] ; 5.471 ;       ;       ; 5.471 ;
-; ENTRADA[21] ; SAIDA_2[21] ; 5.448 ;       ;       ; 5.448 ;
-; ENTRADA[22] ; SAIDA_1[22] ; 5.298 ;       ;       ; 5.298 ;
-; ENTRADA[22] ; SAIDA_2[22] ; 5.209 ;       ;       ; 5.209 ;
-; ENTRADA[23] ; SAIDA_1[23] ; 5.413 ;       ;       ; 5.413 ;
-; ENTRADA[23] ; SAIDA_2[23] ; 5.474 ;       ;       ; 5.474 ;
-; ENTRADA[24] ; SAIDA_1[24] ; 5.255 ;       ;       ; 5.255 ;
-; ENTRADA[24] ; SAIDA_2[24] ; 5.461 ;       ;       ; 5.461 ;
-; ENTRADA[25] ; SAIDA_1[25] ; 5.730 ;       ;       ; 5.730 ;
-; ENTRADA[25] ; SAIDA_2[25] ; 5.645 ;       ;       ; 5.645 ;
-; ENTRADA[26] ; SAIDA_1[26] ; 5.388 ;       ;       ; 5.388 ;
-; ENTRADA[26] ; SAIDA_2[26] ; 5.277 ;       ;       ; 5.277 ;
-; ENTRADA[27] ; SAIDA_1[27] ; 5.141 ;       ;       ; 5.141 ;
-; ENTRADA[27] ; SAIDA_2[27] ; 5.276 ;       ;       ; 5.276 ;
-; ENTRADA[28] ; SAIDA_1[28] ; 5.675 ;       ;       ; 5.675 ;
-; ENTRADA[28] ; SAIDA_2[28] ; 5.560 ;       ;       ; 5.560 ;
-; ENTRADA[29] ; SAIDA_1[29] ; 5.267 ;       ;       ; 5.267 ;
-; ENTRADA[29] ; SAIDA_2[29] ; 5.340 ;       ;       ; 5.340 ;
-; ENTRADA[30] ; SAIDA_1[30] ; 5.323 ;       ;       ; 5.323 ;
-; ENTRADA[30] ; SAIDA_2[30] ; 5.222 ;       ;       ; 5.222 ;
-; ENTRADA[31] ; SAIDA_1[31] ; 5.143 ;       ;       ; 5.143 ;
-; ENTRADA[31] ; SAIDA_2[31] ; 5.105 ;       ;       ; 5.105 ;
-; Sel         ; SAIDA_1[0]  ;       ; 3.400 ; 3.400 ;       ;
-; Sel         ; SAIDA_1[1]  ;       ; 3.384 ; 3.384 ;       ;
-; Sel         ; SAIDA_1[2]  ;       ; 3.275 ; 3.275 ;       ;
-; Sel         ; SAIDA_1[3]  ;       ; 3.406 ; 3.406 ;       ;
-; Sel         ; SAIDA_1[4]  ;       ; 3.376 ; 3.376 ;       ;
-; Sel         ; SAIDA_1[5]  ;       ; 3.394 ; 3.394 ;       ;
-; Sel         ; SAIDA_1[6]  ;       ; 3.370 ; 3.370 ;       ;
-; Sel         ; SAIDA_1[7]  ;       ; 3.378 ; 3.378 ;       ;
-; Sel         ; SAIDA_1[8]  ;       ; 3.320 ; 3.320 ;       ;
-; Sel         ; SAIDA_1[9]  ;       ; 3.418 ; 3.418 ;       ;
-; Sel         ; SAIDA_1[10] ;       ; 3.343 ; 3.343 ;       ;
-; Sel         ; SAIDA_1[11] ;       ; 3.207 ; 3.207 ;       ;
-; Sel         ; SAIDA_1[12] ;       ; 3.341 ; 3.341 ;       ;
-; Sel         ; SAIDA_1[13] ;       ; 3.353 ; 3.353 ;       ;
-; Sel         ; SAIDA_1[14] ;       ; 3.450 ; 3.450 ;       ;
-; Sel         ; SAIDA_1[15] ;       ; 3.423 ; 3.423 ;       ;
-; Sel         ; SAIDA_1[16] ;       ; 3.791 ; 3.791 ;       ;
-; Sel         ; SAIDA_1[17] ;       ; 3.715 ; 3.715 ;       ;
-; Sel         ; SAIDA_1[18] ;       ; 3.804 ; 3.804 ;       ;
-; Sel         ; SAIDA_1[19] ;       ; 3.676 ; 3.676 ;       ;
-; Sel         ; SAIDA_1[20] ;       ; 3.760 ; 3.760 ;       ;
-; Sel         ; SAIDA_1[21] ;       ; 3.701 ; 3.701 ;       ;
-; Sel         ; SAIDA_1[22] ;       ; 3.840 ; 3.840 ;       ;
-; Sel         ; SAIDA_1[23] ;       ; 3.265 ; 3.265 ;       ;
-; Sel         ; SAIDA_1[24] ;       ; 3.208 ; 3.208 ;       ;
-; Sel         ; SAIDA_1[25] ;       ; 3.402 ; 3.402 ;       ;
-; Sel         ; SAIDA_1[26] ;       ; 3.334 ; 3.334 ;       ;
-; Sel         ; SAIDA_1[27] ;       ; 3.208 ; 3.208 ;       ;
-; Sel         ; SAIDA_1[28] ;       ; 3.404 ; 3.404 ;       ;
-; Sel         ; SAIDA_1[29] ;       ; 3.322 ; 3.322 ;       ;
-; Sel         ; SAIDA_1[30] ;       ; 3.305 ; 3.305 ;       ;
-; Sel         ; SAIDA_1[31] ;       ; 3.675 ; 3.675 ;       ;
-; Sel         ; SAIDA_2[0]  ; 3.291 ;       ;       ; 3.291 ;
-; Sel         ; SAIDA_2[1]  ; 3.391 ;       ;       ; 3.391 ;
-; Sel         ; SAIDA_2[2]  ; 3.288 ;       ;       ; 3.288 ;
-; Sel         ; SAIDA_2[3]  ; 3.284 ;       ;       ; 3.284 ;
-; Sel         ; SAIDA_2[4]  ; 3.402 ;       ;       ; 3.402 ;
-; Sel         ; SAIDA_2[5]  ; 3.258 ;       ;       ; 3.258 ;
-; Sel         ; SAIDA_2[6]  ; 3.391 ;       ;       ; 3.391 ;
-; Sel         ; SAIDA_2[7]  ; 3.408 ;       ;       ; 3.408 ;
-; Sel         ; SAIDA_2[8]  ; 3.225 ;       ;       ; 3.225 ;
-; Sel         ; SAIDA_2[9]  ; 3.312 ;       ;       ; 3.312 ;
-; Sel         ; SAIDA_2[10] ; 3.325 ;       ;       ; 3.325 ;
-; Sel         ; SAIDA_2[11] ; 3.298 ;       ;       ; 3.298 ;
-; Sel         ; SAIDA_2[12] ; 3.289 ;       ;       ; 3.289 ;
-; Sel         ; SAIDA_2[13] ; 3.213 ;       ;       ; 3.213 ;
-; Sel         ; SAIDA_2[14] ; 3.503 ;       ;       ; 3.503 ;
-; Sel         ; SAIDA_2[15] ; 3.453 ;       ;       ; 3.453 ;
-; Sel         ; SAIDA_2[16] ; 3.691 ;       ;       ; 3.691 ;
-; Sel         ; SAIDA_2[17] ; 3.898 ;       ;       ; 3.898 ;
-; Sel         ; SAIDA_2[18] ; 3.552 ;       ;       ; 3.552 ;
-; Sel         ; SAIDA_2[19] ; 3.571 ;       ;       ; 3.571 ;
-; Sel         ; SAIDA_2[20] ; 3.663 ;       ;       ; 3.663 ;
-; Sel         ; SAIDA_2[21] ; 3.723 ;       ;       ; 3.723 ;
-; Sel         ; SAIDA_2[22] ; 3.743 ;       ;       ; 3.743 ;
-; Sel         ; SAIDA_2[23] ; 3.368 ;       ;       ; 3.368 ;
-; Sel         ; SAIDA_2[24] ; 3.428 ;       ;       ; 3.428 ;
-; Sel         ; SAIDA_2[25] ; 3.349 ;       ;       ; 3.349 ;
-; Sel         ; SAIDA_2[26] ; 3.244 ;       ;       ; 3.244 ;
-; Sel         ; SAIDA_2[27] ; 3.356 ;       ;       ; 3.356 ;
-; Sel         ; SAIDA_2[28] ; 3.330 ;       ;       ; 3.330 ;
-; Sel         ; SAIDA_2[29] ; 3.435 ;       ;       ; 3.435 ;
-; Sel         ; SAIDA_2[30] ; 3.221 ;       ;       ; 3.221 ;
-; Sel         ; SAIDA_2[31] ; 3.670 ;       ;       ; 3.670 ;
-+-------------+-------------+-------+-------+-------+-------+
++---------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLOCK'                                                           ;
++--------+--------------+----------------+------------------+-------+------------+------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target           ;
++--------+--------------+----------------+------------------+-------+------------+------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK ; Rise       ; CLOCK            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[0]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[0]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[10]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[10]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[11]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[11]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[12]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[12]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[13]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[13]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[14]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[14]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[15]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[15]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[16]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[16]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[17]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[17]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[18]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[18]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[19]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[19]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[1]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[1]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[20]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[20]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[21]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[21]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[22]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[22]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[23]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[23]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[24]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[24]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[25]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[25]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[26]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[26]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[27]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[27]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[28]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[28]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[29]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[29]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[2]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[2]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[30]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[30]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[31]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[31]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[3]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[3]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[4]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[4]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[5]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[5]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[6]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[6]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[7]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[7]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[8]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[8]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_1[9]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_1[9]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[0]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[0]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[10]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[10]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[11]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[11]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[12]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[12]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[13]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[13]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[14]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[14]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[15]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[15]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[16]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[16]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[17]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[17]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[18]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[18]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[19]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[19]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[1]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[1]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[20]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[20]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[21]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[21]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[22]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[22]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[23]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[23]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[24]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; SAIDA_2[24]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; SAIDA_2[25]~reg0 ;
++--------+--------------+----------------+------------------+-------+------------+------------------+
 
 
-+-----------------------------------------------------------+
-; Minimum Propagation Delay                                 ;
-+-------------+-------------+-------+-------+-------+-------+
-; Input Port  ; Output Port ; RR    ; RF    ; FR    ; FF    ;
-+-------------+-------------+-------+-------+-------+-------+
-; ENTRADA[0]  ; SAIDA_1[0]  ; 3.357 ;       ;       ; 3.357 ;
-; ENTRADA[0]  ; SAIDA_2[0]  ; 3.258 ;       ;       ; 3.258 ;
-; ENTRADA[1]  ; SAIDA_1[1]  ; 5.221 ;       ;       ; 5.221 ;
-; ENTRADA[1]  ; SAIDA_2[1]  ; 5.223 ;       ;       ; 5.223 ;
-; ENTRADA[2]  ; SAIDA_1[2]  ; 5.105 ;       ;       ; 5.105 ;
-; ENTRADA[2]  ; SAIDA_2[2]  ; 5.112 ;       ;       ; 5.112 ;
-; ENTRADA[3]  ; SAIDA_1[3]  ; 5.232 ;       ;       ; 5.232 ;
-; ENTRADA[3]  ; SAIDA_2[3]  ; 5.113 ;       ;       ; 5.113 ;
-; ENTRADA[4]  ; SAIDA_1[4]  ; 5.113 ;       ;       ; 5.113 ;
-; ENTRADA[4]  ; SAIDA_2[4]  ; 5.142 ;       ;       ; 5.142 ;
-; ENTRADA[5]  ; SAIDA_1[5]  ; 5.184 ;       ;       ; 5.184 ;
-; ENTRADA[5]  ; SAIDA_2[5]  ; 5.062 ;       ;       ; 5.062 ;
-; ENTRADA[6]  ; SAIDA_1[6]  ; 5.299 ;       ;       ; 5.299 ;
-; ENTRADA[6]  ; SAIDA_2[6]  ; 5.312 ;       ;       ; 5.312 ;
-; ENTRADA[7]  ; SAIDA_1[7]  ; 5.300 ;       ;       ; 5.300 ;
-; ENTRADA[7]  ; SAIDA_2[7]  ; 5.319 ;       ;       ; 5.319 ;
-; ENTRADA[8]  ; SAIDA_1[8]  ; 5.455 ;       ;       ; 5.455 ;
-; ENTRADA[8]  ; SAIDA_2[8]  ; 5.344 ;       ;       ; 5.344 ;
-; ENTRADA[9]  ; SAIDA_1[9]  ; 5.586 ;       ;       ; 5.586 ;
-; ENTRADA[9]  ; SAIDA_2[9]  ; 5.485 ;       ;       ; 5.485 ;
-; ENTRADA[10] ; SAIDA_1[10] ; 5.414 ;       ;       ; 5.414 ;
-; ENTRADA[10] ; SAIDA_2[10] ; 5.388 ;       ;       ; 5.388 ;
-; ENTRADA[11] ; SAIDA_1[11] ; 5.331 ;       ;       ; 5.331 ;
-; ENTRADA[11] ; SAIDA_2[11] ; 5.428 ;       ;       ; 5.428 ;
-; ENTRADA[12] ; SAIDA_1[12] ; 5.517 ;       ;       ; 5.517 ;
-; ENTRADA[12] ; SAIDA_2[12] ; 5.454 ;       ;       ; 5.454 ;
-; ENTRADA[13] ; SAIDA_1[13] ; 5.476 ;       ;       ; 5.476 ;
-; ENTRADA[13] ; SAIDA_2[13] ; 5.312 ;       ;       ; 5.312 ;
-; ENTRADA[14] ; SAIDA_1[14] ; 5.584 ;       ;       ; 5.584 ;
-; ENTRADA[14] ; SAIDA_2[14] ; 5.651 ;       ;       ; 5.651 ;
-; ENTRADA[15] ; SAIDA_1[15] ; 5.603 ;       ;       ; 5.603 ;
-; ENTRADA[15] ; SAIDA_2[15] ; 5.628 ;       ;       ; 5.628 ;
-; ENTRADA[16] ; SAIDA_1[16] ; 5.239 ;       ;       ; 5.239 ;
-; ENTRADA[16] ; SAIDA_2[16] ; 5.103 ;       ;       ; 5.103 ;
-; ENTRADA[17] ; SAIDA_1[17] ; 5.179 ;       ;       ; 5.179 ;
-; ENTRADA[17] ; SAIDA_2[17] ; 5.347 ;       ;       ; 5.347 ;
-; ENTRADA[18] ; SAIDA_1[18] ; 5.561 ;       ;       ; 5.561 ;
-; ENTRADA[18] ; SAIDA_2[18] ; 5.277 ;       ;       ; 5.277 ;
-; ENTRADA[19] ; SAIDA_1[19] ; 5.441 ;       ;       ; 5.441 ;
-; ENTRADA[19] ; SAIDA_2[19] ; 5.300 ;       ;       ; 5.300 ;
-; ENTRADA[20] ; SAIDA_1[20] ; 5.275 ;       ;       ; 5.275 ;
-; ENTRADA[20] ; SAIDA_2[20] ; 5.190 ;       ;       ; 5.190 ;
-; ENTRADA[21] ; SAIDA_1[21] ; 5.471 ;       ;       ; 5.471 ;
-; ENTRADA[21] ; SAIDA_2[21] ; 5.448 ;       ;       ; 5.448 ;
-; ENTRADA[22] ; SAIDA_1[22] ; 5.298 ;       ;       ; 5.298 ;
-; ENTRADA[22] ; SAIDA_2[22] ; 5.209 ;       ;       ; 5.209 ;
-; ENTRADA[23] ; SAIDA_1[23] ; 5.413 ;       ;       ; 5.413 ;
-; ENTRADA[23] ; SAIDA_2[23] ; 5.474 ;       ;       ; 5.474 ;
-; ENTRADA[24] ; SAIDA_1[24] ; 5.255 ;       ;       ; 5.255 ;
-; ENTRADA[24] ; SAIDA_2[24] ; 5.461 ;       ;       ; 5.461 ;
-; ENTRADA[25] ; SAIDA_1[25] ; 5.730 ;       ;       ; 5.730 ;
-; ENTRADA[25] ; SAIDA_2[25] ; 5.645 ;       ;       ; 5.645 ;
-; ENTRADA[26] ; SAIDA_1[26] ; 5.388 ;       ;       ; 5.388 ;
-; ENTRADA[26] ; SAIDA_2[26] ; 5.277 ;       ;       ; 5.277 ;
-; ENTRADA[27] ; SAIDA_1[27] ; 5.141 ;       ;       ; 5.141 ;
-; ENTRADA[27] ; SAIDA_2[27] ; 5.276 ;       ;       ; 5.276 ;
-; ENTRADA[28] ; SAIDA_1[28] ; 5.675 ;       ;       ; 5.675 ;
-; ENTRADA[28] ; SAIDA_2[28] ; 5.560 ;       ;       ; 5.560 ;
-; ENTRADA[29] ; SAIDA_1[29] ; 5.267 ;       ;       ; 5.267 ;
-; ENTRADA[29] ; SAIDA_2[29] ; 5.340 ;       ;       ; 5.340 ;
-; ENTRADA[30] ; SAIDA_1[30] ; 5.323 ;       ;       ; 5.323 ;
-; ENTRADA[30] ; SAIDA_2[30] ; 5.222 ;       ;       ; 5.222 ;
-; ENTRADA[31] ; SAIDA_1[31] ; 5.143 ;       ;       ; 5.143 ;
-; ENTRADA[31] ; SAIDA_2[31] ; 5.105 ;       ;       ; 5.105 ;
-; Sel         ; SAIDA_1[0]  ;       ; 3.400 ; 3.400 ;       ;
-; Sel         ; SAIDA_1[1]  ;       ; 3.384 ; 3.384 ;       ;
-; Sel         ; SAIDA_1[2]  ;       ; 3.275 ; 3.275 ;       ;
-; Sel         ; SAIDA_1[3]  ;       ; 3.406 ; 3.406 ;       ;
-; Sel         ; SAIDA_1[4]  ;       ; 3.376 ; 3.376 ;       ;
-; Sel         ; SAIDA_1[5]  ;       ; 3.394 ; 3.394 ;       ;
-; Sel         ; SAIDA_1[6]  ;       ; 3.370 ; 3.370 ;       ;
-; Sel         ; SAIDA_1[7]  ;       ; 3.378 ; 3.378 ;       ;
-; Sel         ; SAIDA_1[8]  ;       ; 3.320 ; 3.320 ;       ;
-; Sel         ; SAIDA_1[9]  ;       ; 3.418 ; 3.418 ;       ;
-; Sel         ; SAIDA_1[10] ;       ; 3.343 ; 3.343 ;       ;
-; Sel         ; SAIDA_1[11] ;       ; 3.207 ; 3.207 ;       ;
-; Sel         ; SAIDA_1[12] ;       ; 3.341 ; 3.341 ;       ;
-; Sel         ; SAIDA_1[13] ;       ; 3.353 ; 3.353 ;       ;
-; Sel         ; SAIDA_1[14] ;       ; 3.450 ; 3.450 ;       ;
-; Sel         ; SAIDA_1[15] ;       ; 3.423 ; 3.423 ;       ;
-; Sel         ; SAIDA_1[16] ;       ; 3.791 ; 3.791 ;       ;
-; Sel         ; SAIDA_1[17] ;       ; 3.715 ; 3.715 ;       ;
-; Sel         ; SAIDA_1[18] ;       ; 3.804 ; 3.804 ;       ;
-; Sel         ; SAIDA_1[19] ;       ; 3.676 ; 3.676 ;       ;
-; Sel         ; SAIDA_1[20] ;       ; 3.760 ; 3.760 ;       ;
-; Sel         ; SAIDA_1[21] ;       ; 3.701 ; 3.701 ;       ;
-; Sel         ; SAIDA_1[22] ;       ; 3.840 ; 3.840 ;       ;
-; Sel         ; SAIDA_1[23] ;       ; 3.265 ; 3.265 ;       ;
-; Sel         ; SAIDA_1[24] ;       ; 3.208 ; 3.208 ;       ;
-; Sel         ; SAIDA_1[25] ;       ; 3.402 ; 3.402 ;       ;
-; Sel         ; SAIDA_1[26] ;       ; 3.334 ; 3.334 ;       ;
-; Sel         ; SAIDA_1[27] ;       ; 3.208 ; 3.208 ;       ;
-; Sel         ; SAIDA_1[28] ;       ; 3.404 ; 3.404 ;       ;
-; Sel         ; SAIDA_1[29] ;       ; 3.322 ; 3.322 ;       ;
-; Sel         ; SAIDA_1[30] ;       ; 3.305 ; 3.305 ;       ;
-; Sel         ; SAIDA_1[31] ;       ; 3.675 ; 3.675 ;       ;
-; Sel         ; SAIDA_2[0]  ; 3.291 ;       ;       ; 3.291 ;
-; Sel         ; SAIDA_2[1]  ; 3.391 ;       ;       ; 3.391 ;
-; Sel         ; SAIDA_2[2]  ; 3.288 ;       ;       ; 3.288 ;
-; Sel         ; SAIDA_2[3]  ; 3.284 ;       ;       ; 3.284 ;
-; Sel         ; SAIDA_2[4]  ; 3.402 ;       ;       ; 3.402 ;
-; Sel         ; SAIDA_2[5]  ; 3.258 ;       ;       ; 3.258 ;
-; Sel         ; SAIDA_2[6]  ; 3.391 ;       ;       ; 3.391 ;
-; Sel         ; SAIDA_2[7]  ; 3.408 ;       ;       ; 3.408 ;
-; Sel         ; SAIDA_2[8]  ; 3.225 ;       ;       ; 3.225 ;
-; Sel         ; SAIDA_2[9]  ; 3.312 ;       ;       ; 3.312 ;
-; Sel         ; SAIDA_2[10] ; 3.325 ;       ;       ; 3.325 ;
-; Sel         ; SAIDA_2[11] ; 3.298 ;       ;       ; 3.298 ;
-; Sel         ; SAIDA_2[12] ; 3.289 ;       ;       ; 3.289 ;
-; Sel         ; SAIDA_2[13] ; 3.213 ;       ;       ; 3.213 ;
-; Sel         ; SAIDA_2[14] ; 3.503 ;       ;       ; 3.503 ;
-; Sel         ; SAIDA_2[15] ; 3.453 ;       ;       ; 3.453 ;
-; Sel         ; SAIDA_2[16] ; 3.691 ;       ;       ; 3.691 ;
-; Sel         ; SAIDA_2[17] ; 3.898 ;       ;       ; 3.898 ;
-; Sel         ; SAIDA_2[18] ; 3.552 ;       ;       ; 3.552 ;
-; Sel         ; SAIDA_2[19] ; 3.571 ;       ;       ; 3.571 ;
-; Sel         ; SAIDA_2[20] ; 3.663 ;       ;       ; 3.663 ;
-; Sel         ; SAIDA_2[21] ; 3.723 ;       ;       ; 3.723 ;
-; Sel         ; SAIDA_2[22] ; 3.743 ;       ;       ; 3.743 ;
-; Sel         ; SAIDA_2[23] ; 3.368 ;       ;       ; 3.368 ;
-; Sel         ; SAIDA_2[24] ; 3.428 ;       ;       ; 3.428 ;
-; Sel         ; SAIDA_2[25] ; 3.349 ;       ;       ; 3.349 ;
-; Sel         ; SAIDA_2[26] ; 3.244 ;       ;       ; 3.244 ;
-; Sel         ; SAIDA_2[27] ; 3.356 ;       ;       ; 3.356 ;
-; Sel         ; SAIDA_2[28] ; 3.330 ;       ;       ; 3.330 ;
-; Sel         ; SAIDA_2[29] ; 3.435 ;       ;       ; 3.435 ;
-; Sel         ; SAIDA_2[30] ; 3.221 ;       ;       ; 3.221 ;
-; Sel         ; SAIDA_2[31] ; 3.670 ;       ;       ; 3.670 ;
-+-------------+-------------+-------+-------+-------+-------+
++--------------------------------------------------------------------------+
+; Setup Times                                                              ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; ENTRADA[*]   ; CLOCK      ; 2.118 ; 2.118 ; Rise       ; CLOCK           ;
+;  ENTRADA[0]  ; CLOCK      ; 0.193 ; 0.193 ; Rise       ; CLOCK           ;
+;  ENTRADA[1]  ; CLOCK      ; 1.968 ; 1.968 ; Rise       ; CLOCK           ;
+;  ENTRADA[2]  ; CLOCK      ; 1.829 ; 1.829 ; Rise       ; CLOCK           ;
+;  ENTRADA[3]  ; CLOCK      ; 1.857 ; 1.857 ; Rise       ; CLOCK           ;
+;  ENTRADA[4]  ; CLOCK      ; 1.921 ; 1.921 ; Rise       ; CLOCK           ;
+;  ENTRADA[5]  ; CLOCK      ; 1.795 ; 1.795 ; Rise       ; CLOCK           ;
+;  ENTRADA[6]  ; CLOCK      ; 1.802 ; 1.802 ; Rise       ; CLOCK           ;
+;  ENTRADA[7]  ; CLOCK      ; 1.831 ; 1.831 ; Rise       ; CLOCK           ;
+;  ENTRADA[8]  ; CLOCK      ; 1.814 ; 1.814 ; Rise       ; CLOCK           ;
+;  ENTRADA[9]  ; CLOCK      ; 2.118 ; 2.118 ; Rise       ; CLOCK           ;
+;  ENTRADA[10] ; CLOCK      ; 1.915 ; 1.915 ; Rise       ; CLOCK           ;
+;  ENTRADA[11] ; CLOCK      ; 1.886 ; 1.886 ; Rise       ; CLOCK           ;
+;  ENTRADA[12] ; CLOCK      ; 1.995 ; 1.995 ; Rise       ; CLOCK           ;
+;  ENTRADA[13] ; CLOCK      ; 1.998 ; 1.998 ; Rise       ; CLOCK           ;
+;  ENTRADA[14] ; CLOCK      ; 1.909 ; 1.909 ; Rise       ; CLOCK           ;
+;  ENTRADA[15] ; CLOCK      ; 1.831 ; 1.831 ; Rise       ; CLOCK           ;
+;  ENTRADA[16] ; CLOCK      ; 1.904 ; 1.904 ; Rise       ; CLOCK           ;
+;  ENTRADA[17] ; CLOCK      ; 1.797 ; 1.797 ; Rise       ; CLOCK           ;
+;  ENTRADA[18] ; CLOCK      ; 1.766 ; 1.766 ; Rise       ; CLOCK           ;
+;  ENTRADA[19] ; CLOCK      ; 1.877 ; 1.877 ; Rise       ; CLOCK           ;
+;  ENTRADA[20] ; CLOCK      ; 1.843 ; 1.843 ; Rise       ; CLOCK           ;
+;  ENTRADA[21] ; CLOCK      ; 1.747 ; 1.747 ; Rise       ; CLOCK           ;
+;  ENTRADA[22] ; CLOCK      ; 1.748 ; 1.748 ; Rise       ; CLOCK           ;
+;  ENTRADA[23] ; CLOCK      ; 1.879 ; 1.879 ; Rise       ; CLOCK           ;
+;  ENTRADA[24] ; CLOCK      ; 1.768 ; 1.768 ; Rise       ; CLOCK           ;
+;  ENTRADA[25] ; CLOCK      ; 1.889 ; 1.889 ; Rise       ; CLOCK           ;
+;  ENTRADA[26] ; CLOCK      ; 1.923 ; 1.923 ; Rise       ; CLOCK           ;
+;  ENTRADA[27] ; CLOCK      ; 1.907 ; 1.907 ; Rise       ; CLOCK           ;
+;  ENTRADA[28] ; CLOCK      ; 1.909 ; 1.909 ; Rise       ; CLOCK           ;
+;  ENTRADA[29] ; CLOCK      ; 1.760 ; 1.760 ; Rise       ; CLOCK           ;
+;  ENTRADA[30] ; CLOCK      ; 1.934 ; 1.934 ; Rise       ; CLOCK           ;
+;  ENTRADA[31] ; CLOCK      ; 1.804 ; 1.804 ; Rise       ; CLOCK           ;
+; SEL          ; CLOCK      ; 0.155 ; 0.155 ; Rise       ; CLOCK           ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Hold Times                                                                 ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; ENTRADA[*]   ; CLOCK      ; -0.068 ; -0.068 ; Rise       ; CLOCK           ;
+;  ENTRADA[0]  ; CLOCK      ; -0.068 ; -0.068 ; Rise       ; CLOCK           ;
+;  ENTRADA[1]  ; CLOCK      ; -1.848 ; -1.848 ; Rise       ; CLOCK           ;
+;  ENTRADA[2]  ; CLOCK      ; -1.706 ; -1.706 ; Rise       ; CLOCK           ;
+;  ENTRADA[3]  ; CLOCK      ; -1.737 ; -1.737 ; Rise       ; CLOCK           ;
+;  ENTRADA[4]  ; CLOCK      ; -1.796 ; -1.796 ; Rise       ; CLOCK           ;
+;  ENTRADA[5]  ; CLOCK      ; -1.668 ; -1.668 ; Rise       ; CLOCK           ;
+;  ENTRADA[6]  ; CLOCK      ; -1.681 ; -1.681 ; Rise       ; CLOCK           ;
+;  ENTRADA[7]  ; CLOCK      ; -1.708 ; -1.708 ; Rise       ; CLOCK           ;
+;  ENTRADA[8]  ; CLOCK      ; -1.693 ; -1.693 ; Rise       ; CLOCK           ;
+;  ENTRADA[9]  ; CLOCK      ; -1.996 ; -1.996 ; Rise       ; CLOCK           ;
+;  ENTRADA[10] ; CLOCK      ; -1.794 ; -1.794 ; Rise       ; CLOCK           ;
+;  ENTRADA[11] ; CLOCK      ; -1.765 ; -1.765 ; Rise       ; CLOCK           ;
+;  ENTRADA[12] ; CLOCK      ; -1.869 ; -1.869 ; Rise       ; CLOCK           ;
+;  ENTRADA[13] ; CLOCK      ; -1.875 ; -1.875 ; Rise       ; CLOCK           ;
+;  ENTRADA[14] ; CLOCK      ; -1.788 ; -1.788 ; Rise       ; CLOCK           ;
+;  ENTRADA[15] ; CLOCK      ; -1.710 ; -1.710 ; Rise       ; CLOCK           ;
+;  ENTRADA[16] ; CLOCK      ; -1.781 ; -1.781 ; Rise       ; CLOCK           ;
+;  ENTRADA[17] ; CLOCK      ; -1.675 ; -1.675 ; Rise       ; CLOCK           ;
+;  ENTRADA[18] ; CLOCK      ; -1.645 ; -1.645 ; Rise       ; CLOCK           ;
+;  ENTRADA[19] ; CLOCK      ; -1.756 ; -1.756 ; Rise       ; CLOCK           ;
+;  ENTRADA[20] ; CLOCK      ; -1.722 ; -1.722 ; Rise       ; CLOCK           ;
+;  ENTRADA[21] ; CLOCK      ; -1.626 ; -1.626 ; Rise       ; CLOCK           ;
+;  ENTRADA[22] ; CLOCK      ; -1.626 ; -1.626 ; Rise       ; CLOCK           ;
+;  ENTRADA[23] ; CLOCK      ; -1.758 ; -1.758 ; Rise       ; CLOCK           ;
+;  ENTRADA[24] ; CLOCK      ; -1.646 ; -1.646 ; Rise       ; CLOCK           ;
+;  ENTRADA[25] ; CLOCK      ; -1.768 ; -1.768 ; Rise       ; CLOCK           ;
+;  ENTRADA[26] ; CLOCK      ; -1.803 ; -1.803 ; Rise       ; CLOCK           ;
+;  ENTRADA[27] ; CLOCK      ; -1.787 ; -1.787 ; Rise       ; CLOCK           ;
+;  ENTRADA[28] ; CLOCK      ; -1.783 ; -1.783 ; Rise       ; CLOCK           ;
+;  ENTRADA[29] ; CLOCK      ; -1.639 ; -1.639 ; Rise       ; CLOCK           ;
+;  ENTRADA[30] ; CLOCK      ; -1.811 ; -1.811 ; Rise       ; CLOCK           ;
+;  ENTRADA[31] ; CLOCK      ; -1.682 ; -1.682 ; Rise       ; CLOCK           ;
+; SEL          ; CLOCK      ; 0.668  ; 0.668  ; Rise       ; CLOCK           ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; SAIDA_1[*]   ; CLOCK      ; 3.887 ; 3.887 ; Rise       ; CLOCK           ;
+;  SAIDA_1[0]  ; CLOCK      ; 3.751 ; 3.751 ; Rise       ; CLOCK           ;
+;  SAIDA_1[1]  ; CLOCK      ; 3.467 ; 3.467 ; Rise       ; CLOCK           ;
+;  SAIDA_1[2]  ; CLOCK      ; 3.738 ; 3.738 ; Rise       ; CLOCK           ;
+;  SAIDA_1[3]  ; CLOCK      ; 3.746 ; 3.746 ; Rise       ; CLOCK           ;
+;  SAIDA_1[4]  ; CLOCK      ; 3.583 ; 3.583 ; Rise       ; CLOCK           ;
+;  SAIDA_1[5]  ; CLOCK      ; 3.437 ; 3.437 ; Rise       ; CLOCK           ;
+;  SAIDA_1[6]  ; CLOCK      ; 3.552 ; 3.552 ; Rise       ; CLOCK           ;
+;  SAIDA_1[7]  ; CLOCK      ; 3.581 ; 3.581 ; Rise       ; CLOCK           ;
+;  SAIDA_1[8]  ; CLOCK      ; 3.617 ; 3.617 ; Rise       ; CLOCK           ;
+;  SAIDA_1[9]  ; CLOCK      ; 3.655 ; 3.655 ; Rise       ; CLOCK           ;
+;  SAIDA_1[10] ; CLOCK      ; 3.861 ; 3.861 ; Rise       ; CLOCK           ;
+;  SAIDA_1[11] ; CLOCK      ; 3.634 ; 3.634 ; Rise       ; CLOCK           ;
+;  SAIDA_1[12] ; CLOCK      ; 3.887 ; 3.887 ; Rise       ; CLOCK           ;
+;  SAIDA_1[13] ; CLOCK      ; 3.875 ; 3.875 ; Rise       ; CLOCK           ;
+;  SAIDA_1[14] ; CLOCK      ; 3.871 ; 3.871 ; Rise       ; CLOCK           ;
+;  SAIDA_1[15] ; CLOCK      ; 3.758 ; 3.758 ; Rise       ; CLOCK           ;
+;  SAIDA_1[16] ; CLOCK      ; 3.515 ; 3.515 ; Rise       ; CLOCK           ;
+;  SAIDA_1[17] ; CLOCK      ; 3.467 ; 3.467 ; Rise       ; CLOCK           ;
+;  SAIDA_1[18] ; CLOCK      ; 3.457 ; 3.457 ; Rise       ; CLOCK           ;
+;  SAIDA_1[19] ; CLOCK      ; 3.642 ; 3.642 ; Rise       ; CLOCK           ;
+;  SAIDA_1[20] ; CLOCK      ; 3.634 ; 3.634 ; Rise       ; CLOCK           ;
+;  SAIDA_1[21] ; CLOCK      ; 3.700 ; 3.700 ; Rise       ; CLOCK           ;
+;  SAIDA_1[22] ; CLOCK      ; 3.584 ; 3.584 ; Rise       ; CLOCK           ;
+;  SAIDA_1[23] ; CLOCK      ; 3.817 ; 3.817 ; Rise       ; CLOCK           ;
+;  SAIDA_1[24] ; CLOCK      ; 3.645 ; 3.645 ; Rise       ; CLOCK           ;
+;  SAIDA_1[25] ; CLOCK      ; 3.747 ; 3.747 ; Rise       ; CLOCK           ;
+;  SAIDA_1[26] ; CLOCK      ; 3.733 ; 3.733 ; Rise       ; CLOCK           ;
+;  SAIDA_1[27] ; CLOCK      ; 3.838 ; 3.838 ; Rise       ; CLOCK           ;
+;  SAIDA_1[28] ; CLOCK      ; 3.626 ; 3.626 ; Rise       ; CLOCK           ;
+;  SAIDA_1[29] ; CLOCK      ; 3.818 ; 3.818 ; Rise       ; CLOCK           ;
+;  SAIDA_1[30] ; CLOCK      ; 3.631 ; 3.631 ; Rise       ; CLOCK           ;
+;  SAIDA_1[31] ; CLOCK      ; 3.582 ; 3.582 ; Rise       ; CLOCK           ;
+; SAIDA_2[*]   ; CLOCK      ; 3.879 ; 3.879 ; Rise       ; CLOCK           ;
+;  SAIDA_2[0]  ; CLOCK      ; 3.764 ; 3.764 ; Rise       ; CLOCK           ;
+;  SAIDA_2[1]  ; CLOCK      ; 3.744 ; 3.744 ; Rise       ; CLOCK           ;
+;  SAIDA_2[2]  ; CLOCK      ; 3.437 ; 3.437 ; Rise       ; CLOCK           ;
+;  SAIDA_2[3]  ; CLOCK      ; 3.598 ; 3.598 ; Rise       ; CLOCK           ;
+;  SAIDA_2[4]  ; CLOCK      ; 3.764 ; 3.764 ; Rise       ; CLOCK           ;
+;  SAIDA_2[5]  ; CLOCK      ; 3.565 ; 3.565 ; Rise       ; CLOCK           ;
+;  SAIDA_2[6]  ; CLOCK      ; 3.651 ; 3.651 ; Rise       ; CLOCK           ;
+;  SAIDA_2[7]  ; CLOCK      ; 3.470 ; 3.470 ; Rise       ; CLOCK           ;
+;  SAIDA_2[8]  ; CLOCK      ; 3.741 ; 3.741 ; Rise       ; CLOCK           ;
+;  SAIDA_2[9]  ; CLOCK      ; 3.656 ; 3.656 ; Rise       ; CLOCK           ;
+;  SAIDA_2[10] ; CLOCK      ; 3.687 ; 3.687 ; Rise       ; CLOCK           ;
+;  SAIDA_2[11] ; CLOCK      ; 3.677 ; 3.677 ; Rise       ; CLOCK           ;
+;  SAIDA_2[12] ; CLOCK      ; 3.755 ; 3.755 ; Rise       ; CLOCK           ;
+;  SAIDA_2[13] ; CLOCK      ; 3.862 ; 3.862 ; Rise       ; CLOCK           ;
+;  SAIDA_2[14] ; CLOCK      ; 3.754 ; 3.754 ; Rise       ; CLOCK           ;
+;  SAIDA_2[15] ; CLOCK      ; 3.879 ; 3.879 ; Rise       ; CLOCK           ;
+;  SAIDA_2[16] ; CLOCK      ; 3.486 ; 3.486 ; Rise       ; CLOCK           ;
+;  SAIDA_2[17] ; CLOCK      ; 3.622 ; 3.622 ; Rise       ; CLOCK           ;
+;  SAIDA_2[18] ; CLOCK      ; 3.571 ; 3.571 ; Rise       ; CLOCK           ;
+;  SAIDA_2[19] ; CLOCK      ; 3.599 ; 3.599 ; Rise       ; CLOCK           ;
+;  SAIDA_2[20] ; CLOCK      ; 3.560 ; 3.560 ; Rise       ; CLOCK           ;
+;  SAIDA_2[21] ; CLOCK      ; 3.613 ; 3.613 ; Rise       ; CLOCK           ;
+;  SAIDA_2[22] ; CLOCK      ; 3.594 ; 3.594 ; Rise       ; CLOCK           ;
+;  SAIDA_2[23] ; CLOCK      ; 3.728 ; 3.728 ; Rise       ; CLOCK           ;
+;  SAIDA_2[24] ; CLOCK      ; 3.747 ; 3.747 ; Rise       ; CLOCK           ;
+;  SAIDA_2[25] ; CLOCK      ; 3.742 ; 3.742 ; Rise       ; CLOCK           ;
+;  SAIDA_2[26] ; CLOCK      ; 3.625 ; 3.625 ; Rise       ; CLOCK           ;
+;  SAIDA_2[27] ; CLOCK      ; 3.625 ; 3.625 ; Rise       ; CLOCK           ;
+;  SAIDA_2[28] ; CLOCK      ; 3.722 ; 3.722 ; Rise       ; CLOCK           ;
+;  SAIDA_2[29] ; CLOCK      ; 3.742 ; 3.742 ; Rise       ; CLOCK           ;
+;  SAIDA_2[30] ; CLOCK      ; 3.651 ; 3.651 ; Rise       ; CLOCK           ;
+;  SAIDA_2[31] ; CLOCK      ; 3.626 ; 3.626 ; Rise       ; CLOCK           ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; SAIDA_1[*]   ; CLOCK      ; 3.437 ; 3.437 ; Rise       ; CLOCK           ;
+;  SAIDA_1[0]  ; CLOCK      ; 3.751 ; 3.751 ; Rise       ; CLOCK           ;
+;  SAIDA_1[1]  ; CLOCK      ; 3.467 ; 3.467 ; Rise       ; CLOCK           ;
+;  SAIDA_1[2]  ; CLOCK      ; 3.738 ; 3.738 ; Rise       ; CLOCK           ;
+;  SAIDA_1[3]  ; CLOCK      ; 3.746 ; 3.746 ; Rise       ; CLOCK           ;
+;  SAIDA_1[4]  ; CLOCK      ; 3.583 ; 3.583 ; Rise       ; CLOCK           ;
+;  SAIDA_1[5]  ; CLOCK      ; 3.437 ; 3.437 ; Rise       ; CLOCK           ;
+;  SAIDA_1[6]  ; CLOCK      ; 3.552 ; 3.552 ; Rise       ; CLOCK           ;
+;  SAIDA_1[7]  ; CLOCK      ; 3.581 ; 3.581 ; Rise       ; CLOCK           ;
+;  SAIDA_1[8]  ; CLOCK      ; 3.617 ; 3.617 ; Rise       ; CLOCK           ;
+;  SAIDA_1[9]  ; CLOCK      ; 3.655 ; 3.655 ; Rise       ; CLOCK           ;
+;  SAIDA_1[10] ; CLOCK      ; 3.861 ; 3.861 ; Rise       ; CLOCK           ;
+;  SAIDA_1[11] ; CLOCK      ; 3.634 ; 3.634 ; Rise       ; CLOCK           ;
+;  SAIDA_1[12] ; CLOCK      ; 3.887 ; 3.887 ; Rise       ; CLOCK           ;
+;  SAIDA_1[13] ; CLOCK      ; 3.875 ; 3.875 ; Rise       ; CLOCK           ;
+;  SAIDA_1[14] ; CLOCK      ; 3.871 ; 3.871 ; Rise       ; CLOCK           ;
+;  SAIDA_1[15] ; CLOCK      ; 3.758 ; 3.758 ; Rise       ; CLOCK           ;
+;  SAIDA_1[16] ; CLOCK      ; 3.515 ; 3.515 ; Rise       ; CLOCK           ;
+;  SAIDA_1[17] ; CLOCK      ; 3.467 ; 3.467 ; Rise       ; CLOCK           ;
+;  SAIDA_1[18] ; CLOCK      ; 3.457 ; 3.457 ; Rise       ; CLOCK           ;
+;  SAIDA_1[19] ; CLOCK      ; 3.642 ; 3.642 ; Rise       ; CLOCK           ;
+;  SAIDA_1[20] ; CLOCK      ; 3.634 ; 3.634 ; Rise       ; CLOCK           ;
+;  SAIDA_1[21] ; CLOCK      ; 3.700 ; 3.700 ; Rise       ; CLOCK           ;
+;  SAIDA_1[22] ; CLOCK      ; 3.584 ; 3.584 ; Rise       ; CLOCK           ;
+;  SAIDA_1[23] ; CLOCK      ; 3.817 ; 3.817 ; Rise       ; CLOCK           ;
+;  SAIDA_1[24] ; CLOCK      ; 3.645 ; 3.645 ; Rise       ; CLOCK           ;
+;  SAIDA_1[25] ; CLOCK      ; 3.747 ; 3.747 ; Rise       ; CLOCK           ;
+;  SAIDA_1[26] ; CLOCK      ; 3.733 ; 3.733 ; Rise       ; CLOCK           ;
+;  SAIDA_1[27] ; CLOCK      ; 3.838 ; 3.838 ; Rise       ; CLOCK           ;
+;  SAIDA_1[28] ; CLOCK      ; 3.626 ; 3.626 ; Rise       ; CLOCK           ;
+;  SAIDA_1[29] ; CLOCK      ; 3.818 ; 3.818 ; Rise       ; CLOCK           ;
+;  SAIDA_1[30] ; CLOCK      ; 3.631 ; 3.631 ; Rise       ; CLOCK           ;
+;  SAIDA_1[31] ; CLOCK      ; 3.582 ; 3.582 ; Rise       ; CLOCK           ;
+; SAIDA_2[*]   ; CLOCK      ; 3.437 ; 3.437 ; Rise       ; CLOCK           ;
+;  SAIDA_2[0]  ; CLOCK      ; 3.764 ; 3.764 ; Rise       ; CLOCK           ;
+;  SAIDA_2[1]  ; CLOCK      ; 3.744 ; 3.744 ; Rise       ; CLOCK           ;
+;  SAIDA_2[2]  ; CLOCK      ; 3.437 ; 3.437 ; Rise       ; CLOCK           ;
+;  SAIDA_2[3]  ; CLOCK      ; 3.598 ; 3.598 ; Rise       ; CLOCK           ;
+;  SAIDA_2[4]  ; CLOCK      ; 3.764 ; 3.764 ; Rise       ; CLOCK           ;
+;  SAIDA_2[5]  ; CLOCK      ; 3.565 ; 3.565 ; Rise       ; CLOCK           ;
+;  SAIDA_2[6]  ; CLOCK      ; 3.651 ; 3.651 ; Rise       ; CLOCK           ;
+;  SAIDA_2[7]  ; CLOCK      ; 3.470 ; 3.470 ; Rise       ; CLOCK           ;
+;  SAIDA_2[8]  ; CLOCK      ; 3.741 ; 3.741 ; Rise       ; CLOCK           ;
+;  SAIDA_2[9]  ; CLOCK      ; 3.656 ; 3.656 ; Rise       ; CLOCK           ;
+;  SAIDA_2[10] ; CLOCK      ; 3.687 ; 3.687 ; Rise       ; CLOCK           ;
+;  SAIDA_2[11] ; CLOCK      ; 3.677 ; 3.677 ; Rise       ; CLOCK           ;
+;  SAIDA_2[12] ; CLOCK      ; 3.755 ; 3.755 ; Rise       ; CLOCK           ;
+;  SAIDA_2[13] ; CLOCK      ; 3.862 ; 3.862 ; Rise       ; CLOCK           ;
+;  SAIDA_2[14] ; CLOCK      ; 3.754 ; 3.754 ; Rise       ; CLOCK           ;
+;  SAIDA_2[15] ; CLOCK      ; 3.879 ; 3.879 ; Rise       ; CLOCK           ;
+;  SAIDA_2[16] ; CLOCK      ; 3.486 ; 3.486 ; Rise       ; CLOCK           ;
+;  SAIDA_2[17] ; CLOCK      ; 3.622 ; 3.622 ; Rise       ; CLOCK           ;
+;  SAIDA_2[18] ; CLOCK      ; 3.571 ; 3.571 ; Rise       ; CLOCK           ;
+;  SAIDA_2[19] ; CLOCK      ; 3.599 ; 3.599 ; Rise       ; CLOCK           ;
+;  SAIDA_2[20] ; CLOCK      ; 3.560 ; 3.560 ; Rise       ; CLOCK           ;
+;  SAIDA_2[21] ; CLOCK      ; 3.613 ; 3.613 ; Rise       ; CLOCK           ;
+;  SAIDA_2[22] ; CLOCK      ; 3.594 ; 3.594 ; Rise       ; CLOCK           ;
+;  SAIDA_2[23] ; CLOCK      ; 3.728 ; 3.728 ; Rise       ; CLOCK           ;
+;  SAIDA_2[24] ; CLOCK      ; 3.747 ; 3.747 ; Rise       ; CLOCK           ;
+;  SAIDA_2[25] ; CLOCK      ; 3.742 ; 3.742 ; Rise       ; CLOCK           ;
+;  SAIDA_2[26] ; CLOCK      ; 3.625 ; 3.625 ; Rise       ; CLOCK           ;
+;  SAIDA_2[27] ; CLOCK      ; 3.625 ; 3.625 ; Rise       ; CLOCK           ;
+;  SAIDA_2[28] ; CLOCK      ; 3.722 ; 3.722 ; Rise       ; CLOCK           ;
+;  SAIDA_2[29] ; CLOCK      ; 3.742 ; 3.742 ; Rise       ; CLOCK           ;
+;  SAIDA_2[30] ; CLOCK      ; 3.651 ; 3.651 ; Rise       ; CLOCK           ;
+;  SAIDA_2[31] ; CLOCK      ; 3.626 ; 3.626 ; Rise       ; CLOCK           ;
++--------------+------------+-------+-------+------------+-----------------+
 
 
 +----------------------------------------------------------------------------+
@@ -700,281 +853,243 @@ No paths to report.
 +------------------+-------+------+----------+---------+---------------------+
 ; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+-------+------+----------+---------+---------------------+
-; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
-; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; -1.380              ;
+;  CLOCK           ; N/A   ; N/A  ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; -65.38              ;
+;  CLOCK           ; N/A   ; N/A  ; N/A      ; N/A     ; -65.380             ;
 +------------------+-------+------+----------+---------+---------------------+
 
 
-+-------------------------------------------------------------+
-; Progagation Delay                                           ;
-+-------------+-------------+--------+-------+-------+--------+
-; Input Port  ; Output Port ; RR     ; RF    ; FR    ; FF     ;
-+-------------+-------------+--------+-------+-------+--------+
-; ENTRADA[0]  ; SAIDA_1[0]  ; 6.476  ;       ;       ; 6.476  ;
-; ENTRADA[0]  ; SAIDA_2[0]  ; 6.296  ;       ;       ; 6.296  ;
-; ENTRADA[1]  ; SAIDA_1[1]  ; 9.300  ;       ;       ; 9.300  ;
-; ENTRADA[1]  ; SAIDA_2[1]  ; 9.300  ;       ;       ; 9.300  ;
-; ENTRADA[2]  ; SAIDA_1[2]  ; 9.024  ;       ;       ; 9.024  ;
-; ENTRADA[2]  ; SAIDA_2[2]  ; 9.029  ;       ;       ; 9.029  ;
-; ENTRADA[3]  ; SAIDA_1[3]  ; 9.316  ;       ;       ; 9.316  ;
-; ENTRADA[3]  ; SAIDA_2[3]  ; 9.041  ;       ;       ; 9.041  ;
-; ENTRADA[4]  ; SAIDA_1[4]  ; 9.130  ;       ;       ; 9.130  ;
-; ENTRADA[4]  ; SAIDA_2[4]  ; 9.132  ;       ;       ; 9.132  ;
-; ENTRADA[5]  ; SAIDA_1[5]  ; 9.259  ;       ;       ; 9.259  ;
-; ENTRADA[5]  ; SAIDA_2[5]  ; 8.976  ;       ;       ; 8.976  ;
-; ENTRADA[6]  ; SAIDA_1[6]  ; 9.484  ;       ;       ; 9.484  ;
-; ENTRADA[6]  ; SAIDA_2[6]  ; 9.476  ;       ;       ; 9.476  ;
-; ENTRADA[7]  ; SAIDA_1[7]  ; 9.481  ;       ;       ; 9.481  ;
-; ENTRADA[7]  ; SAIDA_2[7]  ; 9.484  ;       ;       ; 9.484  ;
-; ENTRADA[8]  ; SAIDA_1[8]  ; 9.782  ;       ;       ; 9.782  ;
-; ENTRADA[8]  ; SAIDA_2[8]  ; 9.538  ;       ;       ; 9.538  ;
-; ENTRADA[9]  ; SAIDA_1[9]  ; 10.028 ;       ;       ; 10.028 ;
-; ENTRADA[9]  ; SAIDA_2[9]  ; 9.800  ;       ;       ; 9.800  ;
-; ENTRADA[10] ; SAIDA_1[10] ; 9.732  ;       ;       ; 9.732  ;
-; ENTRADA[10] ; SAIDA_2[10] ; 9.683  ;       ;       ; 9.683  ;
-; ENTRADA[11] ; SAIDA_1[11] ; 9.527  ;       ;       ; 9.527  ;
-; ENTRADA[11] ; SAIDA_2[11] ; 9.744  ;       ;       ; 9.744  ;
-; ENTRADA[12] ; SAIDA_1[12] ; 9.941  ;       ;       ; 9.941  ;
-; ENTRADA[12] ; SAIDA_2[12] ; 9.838  ;       ;       ; 9.838  ;
-; ENTRADA[13] ; SAIDA_1[13] ; 9.784  ;       ;       ; 9.784  ;
-; ENTRADA[13] ; SAIDA_2[13] ; 9.487  ;       ;       ; 9.487  ;
-; ENTRADA[14] ; SAIDA_1[14] ; 10.024 ;       ;       ; 10.024 ;
-; ENTRADA[14] ; SAIDA_2[14] ; 10.215 ;       ;       ; 10.215 ;
-; ENTRADA[15] ; SAIDA_1[15] ; 10.080 ;       ;       ; 10.080 ;
-; ENTRADA[15] ; SAIDA_2[15] ; 10.094 ;       ;       ; 10.094 ;
-; ENTRADA[16] ; SAIDA_1[16] ; 9.329  ;       ;       ; 9.329  ;
-; ENTRADA[16] ; SAIDA_2[16] ; 9.110  ;       ;       ; 9.110  ;
-; ENTRADA[17] ; SAIDA_1[17] ; 9.232  ;       ;       ; 9.232  ;
-; ENTRADA[17] ; SAIDA_2[17] ; 9.507  ;       ;       ; 9.507  ;
-; ENTRADA[18] ; SAIDA_1[18] ; 9.917  ;       ;       ; 9.917  ;
-; ENTRADA[18] ; SAIDA_2[18] ; 9.380  ;       ;       ; 9.380  ;
-; ENTRADA[19] ; SAIDA_1[19] ; 9.717  ;       ;       ; 9.717  ;
-; ENTRADA[19] ; SAIDA_2[19] ; 9.418  ;       ;       ; 9.418  ;
-; ENTRADA[20] ; SAIDA_1[20] ; 9.388  ;       ;       ; 9.388  ;
-; ENTRADA[20] ; SAIDA_2[20] ; 9.228  ;       ;       ; 9.228  ;
-; ENTRADA[21] ; SAIDA_1[21] ; 9.847  ;       ;       ; 9.847  ;
-; ENTRADA[21] ; SAIDA_2[21] ; 9.741  ;       ;       ; 9.741  ;
-; ENTRADA[22] ; SAIDA_1[22] ; 9.467  ;       ;       ; 9.467  ;
-; ENTRADA[22] ; SAIDA_2[22] ; 9.293  ;       ;       ; 9.293  ;
-; ENTRADA[23] ; SAIDA_1[23] ; 9.798  ;       ;       ; 9.798  ;
-; ENTRADA[23] ; SAIDA_2[23] ; 9.863  ;       ;       ; 9.863  ;
-; ENTRADA[24] ; SAIDA_1[24] ; 9.398  ;       ;       ; 9.398  ;
-; ENTRADA[24] ; SAIDA_2[24] ; 9.854  ;       ;       ; 9.854  ;
-; ENTRADA[25] ; SAIDA_1[25] ; 10.435 ;       ;       ; 10.435 ;
-; ENTRADA[25] ; SAIDA_2[25] ; 10.230 ;       ;       ; 10.230 ;
-; ENTRADA[26] ; SAIDA_1[26] ; 9.674  ;       ;       ; 9.674  ;
-; ENTRADA[26] ; SAIDA_2[26] ; 9.442  ;       ;       ; 9.442  ;
-; ENTRADA[27] ; SAIDA_1[27] ; 9.149  ;       ;       ; 9.149  ;
-; ENTRADA[27] ; SAIDA_2[27] ; 9.409  ;       ;       ; 9.409  ;
-; ENTRADA[28] ; SAIDA_1[28] ; 10.354 ;       ;       ; 10.354 ;
-; ENTRADA[28] ; SAIDA_2[28] ; 10.114 ;       ;       ; 10.114 ;
-; ENTRADA[29] ; SAIDA_1[29] ; 9.399  ;       ;       ; 9.399  ;
-; ENTRADA[29] ; SAIDA_2[29] ; 9.598  ;       ;       ; 9.598  ;
-; ENTRADA[30] ; SAIDA_1[30] ; 9.585  ;       ;       ; 9.585  ;
-; ENTRADA[30] ; SAIDA_2[30] ; 9.361  ;       ;       ; 9.361  ;
-; ENTRADA[31] ; SAIDA_1[31] ; 9.178  ;       ;       ; 9.178  ;
-; ENTRADA[31] ; SAIDA_2[31] ; 9.128  ;       ;       ; 9.128  ;
-; Sel         ; SAIDA_1[0]  ;        ; 6.546 ; 6.546 ;        ;
-; Sel         ; SAIDA_1[1]  ;        ; 6.522 ; 6.522 ;        ;
-; Sel         ; SAIDA_1[2]  ;        ; 6.259 ; 6.259 ;        ;
-; Sel         ; SAIDA_1[3]  ;        ; 6.552 ; 6.552 ;        ;
-; Sel         ; SAIDA_1[4]  ;        ; 6.516 ; 6.516 ;        ;
-; Sel         ; SAIDA_1[5]  ;        ; 6.535 ; 6.535 ;        ;
-; Sel         ; SAIDA_1[6]  ;        ; 6.509 ; 6.509 ;        ;
-; Sel         ; SAIDA_1[7]  ;        ; 6.519 ; 6.519 ;        ;
-; Sel         ; SAIDA_1[8]  ;        ; 6.360 ; 6.360 ;        ;
-; Sel         ; SAIDA_1[9]  ;        ; 6.572 ; 6.572 ;        ;
-; Sel         ; SAIDA_1[10] ;        ; 6.383 ; 6.383 ;        ;
-; Sel         ; SAIDA_1[11] ;        ; 6.116 ; 6.116 ;        ;
-; Sel         ; SAIDA_1[12] ;        ; 6.380 ; 6.380 ;        ;
-; Sel         ; SAIDA_1[13] ;        ; 6.389 ; 6.389 ;        ;
-; Sel         ; SAIDA_1[14] ;        ; 6.587 ; 6.587 ;        ;
-; Sel         ; SAIDA_1[15] ;        ; 6.568 ; 6.568 ;        ;
-; Sel         ; SAIDA_1[16] ;        ; 7.261 ; 7.261 ;        ;
-; Sel         ; SAIDA_1[17] ;        ; 7.113 ; 7.113 ;        ;
-; Sel         ; SAIDA_1[18] ;        ; 7.284 ; 7.284 ;        ;
-; Sel         ; SAIDA_1[19] ;        ; 7.073 ; 7.073 ;        ;
-; Sel         ; SAIDA_1[20] ;        ; 7.185 ; 7.185 ;        ;
-; Sel         ; SAIDA_1[21] ;        ; 7.182 ; 7.182 ;        ;
-; Sel         ; SAIDA_1[22] ;        ; 7.351 ; 7.351 ;        ;
-; Sel         ; SAIDA_1[23] ;        ; 6.317 ; 6.317 ;        ;
-; Sel         ; SAIDA_1[24] ;        ; 6.140 ; 6.140 ;        ;
-; Sel         ; SAIDA_1[25] ;        ; 6.578 ; 6.578 ;        ;
-; Sel         ; SAIDA_1[26] ;        ; 6.390 ; 6.390 ;        ;
-; Sel         ; SAIDA_1[27] ;        ; 6.139 ; 6.139 ;        ;
-; Sel         ; SAIDA_1[28] ;        ; 6.581 ; 6.581 ;        ;
-; Sel         ; SAIDA_1[29] ;        ; 6.377 ; 6.377 ;        ;
-; Sel         ; SAIDA_1[30] ;        ; 6.363 ; 6.363 ;        ;
-; Sel         ; SAIDA_1[31] ;        ; 7.072 ; 7.072 ;        ;
-; Sel         ; SAIDA_2[0]  ; 6.365  ;       ;       ; 6.365  ;
-; Sel         ; SAIDA_2[1]  ; 6.532  ;       ;       ; 6.532  ;
-; Sel         ; SAIDA_2[2]  ; 6.272  ;       ;       ; 6.272  ;
-; Sel         ; SAIDA_2[3]  ; 6.277  ;       ;       ; 6.277  ;
-; Sel         ; SAIDA_2[4]  ; 6.539  ;       ;       ; 6.539  ;
-; Sel         ; SAIDA_2[5]  ; 6.240  ;       ;       ; 6.240  ;
-; Sel         ; SAIDA_2[6]  ; 6.537  ;       ;       ; 6.537  ;
-; Sel         ; SAIDA_2[7]  ; 6.563  ;       ;       ; 6.563  ;
-; Sel         ; SAIDA_2[8]  ; 6.133  ;       ;       ; 6.133  ;
-; Sel         ; SAIDA_2[9]  ; 6.342  ;       ;       ; 6.342  ;
-; Sel         ; SAIDA_2[10] ; 6.367  ;       ;       ; 6.367  ;
-; Sel         ; SAIDA_2[11] ; 6.329  ;       ;       ; 6.329  ;
-; Sel         ; SAIDA_2[12] ; 6.315  ;       ;       ; 6.315  ;
-; Sel         ; SAIDA_2[13] ; 6.120  ;       ;       ; 6.120  ;
-; Sel         ; SAIDA_2[14] ; 6.780  ;       ;       ; 6.780  ;
-; Sel         ; SAIDA_2[15] ; 6.608  ;       ;       ; 6.608  ;
-; Sel         ; SAIDA_2[16] ; 7.052  ;       ;       ; 7.052  ;
-; Sel         ; SAIDA_2[17] ; 7.440  ;       ;       ; 7.440  ;
-; Sel         ; SAIDA_2[18] ; 6.756  ;       ;       ; 6.756  ;
-; Sel         ; SAIDA_2[19] ; 6.782  ;       ;       ; 6.782  ;
-; Sel         ; SAIDA_2[20] ; 7.050  ;       ;       ; 7.050  ;
-; Sel         ; SAIDA_2[21] ; 7.093  ;       ;       ; 7.093  ;
-; Sel         ; SAIDA_2[22] ; 7.203  ;       ;       ; 7.203  ;
-; Sel         ; SAIDA_2[23] ; 6.395  ;       ;       ; 6.395  ;
-; Sel         ; SAIDA_2[24] ; 6.580  ;       ;       ; 6.580  ;
-; Sel         ; SAIDA_2[25] ; 6.381  ;       ;       ; 6.381  ;
-; Sel         ; SAIDA_2[26] ; 6.154  ;       ;       ; 6.154  ;
-; Sel         ; SAIDA_2[27] ; 6.383  ;       ;       ; 6.383  ;
-; Sel         ; SAIDA_2[28] ; 6.358  ;       ;       ; 6.358  ;
-; Sel         ; SAIDA_2[29] ; 6.586  ;       ;       ; 6.586  ;
-; Sel         ; SAIDA_2[30] ; 6.123  ;       ;       ; 6.123  ;
-; Sel         ; SAIDA_2[31] ; 7.031  ;       ;       ; 7.031  ;
-+-------------+-------------+--------+-------+-------+--------+
++--------------------------------------------------------------------------+
+; Setup Times                                                              ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; ENTRADA[*]   ; CLOCK      ; 4.041 ; 4.041 ; Rise       ; CLOCK           ;
+;  ENTRADA[0]  ; CLOCK      ; 0.894 ; 0.894 ; Rise       ; CLOCK           ;
+;  ENTRADA[1]  ; CLOCK      ; 3.510 ; 3.510 ; Rise       ; CLOCK           ;
+;  ENTRADA[2]  ; CLOCK      ; 3.285 ; 3.285 ; Rise       ; CLOCK           ;
+;  ENTRADA[3]  ; CLOCK      ; 3.436 ; 3.436 ; Rise       ; CLOCK           ;
+;  ENTRADA[4]  ; CLOCK      ; 3.535 ; 3.535 ; Rise       ; CLOCK           ;
+;  ENTRADA[5]  ; CLOCK      ; 3.255 ; 3.255 ; Rise       ; CLOCK           ;
+;  ENTRADA[6]  ; CLOCK      ; 3.236 ; 3.236 ; Rise       ; CLOCK           ;
+;  ENTRADA[7]  ; CLOCK      ; 3.299 ; 3.299 ; Rise       ; CLOCK           ;
+;  ENTRADA[8]  ; CLOCK      ; 3.417 ; 3.417 ; Rise       ; CLOCK           ;
+;  ENTRADA[9]  ; CLOCK      ; 4.041 ; 4.041 ; Rise       ; CLOCK           ;
+;  ENTRADA[10] ; CLOCK      ; 3.542 ; 3.542 ; Rise       ; CLOCK           ;
+;  ENTRADA[11] ; CLOCK      ; 3.525 ; 3.525 ; Rise       ; CLOCK           ;
+;  ENTRADA[12] ; CLOCK      ; 3.762 ; 3.762 ; Rise       ; CLOCK           ;
+;  ENTRADA[13] ; CLOCK      ; 3.751 ; 3.751 ; Rise       ; CLOCK           ;
+;  ENTRADA[14] ; CLOCK      ; 3.620 ; 3.620 ; Rise       ; CLOCK           ;
+;  ENTRADA[15] ; CLOCK      ; 3.454 ; 3.454 ; Rise       ; CLOCK           ;
+;  ENTRADA[16] ; CLOCK      ; 3.465 ; 3.465 ; Rise       ; CLOCK           ;
+;  ENTRADA[17] ; CLOCK      ; 3.325 ; 3.325 ; Rise       ; CLOCK           ;
+;  ENTRADA[18] ; CLOCK      ; 3.197 ; 3.197 ; Rise       ; CLOCK           ;
+;  ENTRADA[19] ; CLOCK      ; 3.465 ; 3.465 ; Rise       ; CLOCK           ;
+;  ENTRADA[20] ; CLOCK      ; 3.430 ; 3.430 ; Rise       ; CLOCK           ;
+;  ENTRADA[21] ; CLOCK      ; 3.179 ; 3.179 ; Rise       ; CLOCK           ;
+;  ENTRADA[22] ; CLOCK      ; 3.154 ; 3.154 ; Rise       ; CLOCK           ;
+;  ENTRADA[23] ; CLOCK      ; 3.508 ; 3.508 ; Rise       ; CLOCK           ;
+;  ENTRADA[24] ; CLOCK      ; 3.281 ; 3.281 ; Rise       ; CLOCK           ;
+;  ENTRADA[25] ; CLOCK      ; 3.524 ; 3.524 ; Rise       ; CLOCK           ;
+;  ENTRADA[26] ; CLOCK      ; 3.643 ; 3.643 ; Rise       ; CLOCK           ;
+;  ENTRADA[27] ; CLOCK      ; 3.621 ; 3.621 ; Rise       ; CLOCK           ;
+;  ENTRADA[28] ; CLOCK      ; 3.622 ; 3.622 ; Rise       ; CLOCK           ;
+;  ENTRADA[29] ; CLOCK      ; 3.273 ; 3.273 ; Rise       ; CLOCK           ;
+;  ENTRADA[30] ; CLOCK      ; 3.649 ; 3.649 ; Rise       ; CLOCK           ;
+;  ENTRADA[31] ; CLOCK      ; 3.269 ; 3.269 ; Rise       ; CLOCK           ;
+; SEL          ; CLOCK      ; 0.851 ; 0.851 ; Rise       ; CLOCK           ;
++--------------+------------+-------+-------+------------+-----------------+
 
 
-+-----------------------------------------------------------+
-; Minimum Progagation Delay                                 ;
-+-------------+-------------+-------+-------+-------+-------+
-; Input Port  ; Output Port ; RR    ; RF    ; FR    ; FF    ;
-+-------------+-------------+-------+-------+-------+-------+
-; ENTRADA[0]  ; SAIDA_1[0]  ; 3.357 ;       ;       ; 3.357 ;
-; ENTRADA[0]  ; SAIDA_2[0]  ; 3.258 ;       ;       ; 3.258 ;
-; ENTRADA[1]  ; SAIDA_1[1]  ; 5.221 ;       ;       ; 5.221 ;
-; ENTRADA[1]  ; SAIDA_2[1]  ; 5.223 ;       ;       ; 5.223 ;
-; ENTRADA[2]  ; SAIDA_1[2]  ; 5.105 ;       ;       ; 5.105 ;
-; ENTRADA[2]  ; SAIDA_2[2]  ; 5.112 ;       ;       ; 5.112 ;
-; ENTRADA[3]  ; SAIDA_1[3]  ; 5.232 ;       ;       ; 5.232 ;
-; ENTRADA[3]  ; SAIDA_2[3]  ; 5.113 ;       ;       ; 5.113 ;
-; ENTRADA[4]  ; SAIDA_1[4]  ; 5.113 ;       ;       ; 5.113 ;
-; ENTRADA[4]  ; SAIDA_2[4]  ; 5.142 ;       ;       ; 5.142 ;
-; ENTRADA[5]  ; SAIDA_1[5]  ; 5.184 ;       ;       ; 5.184 ;
-; ENTRADA[5]  ; SAIDA_2[5]  ; 5.062 ;       ;       ; 5.062 ;
-; ENTRADA[6]  ; SAIDA_1[6]  ; 5.299 ;       ;       ; 5.299 ;
-; ENTRADA[6]  ; SAIDA_2[6]  ; 5.312 ;       ;       ; 5.312 ;
-; ENTRADA[7]  ; SAIDA_1[7]  ; 5.300 ;       ;       ; 5.300 ;
-; ENTRADA[7]  ; SAIDA_2[7]  ; 5.319 ;       ;       ; 5.319 ;
-; ENTRADA[8]  ; SAIDA_1[8]  ; 5.455 ;       ;       ; 5.455 ;
-; ENTRADA[8]  ; SAIDA_2[8]  ; 5.344 ;       ;       ; 5.344 ;
-; ENTRADA[9]  ; SAIDA_1[9]  ; 5.586 ;       ;       ; 5.586 ;
-; ENTRADA[9]  ; SAIDA_2[9]  ; 5.485 ;       ;       ; 5.485 ;
-; ENTRADA[10] ; SAIDA_1[10] ; 5.414 ;       ;       ; 5.414 ;
-; ENTRADA[10] ; SAIDA_2[10] ; 5.388 ;       ;       ; 5.388 ;
-; ENTRADA[11] ; SAIDA_1[11] ; 5.331 ;       ;       ; 5.331 ;
-; ENTRADA[11] ; SAIDA_2[11] ; 5.428 ;       ;       ; 5.428 ;
-; ENTRADA[12] ; SAIDA_1[12] ; 5.517 ;       ;       ; 5.517 ;
-; ENTRADA[12] ; SAIDA_2[12] ; 5.454 ;       ;       ; 5.454 ;
-; ENTRADA[13] ; SAIDA_1[13] ; 5.476 ;       ;       ; 5.476 ;
-; ENTRADA[13] ; SAIDA_2[13] ; 5.312 ;       ;       ; 5.312 ;
-; ENTRADA[14] ; SAIDA_1[14] ; 5.584 ;       ;       ; 5.584 ;
-; ENTRADA[14] ; SAIDA_2[14] ; 5.651 ;       ;       ; 5.651 ;
-; ENTRADA[15] ; SAIDA_1[15] ; 5.603 ;       ;       ; 5.603 ;
-; ENTRADA[15] ; SAIDA_2[15] ; 5.628 ;       ;       ; 5.628 ;
-; ENTRADA[16] ; SAIDA_1[16] ; 5.239 ;       ;       ; 5.239 ;
-; ENTRADA[16] ; SAIDA_2[16] ; 5.103 ;       ;       ; 5.103 ;
-; ENTRADA[17] ; SAIDA_1[17] ; 5.179 ;       ;       ; 5.179 ;
-; ENTRADA[17] ; SAIDA_2[17] ; 5.347 ;       ;       ; 5.347 ;
-; ENTRADA[18] ; SAIDA_1[18] ; 5.561 ;       ;       ; 5.561 ;
-; ENTRADA[18] ; SAIDA_2[18] ; 5.277 ;       ;       ; 5.277 ;
-; ENTRADA[19] ; SAIDA_1[19] ; 5.441 ;       ;       ; 5.441 ;
-; ENTRADA[19] ; SAIDA_2[19] ; 5.300 ;       ;       ; 5.300 ;
-; ENTRADA[20] ; SAIDA_1[20] ; 5.275 ;       ;       ; 5.275 ;
-; ENTRADA[20] ; SAIDA_2[20] ; 5.190 ;       ;       ; 5.190 ;
-; ENTRADA[21] ; SAIDA_1[21] ; 5.471 ;       ;       ; 5.471 ;
-; ENTRADA[21] ; SAIDA_2[21] ; 5.448 ;       ;       ; 5.448 ;
-; ENTRADA[22] ; SAIDA_1[22] ; 5.298 ;       ;       ; 5.298 ;
-; ENTRADA[22] ; SAIDA_2[22] ; 5.209 ;       ;       ; 5.209 ;
-; ENTRADA[23] ; SAIDA_1[23] ; 5.413 ;       ;       ; 5.413 ;
-; ENTRADA[23] ; SAIDA_2[23] ; 5.474 ;       ;       ; 5.474 ;
-; ENTRADA[24] ; SAIDA_1[24] ; 5.255 ;       ;       ; 5.255 ;
-; ENTRADA[24] ; SAIDA_2[24] ; 5.461 ;       ;       ; 5.461 ;
-; ENTRADA[25] ; SAIDA_1[25] ; 5.730 ;       ;       ; 5.730 ;
-; ENTRADA[25] ; SAIDA_2[25] ; 5.645 ;       ;       ; 5.645 ;
-; ENTRADA[26] ; SAIDA_1[26] ; 5.388 ;       ;       ; 5.388 ;
-; ENTRADA[26] ; SAIDA_2[26] ; 5.277 ;       ;       ; 5.277 ;
-; ENTRADA[27] ; SAIDA_1[27] ; 5.141 ;       ;       ; 5.141 ;
-; ENTRADA[27] ; SAIDA_2[27] ; 5.276 ;       ;       ; 5.276 ;
-; ENTRADA[28] ; SAIDA_1[28] ; 5.675 ;       ;       ; 5.675 ;
-; ENTRADA[28] ; SAIDA_2[28] ; 5.560 ;       ;       ; 5.560 ;
-; ENTRADA[29] ; SAIDA_1[29] ; 5.267 ;       ;       ; 5.267 ;
-; ENTRADA[29] ; SAIDA_2[29] ; 5.340 ;       ;       ; 5.340 ;
-; ENTRADA[30] ; SAIDA_1[30] ; 5.323 ;       ;       ; 5.323 ;
-; ENTRADA[30] ; SAIDA_2[30] ; 5.222 ;       ;       ; 5.222 ;
-; ENTRADA[31] ; SAIDA_1[31] ; 5.143 ;       ;       ; 5.143 ;
-; ENTRADA[31] ; SAIDA_2[31] ; 5.105 ;       ;       ; 5.105 ;
-; Sel         ; SAIDA_1[0]  ;       ; 3.400 ; 3.400 ;       ;
-; Sel         ; SAIDA_1[1]  ;       ; 3.384 ; 3.384 ;       ;
-; Sel         ; SAIDA_1[2]  ;       ; 3.275 ; 3.275 ;       ;
-; Sel         ; SAIDA_1[3]  ;       ; 3.406 ; 3.406 ;       ;
-; Sel         ; SAIDA_1[4]  ;       ; 3.376 ; 3.376 ;       ;
-; Sel         ; SAIDA_1[5]  ;       ; 3.394 ; 3.394 ;       ;
-; Sel         ; SAIDA_1[6]  ;       ; 3.370 ; 3.370 ;       ;
-; Sel         ; SAIDA_1[7]  ;       ; 3.378 ; 3.378 ;       ;
-; Sel         ; SAIDA_1[8]  ;       ; 3.320 ; 3.320 ;       ;
-; Sel         ; SAIDA_1[9]  ;       ; 3.418 ; 3.418 ;       ;
-; Sel         ; SAIDA_1[10] ;       ; 3.343 ; 3.343 ;       ;
-; Sel         ; SAIDA_1[11] ;       ; 3.207 ; 3.207 ;       ;
-; Sel         ; SAIDA_1[12] ;       ; 3.341 ; 3.341 ;       ;
-; Sel         ; SAIDA_1[13] ;       ; 3.353 ; 3.353 ;       ;
-; Sel         ; SAIDA_1[14] ;       ; 3.450 ; 3.450 ;       ;
-; Sel         ; SAIDA_1[15] ;       ; 3.423 ; 3.423 ;       ;
-; Sel         ; SAIDA_1[16] ;       ; 3.791 ; 3.791 ;       ;
-; Sel         ; SAIDA_1[17] ;       ; 3.715 ; 3.715 ;       ;
-; Sel         ; SAIDA_1[18] ;       ; 3.804 ; 3.804 ;       ;
-; Sel         ; SAIDA_1[19] ;       ; 3.676 ; 3.676 ;       ;
-; Sel         ; SAIDA_1[20] ;       ; 3.760 ; 3.760 ;       ;
-; Sel         ; SAIDA_1[21] ;       ; 3.701 ; 3.701 ;       ;
-; Sel         ; SAIDA_1[22] ;       ; 3.840 ; 3.840 ;       ;
-; Sel         ; SAIDA_1[23] ;       ; 3.265 ; 3.265 ;       ;
-; Sel         ; SAIDA_1[24] ;       ; 3.208 ; 3.208 ;       ;
-; Sel         ; SAIDA_1[25] ;       ; 3.402 ; 3.402 ;       ;
-; Sel         ; SAIDA_1[26] ;       ; 3.334 ; 3.334 ;       ;
-; Sel         ; SAIDA_1[27] ;       ; 3.208 ; 3.208 ;       ;
-; Sel         ; SAIDA_1[28] ;       ; 3.404 ; 3.404 ;       ;
-; Sel         ; SAIDA_1[29] ;       ; 3.322 ; 3.322 ;       ;
-; Sel         ; SAIDA_1[30] ;       ; 3.305 ; 3.305 ;       ;
-; Sel         ; SAIDA_1[31] ;       ; 3.675 ; 3.675 ;       ;
-; Sel         ; SAIDA_2[0]  ; 3.291 ;       ;       ; 3.291 ;
-; Sel         ; SAIDA_2[1]  ; 3.391 ;       ;       ; 3.391 ;
-; Sel         ; SAIDA_2[2]  ; 3.288 ;       ;       ; 3.288 ;
-; Sel         ; SAIDA_2[3]  ; 3.284 ;       ;       ; 3.284 ;
-; Sel         ; SAIDA_2[4]  ; 3.402 ;       ;       ; 3.402 ;
-; Sel         ; SAIDA_2[5]  ; 3.258 ;       ;       ; 3.258 ;
-; Sel         ; SAIDA_2[6]  ; 3.391 ;       ;       ; 3.391 ;
-; Sel         ; SAIDA_2[7]  ; 3.408 ;       ;       ; 3.408 ;
-; Sel         ; SAIDA_2[8]  ; 3.225 ;       ;       ; 3.225 ;
-; Sel         ; SAIDA_2[9]  ; 3.312 ;       ;       ; 3.312 ;
-; Sel         ; SAIDA_2[10] ; 3.325 ;       ;       ; 3.325 ;
-; Sel         ; SAIDA_2[11] ; 3.298 ;       ;       ; 3.298 ;
-; Sel         ; SAIDA_2[12] ; 3.289 ;       ;       ; 3.289 ;
-; Sel         ; SAIDA_2[13] ; 3.213 ;       ;       ; 3.213 ;
-; Sel         ; SAIDA_2[14] ; 3.503 ;       ;       ; 3.503 ;
-; Sel         ; SAIDA_2[15] ; 3.453 ;       ;       ; 3.453 ;
-; Sel         ; SAIDA_2[16] ; 3.691 ;       ;       ; 3.691 ;
-; Sel         ; SAIDA_2[17] ; 3.898 ;       ;       ; 3.898 ;
-; Sel         ; SAIDA_2[18] ; 3.552 ;       ;       ; 3.552 ;
-; Sel         ; SAIDA_2[19] ; 3.571 ;       ;       ; 3.571 ;
-; Sel         ; SAIDA_2[20] ; 3.663 ;       ;       ; 3.663 ;
-; Sel         ; SAIDA_2[21] ; 3.723 ;       ;       ; 3.723 ;
-; Sel         ; SAIDA_2[22] ; 3.743 ;       ;       ; 3.743 ;
-; Sel         ; SAIDA_2[23] ; 3.368 ;       ;       ; 3.368 ;
-; Sel         ; SAIDA_2[24] ; 3.428 ;       ;       ; 3.428 ;
-; Sel         ; SAIDA_2[25] ; 3.349 ;       ;       ; 3.349 ;
-; Sel         ; SAIDA_2[26] ; 3.244 ;       ;       ; 3.244 ;
-; Sel         ; SAIDA_2[27] ; 3.356 ;       ;       ; 3.356 ;
-; Sel         ; SAIDA_2[28] ; 3.330 ;       ;       ; 3.330 ;
-; Sel         ; SAIDA_2[29] ; 3.435 ;       ;       ; 3.435 ;
-; Sel         ; SAIDA_2[30] ; 3.221 ;       ;       ; 3.221 ;
-; Sel         ; SAIDA_2[31] ; 3.670 ;       ;       ; 3.670 ;
-+-------------+-------------+-------+-------+-------+-------+
++----------------------------------------------------------------------------+
+; Hold Times                                                                 ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; ENTRADA[*]   ; CLOCK      ; -0.068 ; -0.068 ; Rise       ; CLOCK           ;
+;  ENTRADA[0]  ; CLOCK      ; -0.068 ; -0.068 ; Rise       ; CLOCK           ;
+;  ENTRADA[1]  ; CLOCK      ; -1.848 ; -1.848 ; Rise       ; CLOCK           ;
+;  ENTRADA[2]  ; CLOCK      ; -1.706 ; -1.706 ; Rise       ; CLOCK           ;
+;  ENTRADA[3]  ; CLOCK      ; -1.737 ; -1.737 ; Rise       ; CLOCK           ;
+;  ENTRADA[4]  ; CLOCK      ; -1.796 ; -1.796 ; Rise       ; CLOCK           ;
+;  ENTRADA[5]  ; CLOCK      ; -1.668 ; -1.668 ; Rise       ; CLOCK           ;
+;  ENTRADA[6]  ; CLOCK      ; -1.681 ; -1.681 ; Rise       ; CLOCK           ;
+;  ENTRADA[7]  ; CLOCK      ; -1.708 ; -1.708 ; Rise       ; CLOCK           ;
+;  ENTRADA[8]  ; CLOCK      ; -1.693 ; -1.693 ; Rise       ; CLOCK           ;
+;  ENTRADA[9]  ; CLOCK      ; -1.996 ; -1.996 ; Rise       ; CLOCK           ;
+;  ENTRADA[10] ; CLOCK      ; -1.794 ; -1.794 ; Rise       ; CLOCK           ;
+;  ENTRADA[11] ; CLOCK      ; -1.765 ; -1.765 ; Rise       ; CLOCK           ;
+;  ENTRADA[12] ; CLOCK      ; -1.869 ; -1.869 ; Rise       ; CLOCK           ;
+;  ENTRADA[13] ; CLOCK      ; -1.875 ; -1.875 ; Rise       ; CLOCK           ;
+;  ENTRADA[14] ; CLOCK      ; -1.788 ; -1.788 ; Rise       ; CLOCK           ;
+;  ENTRADA[15] ; CLOCK      ; -1.710 ; -1.710 ; Rise       ; CLOCK           ;
+;  ENTRADA[16] ; CLOCK      ; -1.781 ; -1.781 ; Rise       ; CLOCK           ;
+;  ENTRADA[17] ; CLOCK      ; -1.675 ; -1.675 ; Rise       ; CLOCK           ;
+;  ENTRADA[18] ; CLOCK      ; -1.645 ; -1.645 ; Rise       ; CLOCK           ;
+;  ENTRADA[19] ; CLOCK      ; -1.756 ; -1.756 ; Rise       ; CLOCK           ;
+;  ENTRADA[20] ; CLOCK      ; -1.722 ; -1.722 ; Rise       ; CLOCK           ;
+;  ENTRADA[21] ; CLOCK      ; -1.626 ; -1.626 ; Rise       ; CLOCK           ;
+;  ENTRADA[22] ; CLOCK      ; -1.626 ; -1.626 ; Rise       ; CLOCK           ;
+;  ENTRADA[23] ; CLOCK      ; -1.758 ; -1.758 ; Rise       ; CLOCK           ;
+;  ENTRADA[24] ; CLOCK      ; -1.646 ; -1.646 ; Rise       ; CLOCK           ;
+;  ENTRADA[25] ; CLOCK      ; -1.768 ; -1.768 ; Rise       ; CLOCK           ;
+;  ENTRADA[26] ; CLOCK      ; -1.803 ; -1.803 ; Rise       ; CLOCK           ;
+;  ENTRADA[27] ; CLOCK      ; -1.787 ; -1.787 ; Rise       ; CLOCK           ;
+;  ENTRADA[28] ; CLOCK      ; -1.783 ; -1.783 ; Rise       ; CLOCK           ;
+;  ENTRADA[29] ; CLOCK      ; -1.639 ; -1.639 ; Rise       ; CLOCK           ;
+;  ENTRADA[30] ; CLOCK      ; -1.811 ; -1.811 ; Rise       ; CLOCK           ;
+;  ENTRADA[31] ; CLOCK      ; -1.682 ; -1.682 ; Rise       ; CLOCK           ;
+; SEL          ; CLOCK      ; 0.668  ; 0.668  ; Rise       ; CLOCK           ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; SAIDA_1[*]   ; CLOCK      ; 6.861 ; 6.861 ; Rise       ; CLOCK           ;
+;  SAIDA_1[0]  ; CLOCK      ; 6.644 ; 6.644 ; Rise       ; CLOCK           ;
+;  SAIDA_1[1]  ; CLOCK      ; 6.078 ; 6.078 ; Rise       ; CLOCK           ;
+;  SAIDA_1[2]  ; CLOCK      ; 6.628 ; 6.628 ; Rise       ; CLOCK           ;
+;  SAIDA_1[3]  ; CLOCK      ; 6.636 ; 6.636 ; Rise       ; CLOCK           ;
+;  SAIDA_1[4]  ; CLOCK      ; 6.354 ; 6.354 ; Rise       ; CLOCK           ;
+;  SAIDA_1[5]  ; CLOCK      ; 6.048 ; 6.048 ; Rise       ; CLOCK           ;
+;  SAIDA_1[6]  ; CLOCK      ; 6.298 ; 6.298 ; Rise       ; CLOCK           ;
+;  SAIDA_1[7]  ; CLOCK      ; 6.348 ; 6.348 ; Rise       ; CLOCK           ;
+;  SAIDA_1[8]  ; CLOCK      ; 6.332 ; 6.332 ; Rise       ; CLOCK           ;
+;  SAIDA_1[9]  ; CLOCK      ; 6.370 ; 6.370 ; Rise       ; CLOCK           ;
+;  SAIDA_1[10] ; CLOCK      ; 6.828 ; 6.828 ; Rise       ; CLOCK           ;
+;  SAIDA_1[11] ; CLOCK      ; 6.356 ; 6.356 ; Rise       ; CLOCK           ;
+;  SAIDA_1[12] ; CLOCK      ; 6.861 ; 6.861 ; Rise       ; CLOCK           ;
+;  SAIDA_1[13] ; CLOCK      ; 6.841 ; 6.841 ; Rise       ; CLOCK           ;
+;  SAIDA_1[14] ; CLOCK      ; 6.842 ; 6.842 ; Rise       ; CLOCK           ;
+;  SAIDA_1[15] ; CLOCK      ; 6.604 ; 6.604 ; Rise       ; CLOCK           ;
+;  SAIDA_1[16] ; CLOCK      ; 6.222 ; 6.222 ; Rise       ; CLOCK           ;
+;  SAIDA_1[17] ; CLOCK      ; 6.079 ; 6.079 ; Rise       ; CLOCK           ;
+;  SAIDA_1[18] ; CLOCK      ; 6.072 ; 6.072 ; Rise       ; CLOCK           ;
+;  SAIDA_1[19] ; CLOCK      ; 6.427 ; 6.427 ; Rise       ; CLOCK           ;
+;  SAIDA_1[20] ; CLOCK      ; 6.406 ; 6.406 ; Rise       ; CLOCK           ;
+;  SAIDA_1[21] ; CLOCK      ; 6.502 ; 6.502 ; Rise       ; CLOCK           ;
+;  SAIDA_1[22] ; CLOCK      ; 6.361 ; 6.361 ; Rise       ; CLOCK           ;
+;  SAIDA_1[23] ; CLOCK      ; 6.774 ; 6.774 ; Rise       ; CLOCK           ;
+;  SAIDA_1[24] ; CLOCK      ; 6.357 ; 6.357 ; Rise       ; CLOCK           ;
+;  SAIDA_1[25] ; CLOCK      ; 6.582 ; 6.582 ; Rise       ; CLOCK           ;
+;  SAIDA_1[26] ; CLOCK      ; 6.566 ; 6.566 ; Rise       ; CLOCK           ;
+;  SAIDA_1[27] ; CLOCK      ; 6.804 ; 6.804 ; Rise       ; CLOCK           ;
+;  SAIDA_1[28] ; CLOCK      ; 6.339 ; 6.339 ; Rise       ; CLOCK           ;
+;  SAIDA_1[29] ; CLOCK      ; 6.778 ; 6.778 ; Rise       ; CLOCK           ;
+;  SAIDA_1[30] ; CLOCK      ; 6.348 ; 6.348 ; Rise       ; CLOCK           ;
+;  SAIDA_1[31] ; CLOCK      ; 6.351 ; 6.351 ; Rise       ; CLOCK           ;
+; SAIDA_2[*]   ; CLOCK      ; 6.854 ; 6.854 ; Rise       ; CLOCK           ;
+;  SAIDA_2[0]  ; CLOCK      ; 6.660 ; 6.660 ; Rise       ; CLOCK           ;
+;  SAIDA_2[1]  ; CLOCK      ; 6.634 ; 6.634 ; Rise       ; CLOCK           ;
+;  SAIDA_2[2]  ; CLOCK      ; 6.051 ; 6.051 ; Rise       ; CLOCK           ;
+;  SAIDA_2[3]  ; CLOCK      ; 6.391 ; 6.391 ; Rise       ; CLOCK           ;
+;  SAIDA_2[4]  ; CLOCK      ; 6.662 ; 6.662 ; Rise       ; CLOCK           ;
+;  SAIDA_2[5]  ; CLOCK      ; 6.338 ; 6.338 ; Rise       ; CLOCK           ;
+;  SAIDA_2[6]  ; CLOCK      ; 6.501 ; 6.501 ; Rise       ; CLOCK           ;
+;  SAIDA_2[7]  ; CLOCK      ; 6.087 ; 6.087 ; Rise       ; CLOCK           ;
+;  SAIDA_2[8]  ; CLOCK      ; 6.592 ; 6.592 ; Rise       ; CLOCK           ;
+;  SAIDA_2[9]  ; CLOCK      ; 6.372 ; 6.372 ; Rise       ; CLOCK           ;
+;  SAIDA_2[10] ; CLOCK      ; 6.404 ; 6.404 ; Rise       ; CLOCK           ;
+;  SAIDA_2[11] ; CLOCK      ; 6.394 ; 6.394 ; Rise       ; CLOCK           ;
+;  SAIDA_2[12] ; CLOCK      ; 6.600 ; 6.600 ; Rise       ; CLOCK           ;
+;  SAIDA_2[13] ; CLOCK      ; 6.830 ; 6.830 ; Rise       ; CLOCK           ;
+;  SAIDA_2[14] ; CLOCK      ; 6.598 ; 6.598 ; Rise       ; CLOCK           ;
+;  SAIDA_2[15] ; CLOCK      ; 6.854 ; 6.854 ; Rise       ; CLOCK           ;
+;  SAIDA_2[16] ; CLOCK      ; 6.097 ; 6.097 ; Rise       ; CLOCK           ;
+;  SAIDA_2[17] ; CLOCK      ; 6.392 ; 6.392 ; Rise       ; CLOCK           ;
+;  SAIDA_2[18] ; CLOCK      ; 6.340 ; 6.340 ; Rise       ; CLOCK           ;
+;  SAIDA_2[19] ; CLOCK      ; 6.375 ; 6.375 ; Rise       ; CLOCK           ;
+;  SAIDA_2[20] ; CLOCK      ; 6.263 ; 6.263 ; Rise       ; CLOCK           ;
+;  SAIDA_2[21] ; CLOCK      ; 6.383 ; 6.383 ; Rise       ; CLOCK           ;
+;  SAIDA_2[22] ; CLOCK      ; 6.367 ; 6.367 ; Rise       ; CLOCK           ;
+;  SAIDA_2[23] ; CLOCK      ; 6.566 ; 6.566 ; Rise       ; CLOCK           ;
+;  SAIDA_2[24] ; CLOCK      ; 6.582 ; 6.582 ; Rise       ; CLOCK           ;
+;  SAIDA_2[25] ; CLOCK      ; 6.576 ; 6.576 ; Rise       ; CLOCK           ;
+;  SAIDA_2[26] ; CLOCK      ; 6.338 ; 6.338 ; Rise       ; CLOCK           ;
+;  SAIDA_2[27] ; CLOCK      ; 6.338 ; 6.338 ; Rise       ; CLOCK           ;
+;  SAIDA_2[28] ; CLOCK      ; 6.554 ; 6.554 ; Rise       ; CLOCK           ;
+;  SAIDA_2[29] ; CLOCK      ; 6.576 ; 6.576 ; Rise       ; CLOCK           ;
+;  SAIDA_2[30] ; CLOCK      ; 6.366 ; 6.366 ; Rise       ; CLOCK           ;
+;  SAIDA_2[31] ; CLOCK      ; 6.420 ; 6.420 ; Rise       ; CLOCK           ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; SAIDA_1[*]   ; CLOCK      ; 3.437 ; 3.437 ; Rise       ; CLOCK           ;
+;  SAIDA_1[0]  ; CLOCK      ; 3.751 ; 3.751 ; Rise       ; CLOCK           ;
+;  SAIDA_1[1]  ; CLOCK      ; 3.467 ; 3.467 ; Rise       ; CLOCK           ;
+;  SAIDA_1[2]  ; CLOCK      ; 3.738 ; 3.738 ; Rise       ; CLOCK           ;
+;  SAIDA_1[3]  ; CLOCK      ; 3.746 ; 3.746 ; Rise       ; CLOCK           ;
+;  SAIDA_1[4]  ; CLOCK      ; 3.583 ; 3.583 ; Rise       ; CLOCK           ;
+;  SAIDA_1[5]  ; CLOCK      ; 3.437 ; 3.437 ; Rise       ; CLOCK           ;
+;  SAIDA_1[6]  ; CLOCK      ; 3.552 ; 3.552 ; Rise       ; CLOCK           ;
+;  SAIDA_1[7]  ; CLOCK      ; 3.581 ; 3.581 ; Rise       ; CLOCK           ;
+;  SAIDA_1[8]  ; CLOCK      ; 3.617 ; 3.617 ; Rise       ; CLOCK           ;
+;  SAIDA_1[9]  ; CLOCK      ; 3.655 ; 3.655 ; Rise       ; CLOCK           ;
+;  SAIDA_1[10] ; CLOCK      ; 3.861 ; 3.861 ; Rise       ; CLOCK           ;
+;  SAIDA_1[11] ; CLOCK      ; 3.634 ; 3.634 ; Rise       ; CLOCK           ;
+;  SAIDA_1[12] ; CLOCK      ; 3.887 ; 3.887 ; Rise       ; CLOCK           ;
+;  SAIDA_1[13] ; CLOCK      ; 3.875 ; 3.875 ; Rise       ; CLOCK           ;
+;  SAIDA_1[14] ; CLOCK      ; 3.871 ; 3.871 ; Rise       ; CLOCK           ;
+;  SAIDA_1[15] ; CLOCK      ; 3.758 ; 3.758 ; Rise       ; CLOCK           ;
+;  SAIDA_1[16] ; CLOCK      ; 3.515 ; 3.515 ; Rise       ; CLOCK           ;
+;  SAIDA_1[17] ; CLOCK      ; 3.467 ; 3.467 ; Rise       ; CLOCK           ;
+;  SAIDA_1[18] ; CLOCK      ; 3.457 ; 3.457 ; Rise       ; CLOCK           ;
+;  SAIDA_1[19] ; CLOCK      ; 3.642 ; 3.642 ; Rise       ; CLOCK           ;
+;  SAIDA_1[20] ; CLOCK      ; 3.634 ; 3.634 ; Rise       ; CLOCK           ;
+;  SAIDA_1[21] ; CLOCK      ; 3.700 ; 3.700 ; Rise       ; CLOCK           ;
+;  SAIDA_1[22] ; CLOCK      ; 3.584 ; 3.584 ; Rise       ; CLOCK           ;
+;  SAIDA_1[23] ; CLOCK      ; 3.817 ; 3.817 ; Rise       ; CLOCK           ;
+;  SAIDA_1[24] ; CLOCK      ; 3.645 ; 3.645 ; Rise       ; CLOCK           ;
+;  SAIDA_1[25] ; CLOCK      ; 3.747 ; 3.747 ; Rise       ; CLOCK           ;
+;  SAIDA_1[26] ; CLOCK      ; 3.733 ; 3.733 ; Rise       ; CLOCK           ;
+;  SAIDA_1[27] ; CLOCK      ; 3.838 ; 3.838 ; Rise       ; CLOCK           ;
+;  SAIDA_1[28] ; CLOCK      ; 3.626 ; 3.626 ; Rise       ; CLOCK           ;
+;  SAIDA_1[29] ; CLOCK      ; 3.818 ; 3.818 ; Rise       ; CLOCK           ;
+;  SAIDA_1[30] ; CLOCK      ; 3.631 ; 3.631 ; Rise       ; CLOCK           ;
+;  SAIDA_1[31] ; CLOCK      ; 3.582 ; 3.582 ; Rise       ; CLOCK           ;
+; SAIDA_2[*]   ; CLOCK      ; 3.437 ; 3.437 ; Rise       ; CLOCK           ;
+;  SAIDA_2[0]  ; CLOCK      ; 3.764 ; 3.764 ; Rise       ; CLOCK           ;
+;  SAIDA_2[1]  ; CLOCK      ; 3.744 ; 3.744 ; Rise       ; CLOCK           ;
+;  SAIDA_2[2]  ; CLOCK      ; 3.437 ; 3.437 ; Rise       ; CLOCK           ;
+;  SAIDA_2[3]  ; CLOCK      ; 3.598 ; 3.598 ; Rise       ; CLOCK           ;
+;  SAIDA_2[4]  ; CLOCK      ; 3.764 ; 3.764 ; Rise       ; CLOCK           ;
+;  SAIDA_2[5]  ; CLOCK      ; 3.565 ; 3.565 ; Rise       ; CLOCK           ;
+;  SAIDA_2[6]  ; CLOCK      ; 3.651 ; 3.651 ; Rise       ; CLOCK           ;
+;  SAIDA_2[7]  ; CLOCK      ; 3.470 ; 3.470 ; Rise       ; CLOCK           ;
+;  SAIDA_2[8]  ; CLOCK      ; 3.741 ; 3.741 ; Rise       ; CLOCK           ;
+;  SAIDA_2[9]  ; CLOCK      ; 3.656 ; 3.656 ; Rise       ; CLOCK           ;
+;  SAIDA_2[10] ; CLOCK      ; 3.687 ; 3.687 ; Rise       ; CLOCK           ;
+;  SAIDA_2[11] ; CLOCK      ; 3.677 ; 3.677 ; Rise       ; CLOCK           ;
+;  SAIDA_2[12] ; CLOCK      ; 3.755 ; 3.755 ; Rise       ; CLOCK           ;
+;  SAIDA_2[13] ; CLOCK      ; 3.862 ; 3.862 ; Rise       ; CLOCK           ;
+;  SAIDA_2[14] ; CLOCK      ; 3.754 ; 3.754 ; Rise       ; CLOCK           ;
+;  SAIDA_2[15] ; CLOCK      ; 3.879 ; 3.879 ; Rise       ; CLOCK           ;
+;  SAIDA_2[16] ; CLOCK      ; 3.486 ; 3.486 ; Rise       ; CLOCK           ;
+;  SAIDA_2[17] ; CLOCK      ; 3.622 ; 3.622 ; Rise       ; CLOCK           ;
+;  SAIDA_2[18] ; CLOCK      ; 3.571 ; 3.571 ; Rise       ; CLOCK           ;
+;  SAIDA_2[19] ; CLOCK      ; 3.599 ; 3.599 ; Rise       ; CLOCK           ;
+;  SAIDA_2[20] ; CLOCK      ; 3.560 ; 3.560 ; Rise       ; CLOCK           ;
+;  SAIDA_2[21] ; CLOCK      ; 3.613 ; 3.613 ; Rise       ; CLOCK           ;
+;  SAIDA_2[22] ; CLOCK      ; 3.594 ; 3.594 ; Rise       ; CLOCK           ;
+;  SAIDA_2[23] ; CLOCK      ; 3.728 ; 3.728 ; Rise       ; CLOCK           ;
+;  SAIDA_2[24] ; CLOCK      ; 3.747 ; 3.747 ; Rise       ; CLOCK           ;
+;  SAIDA_2[25] ; CLOCK      ; 3.742 ; 3.742 ; Rise       ; CLOCK           ;
+;  SAIDA_2[26] ; CLOCK      ; 3.625 ; 3.625 ; Rise       ; CLOCK           ;
+;  SAIDA_2[27] ; CLOCK      ; 3.625 ; 3.625 ; Rise       ; CLOCK           ;
+;  SAIDA_2[28] ; CLOCK      ; 3.722 ; 3.722 ; Rise       ; CLOCK           ;
+;  SAIDA_2[29] ; CLOCK      ; 3.742 ; 3.742 ; Rise       ; CLOCK           ;
+;  SAIDA_2[30] ; CLOCK      ; 3.651 ; 3.651 ; Rise       ; CLOCK           ;
+;  SAIDA_2[31] ; CLOCK      ; 3.626 ; 3.626 ; Rise       ; CLOCK           ;
++--------------+------------+-------+-------+------------+-----------------+
 
 
 -------------------
@@ -1002,10 +1117,10 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 33    ; 33   ;
-; Unconstrained Input Port Paths  ; 128   ; 128  ;
+; Unconstrained Input Ports       ; 34    ; 34   ;
+; Unconstrained Input Port Paths  ; 192   ; 192  ;
 ; Unconstrained Output Ports      ; 64    ; 64   ;
-; Unconstrained Output Port Paths ; 128   ; 128  ;
+; Unconstrained Output Port Paths ; 64    ; 64   ;
 +---------------------------------+-------+------+
 
 
@@ -1015,7 +1130,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Jun 29 19:55:35 2023
+    Info: Processing started: Thu Jun 29 20:30:23 2023
 Info: Command: quartus_sta Demux -c Demux
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -1023,33 +1138,37 @@ Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Demux.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLOCK CLOCK
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
-Info (332159): No clocks to report
 Info: Analyzing Slow Model
 Info (332140): No fmax paths to report
 Info (332140): No Setup paths to report
 Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -65.380 CLOCK 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
 Info (332140): No Setup paths to report
 Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -65.380 CLOCK 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4536 megabytes
-    Info: Processing ended: Thu Jun 29 19:55:36 2023
+    Info: Peak virtual memory: 4551 megabytes
+    Info: Processing ended: Thu Jun 29 20:30:24 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

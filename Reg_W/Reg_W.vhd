@@ -3,17 +3,25 @@ use ieee.std_logic_1164.all;
 
 entity Reg_W is
 	generic (
-		W : integer := 4
+		W : integer := 32
 	);
 	port(
-		clock: in std_logic;
-		load: in std_logic;
+		CLOCK: in std_logic;
+		RESET : in std_logic;
+		LOAD: in std_logic;
 		D: in std_logic_vector (W - 1 downto 0);
 		Q: out std_logic_vector (W - 1 downto 0)
 	);
 end Reg_W;
 
-architecture RTL of Reg_W is
+architecture Main of Reg_W is
 begin
-		Q <= D when rising_edge(clock) and load='1';
-end RTL;
+	process (CLOCK, RESET, LOAD, D)
+	begin
+		if reset = '1' then
+			Q <= (others => '0');
+		elsif rising_edge(CLOCK)and LOAD = '1' then
+			Q <= D;
+		end if;
+	end process;
+end Main;

@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity Multiplicador is
 	generic(
-		W : natural := 32
+		W : natural := 16
 	);
 	port (
 		CLOCK : in std_logic;
@@ -17,5 +17,12 @@ end entity Multiplicador;
 
 architecture Main of Multiplicador is
 begin
-	PRODUTO <= std_logic_vector(unsigned(A) * unsigned(B));
+	process(CLOCK, RESET, A, B)
+	begin
+		if RESET = '1' then
+			PRODUTO <= (others => '0');
+		elsif rising_edge(CLOCK) then
+			PRODUTO <= std_logic_vector(unsigned(A) * unsigned(B));
+		end if;
+	end process;
 end architecture Main;

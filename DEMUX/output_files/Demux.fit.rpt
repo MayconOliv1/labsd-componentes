@@ -1,5 +1,5 @@
 Fitter report for Demux
-Thu Jun 29 19:55:32 2023
+Thu Jun 29 20:30:20 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -24,16 +24,19 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  16. Fitter Resource Utilization by Entity
  17. Delay Chain Summary
  18. Pad To Core Delay Chain Fanout
- 19. Non-Global High Fan-Out Signals
- 20. Other Routing Usage Summary
- 21. LAB Logic Elements
- 22. LAB Signals Sourced
- 23. LAB Signals Sourced Out
- 24. LAB Distinct Inputs
- 25. Fitter Device Options
- 26. Operating Settings and Conditions
- 27. Fitter Messages
- 28. Fitter Suppressed Messages
+ 19. Control Signals
+ 20. Global & Other Fast Signals
+ 21. Non-Global High Fan-Out Signals
+ 22. Other Routing Usage Summary
+ 23. LAB Logic Elements
+ 24. LAB-wide Signals
+ 25. LAB Signals Sourced
+ 26. LAB Signals Sourced Out
+ 27. LAB Distinct Inputs
+ 28. Fitter Device Options
+ 29. Operating Settings and Conditions
+ 30. Fitter Messages
+ 31. Fitter Suppressed Messages
 
 
 
@@ -59,7 +62,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Thu Jun 29 19:55:32 2023           ;
+; Fitter Status                      ; Successful - Thu Jun 29 20:30:20 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Demux                                           ;
 ; Top-level Entity Name              ; Demux                                           ;
@@ -68,9 +71,9 @@ applicable agreement for further details.
 ; Timing Models                      ; Final                                           ;
 ; Total logic elements               ; 64 / 33,216 ( < 1 % )                           ;
 ;     Total combinational functions  ; 64 / 33,216 ( < 1 % )                           ;
-;     Dedicated logic registers      ; 0 / 33,216 ( 0 % )                              ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 97 / 475 ( 20 % )                               ;
+;     Dedicated logic registers      ; 64 / 33,216 ( < 1 % )                           ;
+; Total registers                    ; 64                                              ;
+; Total pins                         ; 99 / 475 ( 21 % )                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 483,840 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                  ;
@@ -145,8 +148,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 165 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 165 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 233 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 233 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -169,7 +172,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 162     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 230     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -186,9 +189,9 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
 ; Total logic elements                        ; 64 / 33,216 ( < 1 % ) ;
-;     -- Combinational with no register       ; 64                    ;
+;     -- Combinational with no register       ; 0                     ;
 ;     -- Register only                        ; 0                     ;
-;     -- Combinational with a register        ; 0                     ;
+;     -- Combinational with a register        ; 64                    ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
 ;     -- 4 input functions                    ; 0                     ;
@@ -200,22 +203,22 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ;     -- normal mode                          ; 64                    ;
 ;     -- arithmetic mode                      ; 0                     ;
 ;                                             ;                       ;
-; Total registers*                            ; 0 / 34,593 ( 0 % )    ;
-;     -- Dedicated logic registers            ; 0 / 33,216 ( 0 % )    ;
+; Total registers*                            ; 64 / 34,593 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 64 / 33,216 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 1,377 ( 0 % )     ;
 ;                                             ;                       ;
 ; Total LABs:  partially or completely used   ; 4 / 2,076 ( < 1 % )   ;
 ; Virtual pins                                ; 0                     ;
-; I/O pins                                    ; 97 / 475 ( 20 % )     ;
-;     -- Clock pins                           ; 1 / 8 ( 13 % )        ;
+; I/O pins                                    ; 99 / 475 ( 21 % )     ;
+;     -- Clock pins                           ; 2 / 8 ( 25 % )        ;
 ;                                             ;                       ;
-; Global signals                              ; 0                     ;
+; Global signals                              ; 2                     ;
 ; M4Ks                                        ; 0 / 105 ( 0 % )       ;
 ; Total block memory bits                     ; 0 / 483,840 ( 0 % )   ;
 ; Total block memory implementation bits      ; 0 / 483,840 ( 0 % )   ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )        ;
 ; PLLs                                        ; 0 / 4 ( 0 % )         ;
-; Global clocks                               ; 0 / 16 ( 0 % )        ;
+; Global clocks                               ; 2 / 16 ( 13 % )       ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )         ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )         ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
@@ -223,8 +226,8 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%          ;
 ; Maximum fan-out                             ; 64                    ;
 ; Highest non-global fan-out                  ; 64                    ;
-; Total fan-out                               ; 192                   ;
-; Average fan-out                             ; 1.17                  ;
+; Total fan-out                               ; 386                   ;
+; Average fan-out                             ; 1.66                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -238,9 +241,9 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
 ; Total logic elements                        ; 64 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
-;     -- Combinational with no register       ; 64                   ; 0                              ;
+;     -- Combinational with no register       ; 0                    ; 0                              ;
 ;     -- Register only                        ; 0                    ; 0                              ;
-;     -- Combinational with a register        ; 0                    ; 0                              ;
+;     -- Combinational with a register        ; 64                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
 ;     -- 4 input functions                    ; 0                    ; 0                              ;
@@ -252,16 +255,17 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ;     -- normal mode                          ; 64                   ; 0                              ;
 ;     -- arithmetic mode                      ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total registers                             ; 0                    ; 0                              ;
-;     -- Dedicated logic registers            ; 0 / 33216 ( 0 % )    ; 0 / 33216 ( 0 % )              ;
+; Total registers                             ; 64                   ; 0                              ;
+;     -- Dedicated logic registers            ; 64 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
 ;                                             ;                      ;                                ;
 ; Total LABs:  partially or completely used   ; 4 / 2076 ( < 1 % )   ; 0 / 2076 ( 0 % )               ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
-; I/O pins                                    ; 97                   ; 0                              ;
+; I/O pins                                    ; 99                   ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )       ; 0 / 70 ( 0 % )                 ;
 ; Total memory bits                           ; 0                    ; 0                              ;
 ; Total RAM block bits                        ; 0                    ; 0                              ;
+; Clock control block                         ; 2 / 20 ( 10 % )      ; 0 / 20 ( 0 % )                 ;
 ;                                             ;                      ;                                ;
 ; Connections                                 ;                      ;                                ;
 ;     -- Input Connections                    ; 0                    ; 0                              ;
@@ -270,15 +274,15 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 192                  ; 0                              ;
-;     -- Registered Connections               ; 0                    ; 0                              ;
+;     -- Total Connections                    ; 386                  ; 0                              ;
+;     -- Registered Connections               ; 64                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 0                    ; 0                              ;
 ;     -- hard_block:auto_generated_inst       ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Partition Interface                         ;                      ;                                ;
-;     -- Input Ports                          ; 33                   ; 0                              ;
+;     -- Input Ports                          ; 35                   ; 0                              ;
 ;     -- Output Ports                         ; 64                   ; 0                              ;
 ;     -- Bidir Ports                          ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
@@ -303,39 +307,41 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 +-------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +-------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; CLOCK       ; P2    ; 1        ; 0            ; 18           ; 2           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; ENTRADA[0]  ; C13   ; 3        ; 31           ; 36           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[10] ; E12   ; 3        ; 24           ; 36           ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[11] ; B12   ; 3        ; 29           ; 36           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[12] ; B10   ; 3        ; 22           ; 36           ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[13] ; B9    ; 3        ; 20           ; 36           ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[14] ; B14   ; 4        ; 33           ; 36           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[15] ; A14   ; 4        ; 33           ; 36           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[16] ; R5    ; 1        ; 0            ; 16           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[17] ; P4    ; 1        ; 0            ; 17           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[18] ; M2    ; 2        ; 0            ; 23           ; 4           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[19] ; M5    ; 2        ; 0            ; 23           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[1]  ; K3    ; 2        ; 0            ; 26           ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[20] ; T3    ; 1        ; 0            ; 15           ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[21] ; L7    ; 2        ; 0            ; 24           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[22] ; R2    ; 1        ; 0            ; 17           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[10] ; D12   ; 3        ; 24           ; 36           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[11] ; E12   ; 3        ; 24           ; 36           ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[12] ; D10   ; 3        ; 20           ; 36           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[13] ; A14   ; 4        ; 33           ; 36           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[14] ; F14   ; 4        ; 35           ; 36           ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[15] ; B12   ; 3        ; 29           ; 36           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[16] ; B3    ; 2        ; 0            ; 34           ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[17] ; J7    ; 2        ; 0            ; 31           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[18] ; G6    ; 2        ; 0            ; 33           ; 4           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[19] ; K6    ; 2        ; 0            ; 30           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[1]  ; R3    ; 1        ; 0            ; 17           ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[20] ; J8    ; 2        ; 0            ; 31           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[21] ; F3    ; 2        ; 0            ; 32           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[22] ; D2    ; 2        ; 0            ; 32           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; ENTRADA[23] ; C17   ; 4        ; 46           ; 36           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[24] ; B15   ; 4        ; 37           ; 36           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[24] ; F16   ; 4        ; 44           ; 36           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; ENTRADA[25] ; D17   ; 4        ; 46           ; 36           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[26] ; D15   ; 4        ; 40           ; 36           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[27] ; A17   ; 4        ; 42           ; 36           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[28] ; F14   ; 4        ; 35           ; 36           ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[29] ; B17   ; 4        ; 42           ; 36           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[2]  ; H1    ; 2        ; 0            ; 27           ; 4           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[30] ; F16   ; 4        ; 44           ; 36           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[31] ; T9    ; 1        ; 0            ; 16           ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[3]  ; K4    ; 2        ; 0            ; 26           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[4]  ; H3    ; 2        ; 0            ; 28           ; 4           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[5]  ; K8    ; 2        ; 0            ; 29           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[6]  ; E2    ; 2        ; 0            ; 30           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[7]  ; E1    ; 2        ; 0            ; 30           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[26] ; G14   ; 4        ; 35           ; 36           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[27] ; H17   ; 4        ; 48           ; 36           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[28] ; J17   ; 4        ; 48           ; 36           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[29] ; G16   ; 4        ; 44           ; 36           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[2]  ; N9    ; 2        ; 0            ; 25           ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[30] ; B15   ; 4        ; 37           ; 36           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[31] ; K8    ; 2        ; 0            ; 29           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[3]  ; L10   ; 2        ; 0            ; 23           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[4]  ; M4    ; 2        ; 0            ; 23           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[5]  ; L7    ; 2        ; 0            ; 24           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[6]  ; P9    ; 2        ; 0            ; 25           ; 4           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[7]  ; M2    ; 2        ; 0            ; 23           ; 4           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; ENTRADA[8]  ; C12   ; 3        ; 29           ; 36           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ENTRADA[9]  ; J10   ; 3        ; 27           ; 36           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; Sel         ; D13   ; 3        ; 31           ; 36           ; 3           ; 64                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ENTRADA[9]  ; D14   ; 4        ; 33           ; 36           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; RESET       ; P1    ; 1        ; 0            ; 18           ; 3           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; SEL         ; D13   ; 3        ; 31           ; 36           ; 3           ; 64                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 +-------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -344,70 +350,70 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 +-------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 ; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
 +-------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; SAIDA_1[0]  ; J2    ; 2        ; 0            ; 26           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[10] ; C11   ; 3        ; 29           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[11] ; J13   ; 3        ; 24           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[12] ; B11   ; 3        ; 29           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[13] ; J11   ; 3        ; 27           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[14] ; A9    ; 3        ; 20           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[15] ; G12   ; 3        ; 27           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[16] ; L10   ; 2        ; 0            ; 23           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[17] ; R3    ; 1        ; 0            ; 17           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[18] ; M4    ; 2        ; 0            ; 23           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[19] ; R6    ; 1        ; 0            ; 14           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[1]  ; K6    ; 2        ; 0            ; 30           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[20] ; R7    ; 1        ; 0            ; 14           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[21] ; P7    ; 1        ; 0            ; 15           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[22] ; U2    ; 1        ; 0            ; 13           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[23] ; G16   ; 4        ; 44           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[24] ; H15   ; 4        ; 42           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[25] ; A18   ; 4        ; 46           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[26] ; B16   ; 4        ; 37           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[27] ; E15   ; 4        ; 40           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[28] ; B18   ; 4        ; 46           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[29] ; C16   ; 4        ; 37           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[2]  ; G2    ; 2        ; 0            ; 28           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[0]  ; P3    ; 1        ; 0            ; 17           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[10] ; B14   ; 4        ; 33           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[11] ; F12   ; 3        ; 27           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[12] ; G13   ; 4        ; 35           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[13] ; B10   ; 3        ; 22           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[14] ; A10   ; 3        ; 22           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[15] ; J14   ; 3        ; 24           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[16] ; J5    ; 2        ; 0            ; 31           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[17] ; F4    ; 2        ; 0            ; 32           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[18] ; F7    ; 2        ; 0            ; 32           ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[19] ; E1    ; 2        ; 0            ; 30           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[1]  ; L2    ; 2        ; 0            ; 24           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[20] ; E2    ; 2        ; 0            ; 30           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[21] ; F6    ; 2        ; 0            ; 33           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[22] ; K7    ; 2        ; 0            ; 29           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[23] ; G17   ; 4        ; 48           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[24] ; A17   ; 4        ; 42           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[25] ; B16   ; 4        ; 37           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[26] ; D16   ; 4        ; 40           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[27] ; C15   ; 4        ; 37           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[28] ; H15   ; 4        ; 42           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[29] ; F17   ; 4        ; 48           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[2]  ; R4    ; 1        ; 0            ; 16           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 ; SAIDA_1[30] ; F15   ; 4        ; 44           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[31] ; T2    ; 1        ; 0            ; 15           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[3]  ; H2    ; 2        ; 0            ; 27           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[4]  ; J6    ; 2        ; 0            ; 29           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[5]  ; J3    ; 2        ; 0            ; 27           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[6]  ; J4    ; 2        ; 0            ; 27           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[7]  ; G4    ; 2        ; 0            ; 30           ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[8]  ; D10   ; 3        ; 20           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_1[9]  ; H12   ; 3        ; 18           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[0]  ; K7    ; 2        ; 0            ; 29           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[10] ; F12   ; 3        ; 27           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[11] ; D11   ; 3        ; 22           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[12] ; G11   ; 3        ; 22           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[13] ; J14   ; 3        ; 24           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[14] ; F11   ; 3        ; 18           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[15] ; A10   ; 3        ; 22           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[16] ; T4    ; 1        ; 0            ; 14           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[17] ; M3    ; 2        ; 0            ; 23           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[18] ; R4    ; 1        ; 0            ; 16           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[19] ; T10   ; 1        ; 0            ; 16           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[1]  ; G3    ; 2        ; 0            ; 29           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[20] ; P3    ; 1        ; 0            ; 17           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[21] ; U1    ; 1        ; 0            ; 13           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[22] ; U9    ; 1        ; 0            ; 13           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[23] ; F13   ; 4        ; 35           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[24] ; D14   ; 4        ; 33           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[25] ; C15   ; 4        ; 37           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[26] ; D16   ; 4        ; 40           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[27] ; G13   ; 4        ; 35           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[28] ; G15   ; 4        ; 44           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[29] ; G14   ; 4        ; 35           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[2]  ; F1    ; 2        ; 0            ; 28           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[30] ; H16   ; 4        ; 42           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[31] ; P6    ; 1        ; 0            ; 15           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[3]  ; F2    ; 2        ; 0            ; 28           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[4]  ; H4    ; 2        ; 0            ; 27           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[5]  ; G1    ; 2        ; 0            ; 28           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[6]  ; K5    ; 2        ; 0            ; 30           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[7]  ; J1    ; 2        ; 0            ; 26           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[8]  ; D12   ; 3        ; 24           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_2[9]  ; C10   ; 3        ; 20           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[31] ; G5    ; 2        ; 0            ; 33           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[3]  ; R2    ; 1        ; 0            ; 17           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[4]  ; K4    ; 2        ; 0            ; 26           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[5]  ; L9    ; 2        ; 0            ; 24           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[6]  ; M5    ; 2        ; 0            ; 23           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[7]  ; K2    ; 2        ; 0            ; 25           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[8]  ; G12   ; 3        ; 27           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_1[9]  ; B11   ; 3        ; 29           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[0]  ; T9    ; 1        ; 0            ; 16           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[10] ; J10   ; 3        ; 27           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[11] ; J11   ; 3        ; 27           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[12] ; D11   ; 3        ; 22           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[13] ; C10   ; 3        ; 20           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[14] ; J13   ; 3        ; 24           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[15] ; A9    ; 3        ; 20           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[16] ; D1    ; 2        ; 0            ; 32           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[17] ; B2    ; 2        ; 0            ; 34           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[18] ; H6    ; 2        ; 0            ; 31           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[19] ; K5    ; 2        ; 0            ; 30           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[1]  ; P4    ; 1        ; 0            ; 17           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[20] ; C3    ; 2        ; 0            ; 33           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[21] ; C2    ; 2        ; 0            ; 33           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[22] ; G4    ; 2        ; 0            ; 30           ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[23] ; E15   ; 4        ; 40           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[24] ; C16   ; 4        ; 37           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[25] ; B18   ; 4        ; 46           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[26] ; G15   ; 4        ; 44           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[27] ; H16   ; 4        ; 42           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[28] ; D15   ; 4        ; 40           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[29] ; A18   ; 4        ; 46           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[2]  ; L6    ; 2        ; 0            ; 24           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[30] ; B17   ; 4        ; 42           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[31] ; G3    ; 2        ; 0            ; 29           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[3]  ; K1    ; 2        ; 0            ; 25           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[4]  ; T10   ; 1        ; 0            ; 16           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[5]  ; L4    ; 2        ; 0            ; 25           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[6]  ; M3    ; 2        ; 0            ; 23           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[7]  ; L3    ; 2        ; 0            ; 24           ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[8]  ; G11   ; 3        ; 22           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_2[9]  ; C11   ; 3        ; 29           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 +-------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
@@ -416,10 +422,10 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 +----------+------------------+---------------+--------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
-; 1        ; 18 / 64 ( 28 % ) ; 3.3V          ; --           ;
-; 2        ; 31 / 59 ( 53 % ) ; 3.3V          ; --           ;
-; 3        ; 24 / 56 ( 43 % ) ; 3.3V          ; --           ;
-; 4        ; 26 / 58 ( 45 % ) ; 3.3V          ; --           ;
+; 1        ; 9 / 64 ( 14 % )  ; 3.3V          ; --           ;
+; 2        ; 42 / 59 ( 71 % ) ; 3.3V          ; --           ;
+; 3        ; 21 / 56 ( 38 % ) ; 3.3V          ; --           ;
+; 4        ; 29 / 58 ( 50 % ) ; 3.3V          ; --           ;
 ; 5        ; 0 / 65 ( 0 % )   ; 3.3V          ; --           ;
 ; 6        ; 1 / 59 ( 2 % )   ; 3.3V          ; --           ;
 ; 7        ; 0 / 58 ( 0 % )   ; 3.3V          ; --           ;
@@ -439,16 +445,16 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ; A6       ; 479        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A7       ; 465        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A8       ; 457        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; A9       ; 451        ; 3        ; SAIDA_1[14]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; A10      ; 447        ; 3        ; SAIDA_2[15]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A9       ; 451        ; 3        ; SAIDA_2[15]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A10      ; 447        ; 3        ; SAIDA_1[14]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A11      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; A12      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; A13      ; 430        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; A14      ; 427        ; 4        ; ENTRADA[15]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A14      ; 427        ; 4        ; ENTRADA[13]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A15      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; A16      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; A17      ; 412        ; 4        ; ENTRADA[27]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; A18      ; 406        ; 4        ; SAIDA_1[25]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A17      ; 412        ; 4        ; SAIDA_1[24]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A18      ; 406        ; 4        ; SAIDA_2[29]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A19      ; 394        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A20      ; 390        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A21      ; 382        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -611,23 +617,23 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ; AF24     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AF25     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B1       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; B2       ; 2          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; B3       ; 3          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; B2       ; 2          ; 2        ; SAIDA_2[17]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; B3       ; 3          ; 2        ; ENTRADA[16]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; B4       ; 483        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B5       ; 481        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B6       ; 480        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B7       ; 466        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B8       ; 458        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B9       ; 452        ; 3        ; ENTRADA[13]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B10      ; 448        ; 3        ; ENTRADA[12]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B11      ; 435        ; 3        ; SAIDA_1[12]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B12      ; 433        ; 3        ; ENTRADA[11]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B9       ; 452        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B10      ; 448        ; 3        ; SAIDA_1[13]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B11      ; 435        ; 3        ; SAIDA_1[9]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B12      ; 433        ; 3        ; ENTRADA[15]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B13      ; 429        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; B14      ; 428        ; 4        ; ENTRADA[14]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B15      ; 420        ; 4        ; ENTRADA[24]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B16      ; 419        ; 4        ; SAIDA_1[26]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B17      ; 411        ; 4        ; ENTRADA[29]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B18      ; 405        ; 4        ; SAIDA_1[28]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B14      ; 428        ; 4        ; SAIDA_1[10]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B15      ; 420        ; 4        ; ENTRADA[30]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B16      ; 419        ; 4        ; SAIDA_1[25]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B17      ; 411        ; 4        ; SAIDA_2[30]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B18      ; 405        ; 4        ; SAIDA_2[25]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B19      ; 393        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B20      ; 389        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B21      ; 381        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -637,21 +643,21 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ; B25      ; 362        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; B26      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C1       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; C2       ; 6          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; C3       ; 7          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; C2       ; 6          ; 2        ; SAIDA_2[21]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; C3       ; 7          ; 2        ; SAIDA_2[20]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; C4       ; 478        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C5       ; 486        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C6       ; 485        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C7       ; 468        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C8       ; 463        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C9       ; 459        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; C10      ; 450        ; 3        ; SAIDA_2[9]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C11      ; 436        ; 3        ; SAIDA_1[10]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C10      ; 450        ; 3        ; SAIDA_2[13]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C11      ; 436        ; 3        ; SAIDA_2[9]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C12      ; 434        ; 3        ; ENTRADA[8]                               ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C13      ; 431        ; 3        ; ENTRADA[0]                               ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C14      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; C15      ; 421        ; 4        ; SAIDA_2[25]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C16      ; 418        ; 4        ; SAIDA_1[29]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C15      ; 421        ; 4        ; SAIDA_1[27]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C16      ; 418        ; 4        ; SAIDA_2[24]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C17      ; 404        ; 4        ; ENTRADA[23]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C18      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C19      ; 391        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -662,8 +668,8 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ; C24      ; 360        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; C25      ; 361        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; C26      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; D1       ; 13         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; D2       ; 12         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; D1       ; 13         ; 2        ; SAIDA_2[16]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; D2       ; 12         ; 2        ; ENTRADA[22]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; D3       ; 1          ; 2        ; ~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; On           ;
 ; D4       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; D5       ; 477        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -671,13 +677,13 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ; D7       ; 469        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D8       ; 464        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D9       ; 460        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; D10      ; 449        ; 3        ; SAIDA_1[8]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D11      ; 445        ; 3        ; SAIDA_2[11]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D12      ; 443        ; 3        ; SAIDA_2[8]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D13      ; 432        ; 3        ; Sel                                      ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D14      ; 426        ; 4        ; SAIDA_2[24]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D15      ; 417        ; 4        ; ENTRADA[26]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D16      ; 415        ; 4        ; SAIDA_2[26]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D10      ; 449        ; 3        ; ENTRADA[12]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D11      ; 445        ; 3        ; SAIDA_2[12]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D12      ; 443        ; 3        ; ENTRADA[10]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D13      ; 432        ; 3        ; SEL                                      ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D14      ; 426        ; 4        ; ENTRADA[9]                               ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D15      ; 417        ; 4        ; SAIDA_2[28]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D16      ; 415        ; 4        ; SAIDA_1[26]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D17      ; 403        ; 4        ; ENTRADA[25]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D18      ; 396        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D19      ; 392        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -688,8 +694,8 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ; D24      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; D25      ; 358        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D26      ; 359        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; E1       ; 20         ; 2        ; ENTRADA[7]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; E2       ; 19         ; 2        ; ENTRADA[6]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; E1       ; 20         ; 2        ; SAIDA_1[19]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; E2       ; 19         ; 2        ; SAIDA_1[20]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; E3       ; 0          ; 2        ; ~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; On           ;
 ; E4       ;            ;          ; GND_PLL3                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; E5       ; 4          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -699,10 +705,10 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ; E9       ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; E10      ; 453        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E11      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; E12      ; 444        ; 3        ; ENTRADA[10]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; E12      ; 444        ; 3        ; ENTRADA[11]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E13      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; E14      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; E15      ; 416        ; 4        ; SAIDA_1[27]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; E15      ; 416        ; 4        ; SAIDA_2[23]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E16      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; E17      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; E18      ; 395        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -714,23 +720,23 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ; E24      ; 364        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E25      ; 355        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E26      ; 356        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; F1       ; 29         ; 2        ; SAIDA_2[2]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; F2       ; 28         ; 2        ; SAIDA_2[3]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; F3       ; 10         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; F4       ; 11         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; F1       ; 29         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; F2       ; 28         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; F3       ; 10         ; 2        ; ENTRADA[21]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F4       ; 11         ; 2        ; SAIDA_1[17]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; F5       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; F6       ; 5          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; F7       ; 14         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; F6       ; 5          ; 2        ; SAIDA_1[21]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F7       ; 14         ; 2        ; SAIDA_1[18]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; F8       ;            ;          ; GNDA_PLL3                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F9       ; 470        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F10      ; 462        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; F11      ; 454        ; 3        ; SAIDA_2[14]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; F12      ; 440        ; 3        ; SAIDA_2[10]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; F13      ; 423        ; 4        ; SAIDA_2[23]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; F14      ; 425        ; 4        ; ENTRADA[28]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F11      ; 454        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; F12      ; 440        ; 3        ; SAIDA_1[11]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F13      ; 423        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; F14      ; 425        ; 4        ; ENTRADA[14]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; F15      ; 409        ; 4        ; SAIDA_1[30]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; F16      ; 408        ; 4        ; ENTRADA[30]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; F17      ; 401        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; F16      ; 408        ; 4        ; ENTRADA[24]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F17      ; 401        ; 4        ; SAIDA_1[29]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; F18      ; 398        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F19      ;            ;          ; GNDA_PLL2                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F20      ; 372        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -740,23 +746,23 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ; F24      ; 354        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F25      ; 350        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F26      ; 349        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; G1       ; 30         ; 2        ; SAIDA_2[5]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; G2       ; 31         ; 2        ; SAIDA_1[2]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; G3       ; 24         ; 2        ; SAIDA_2[1]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; G4       ; 23         ; 2        ; SAIDA_1[7]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; G5       ; 8          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; G6       ; 9          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; G1       ; 30         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; G2       ; 31         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; G3       ; 24         ; 2        ; SAIDA_2[31]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G4       ; 23         ; 2        ; SAIDA_2[22]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G5       ; 8          ; 2        ; SAIDA_1[31]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G6       ; 9          ; 2        ; ENTRADA[18]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; G7       ;            ;          ; GND_PLL3                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; G8       ;            ;          ; VCCA_PLL3                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; G9       ; 471        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G10      ; 461        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; G11      ; 446        ; 3        ; SAIDA_2[12]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; G12      ; 439        ; 3        ; SAIDA_1[15]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; G13      ; 422        ; 4        ; SAIDA_2[27]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; G14      ; 424        ; 4        ; SAIDA_2[29]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; G15      ; 410        ; 4        ; SAIDA_2[28]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; G16      ; 407        ; 4        ; SAIDA_1[23]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; G17      ; 402        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; G11      ; 446        ; 3        ; SAIDA_2[8]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G12      ; 439        ; 3        ; SAIDA_1[8]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G13      ; 422        ; 4        ; SAIDA_1[12]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G14      ; 424        ; 4        ; ENTRADA[26]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G15      ; 410        ; 4        ; SAIDA_2[26]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G16      ; 407        ; 4        ; ENTRADA[29]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G17      ; 402        ; 4        ; SAIDA_1[23]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; G18      ; 397        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G19      ;            ;          ; VCCA_PLL2                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; G20      ;            ;          ; GND_PLL2                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -766,23 +772,23 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ; G24      ; 345        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G25      ; 343        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G26      ; 342        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; H1       ; 37         ; 2        ; ENTRADA[2]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; H2       ; 36         ; 2        ; SAIDA_1[3]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; H3       ; 32         ; 2        ; ENTRADA[4]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; H4       ; 33         ; 2        ; SAIDA_2[4]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H1       ; 37         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; H2       ; 36         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; H3       ; 32         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; H4       ; 33         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H5       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; H6       ; 18         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; H6       ; 18         ; 2        ; SAIDA_2[18]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; H7       ;            ;          ; VCCD_PLL3                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; H8       ; 473        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H9       ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; H10      ; 472        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H11      ; 456        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; H12      ; 455        ; 3        ; SAIDA_1[9]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; H12      ; 455        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H13      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; H14      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; H15      ; 414        ; 4        ; SAIDA_1[24]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; H16      ; 413        ; 4        ; SAIDA_2[30]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; H17      ; 400        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; H15      ; 414        ; 4        ; SAIDA_1[28]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; H16      ; 413        ; 4        ; SAIDA_2[27]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; H17      ; 400        ; 4        ; ENTRADA[27]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H18      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; H19      ; 335        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H20      ;            ;          ; VCCD_PLL2                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -792,23 +798,23 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ; H24      ; 340        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H25      ; 337        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H26      ; 336        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; J1       ; 39         ; 2        ; SAIDA_2[7]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; J2       ; 38         ; 2        ; SAIDA_1[0]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; J3       ; 34         ; 2        ; SAIDA_1[5]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; J4       ; 35         ; 2        ; SAIDA_1[6]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; J5       ; 15         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; J6       ; 25         ; 2        ; SAIDA_1[4]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; J7       ; 17         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; J8       ; 16         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; J1       ; 39         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; J2       ; 38         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; J3       ; 34         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; J4       ; 35         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; J5       ; 15         ; 2        ; SAIDA_1[16]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; J6       ; 25         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; J7       ; 17         ; 2        ; ENTRADA[17]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; J8       ; 16         ; 2        ; ENTRADA[20]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; J9       ; 475        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; J10      ; 438        ; 3        ; ENTRADA[9]                               ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; J11      ; 437        ; 3        ; SAIDA_1[13]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; J10      ; 438        ; 3        ; SAIDA_2[10]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; J11      ; 437        ; 3        ; SAIDA_2[11]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; J12      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; J13      ; 442        ; 3        ; SAIDA_1[11]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; J14      ; 441        ; 3        ; SAIDA_2[13]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; J13      ; 442        ; 3        ; SAIDA_2[14]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; J14      ; 441        ; 3        ; SAIDA_1[15]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; J15      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; J16      ; 385        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; J17      ; 399        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; J17      ; 399        ; 4        ; ENTRADA[28]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; J18      ; 383        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; J19      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; J20      ; 351        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -818,14 +824,14 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ; J24      ; 338        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J25      ; 327        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J26      ; 326        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; K1       ; 42         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; K2       ; 43         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; K3       ; 41         ; 2        ; ENTRADA[1]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; K4       ; 40         ; 2        ; ENTRADA[3]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; K5       ; 22         ; 2        ; SAIDA_2[6]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; K6       ; 21         ; 2        ; SAIDA_1[1]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; K7       ; 27         ; 2        ; SAIDA_2[0]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; K8       ; 26         ; 2        ; ENTRADA[5]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; K1       ; 42         ; 2        ; SAIDA_2[3]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; K2       ; 43         ; 2        ; SAIDA_1[7]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; K3       ; 41         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; K4       ; 40         ; 2        ; SAIDA_1[4]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; K5       ; 22         ; 2        ; SAIDA_2[19]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; K6       ; 21         ; 2        ; ENTRADA[19]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; K7       ; 27         ; 2        ; SAIDA_1[22]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; K8       ; 26         ; 2        ; ENTRADA[31]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; K9       ; 476        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; K10      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; K11      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -845,15 +851,15 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ; K25      ; 321        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K26      ; 320        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; L1       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; L2       ; 50         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; L3       ; 51         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; L4       ; 44         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; L2       ; 50         ; 2        ; SAIDA_1[1]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L3       ; 51         ; 2        ; SAIDA_2[7]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L4       ; 44         ; 2        ; SAIDA_2[5]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; L5       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; L6       ; 48         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; L7       ; 47         ; 2        ; ENTRADA[21]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L6       ; 48         ; 2        ; SAIDA_2[2]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L7       ; 47         ; 2        ; ENTRADA[5]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; L8       ; 59         ; 2        ; #TMS                                     ; input  ;              ;         ; --         ;                 ; --       ; --           ;
-; L9       ; 49         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; L10      ; 52         ; 2        ; SAIDA_1[16]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L9       ; 49         ; 2        ; SAIDA_1[5]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L10      ; 52         ; 2        ; ENTRADA[3]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; L11      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; L12      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; L13      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -871,10 +877,10 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ; L25      ; 323        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; L26      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; M1       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; M2       ; 56         ; 2        ; ENTRADA[18]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; M3       ; 55         ; 2        ; SAIDA_2[17]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; M4       ; 53         ; 2        ; SAIDA_1[18]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; M5       ; 54         ; 2        ; ENTRADA[19]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; M2       ; 56         ; 2        ; ENTRADA[7]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; M3       ; 55         ; 2        ; SAIDA_2[6]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; M4       ; 53         ; 2        ; ENTRADA[4]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; M5       ; 54         ; 2        ; SAIDA_1[6]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; M6       ; 58         ; 2        ; #TCK                                     ; input  ;              ;         ; --         ;                 ; --       ; --           ;
 ; M7       ; 60         ; 2        ; #TDO                                     ; output ;              ;         ; --         ;                 ; --       ; --           ;
 ; M8       ; 57         ; 2        ; #TDI                                     ; input  ;              ;         ; --         ;                 ; --       ; --           ;
@@ -904,7 +910,7 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ; N6       ; 61         ; 2        ; ^DCLK                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; N7       ; 66         ; 2        ; ^nCONFIG                                 ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; N8       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; N9       ; 45         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; N9       ; 45         ; 2        ; ENTRADA[2]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; N10      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; N11      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N12      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -922,15 +928,15 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ; N24      ; 310        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N25      ; 309        ; 5        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; N26      ; 308        ; 5        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; P1       ; 68         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; P2       ; 67         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; P3       ; 69         ; 1        ; SAIDA_2[20]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; P4       ; 70         ; 1        ; ENTRADA[17]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P1       ; 68         ; 1        ; RESET                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P2       ; 67         ; 1        ; CLOCK                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P3       ; 69         ; 1        ; SAIDA_1[0]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P4       ; 70         ; 1        ; SAIDA_2[1]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; P5       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; P6       ; 78         ; 1        ; SAIDA_2[31]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; P7       ; 77         ; 1        ; SAIDA_1[21]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P6       ; 78         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; P7       ; 77         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P8       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; P9       ; 46         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; P9       ; 46         ; 2        ; ENTRADA[6]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; P10      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; P11      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; P12      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -949,12 +955,12 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ; P25      ; 307        ; 6        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; P26      ; 306        ; 6        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; R1       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; R2       ; 71         ; 1        ; ENTRADA[22]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; R3       ; 72         ; 1        ; SAIDA_1[17]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; R4       ; 73         ; 1        ; SAIDA_2[18]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; R5       ; 74         ; 1        ; ENTRADA[16]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; R6       ; 81         ; 1        ; SAIDA_1[19]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; R7       ; 82         ; 1        ; SAIDA_1[20]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; R2       ; 71         ; 1        ; SAIDA_1[3]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; R3       ; 72         ; 1        ; ENTRADA[1]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; R4       ; 73         ; 1        ; SAIDA_1[2]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; R5       ; 74         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; R6       ; 81         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; R7       ; 82         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; R8       ; 110        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; R9       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; R10      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -975,15 +981,15 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ; R25      ; 303        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; R26      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; T1       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; T2       ; 79         ; 1        ; SAIDA_1[31]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; T3       ; 80         ; 1        ; ENTRADA[20]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; T4       ; 83         ; 1        ; SAIDA_2[16]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T2       ; 79         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; T3       ; 80         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; T4       ; 83         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; T5       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; T6       ; 93         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T7       ; 92         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T8       ; 111        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; T9       ; 76         ; 1        ; ENTRADA[31]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; T10      ; 75         ; 1        ; SAIDA_2[19]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T9       ; 76         ; 1        ; SAIDA_2[0]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T10      ; 75         ; 1        ; SAIDA_2[4]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; T11      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; T12      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; T13      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1000,15 +1006,15 @@ The pin-out file can be found in C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/o
 ; T24      ; 292        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T25      ; 291        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T26      ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; U1       ; 85         ; 1        ; SAIDA_2[21]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; U2       ; 84         ; 1        ; SAIDA_1[22]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; U1       ; 85         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; U2       ; 84         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U3       ; 88         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U4       ; 89         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U5       ; 100        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U6       ; 98         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U7       ; 99         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U8       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; U9       ; 86         ; 1        ; SAIDA_2[22]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; U9       ; 86         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U10      ; 87         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U11      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; U12      ; 178        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -1150,7 +1156,7 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; |Demux                     ; 64 (64)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 97   ; 0            ; 64 (64)      ; 0 (0)             ; 0 (0)            ; |Demux              ; work         ;
+; |Demux                     ; 64 (64)     ; 64 (64)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 99   ; 0            ; 0 (0)        ; 0 (0)             ; 64 (64)          ; |Demux              ; work         ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1225,7 +1231,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SAIDA_2[30] ; Output   ; --            ; --            ; --                    ; --  ;
 ; SAIDA_2[31] ; Output   ; --            ; --            ; --                    ; --  ;
 ; ENTRADA[0]  ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; Sel         ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; SEL         ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; CLOCK       ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; RESET       ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; ENTRADA[1]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; ENTRADA[2]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; ENTRADA[3]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
@@ -1266,10 +1274,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout ; Pad To Core Index ; Setting ;
 +---------------------+-------------------+---------+
 ; ENTRADA[0]          ;                   ;         ;
-; Sel                 ;                   ;         ;
+; SEL                 ;                   ;         ;
+; CLOCK               ;                   ;         ;
+; RESET               ;                   ;         ;
 ; ENTRADA[1]          ;                   ;         ;
-;      - SAIDA_1~1    ; 0                 ; 6       ;
-;      - SAIDA_2~1    ; 0                 ; 6       ;
+;      - SAIDA_1~1    ; 1                 ; 6       ;
+;      - SAIDA_2~1    ; 1                 ; 6       ;
 ; ENTRADA[2]          ;                   ;         ;
 ;      - SAIDA_1~2    ; 1                 ; 6       ;
 ;      - SAIDA_2~2    ; 1                 ; 6       ;
@@ -1307,17 +1317,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - SAIDA_1~13   ; 0                 ; 6       ;
 ;      - SAIDA_2~13   ; 0                 ; 6       ;
 ; ENTRADA[14]         ;                   ;         ;
-;      - SAIDA_1~14   ; 0                 ; 6       ;
-;      - SAIDA_2~14   ; 0                 ; 6       ;
+;      - SAIDA_1~14   ; 1                 ; 6       ;
+;      - SAIDA_2~14   ; 1                 ; 6       ;
 ; ENTRADA[15]         ;                   ;         ;
 ;      - SAIDA_1~15   ; 0                 ; 6       ;
 ;      - SAIDA_2~15   ; 0                 ; 6       ;
 ; ENTRADA[16]         ;                   ;         ;
-;      - SAIDA_1~16   ; 0                 ; 6       ;
-;      - SAIDA_2~16   ; 0                 ; 6       ;
+;      - SAIDA_1~16   ; 1                 ; 6       ;
+;      - SAIDA_2~16   ; 1                 ; 6       ;
 ; ENTRADA[17]         ;                   ;         ;
-;      - SAIDA_1~17   ; 1                 ; 6       ;
-;      - SAIDA_2~17   ; 1                 ; 6       ;
+;      - SAIDA_1~17   ; 0                 ; 6       ;
+;      - SAIDA_2~17   ; 0                 ; 6       ;
 ; ENTRADA[18]         ;                   ;         ;
 ;      - SAIDA_1~18   ; 1                 ; 6       ;
 ;      - SAIDA_2~18   ; 1                 ; 6       ;
@@ -1331,8 +1341,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - SAIDA_1~21   ; 0                 ; 6       ;
 ;      - SAIDA_2~21   ; 0                 ; 6       ;
 ; ENTRADA[22]         ;                   ;         ;
-;      - SAIDA_1~22   ; 0                 ; 6       ;
-;      - SAIDA_2~22   ; 0                 ; 6       ;
+;      - SAIDA_1~22   ; 1                 ; 6       ;
+;      - SAIDA_2~22   ; 1                 ; 6       ;
 ; ENTRADA[23]         ;                   ;         ;
 ;      - SAIDA_1~23   ; 0                 ; 6       ;
 ;      - SAIDA_2~23   ; 0                 ; 6       ;
@@ -1363,109 +1373,193 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 
 
++--------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                          ;
++-------+----------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name  ; Location ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------+----------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; CLOCK ; PIN_P2   ; 64      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; RESET ; PIN_P1   ; 64      ; Async. clear ; yes    ; Global Clock         ; GCLK1            ; --                        ;
++-------+----------+---------+--------------+--------+----------------------+------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                      ;
++-------+----------+---------+----------------------+------------------+---------------------------+
+; Name  ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------+----------+---------+----------------------+------------------+---------------------------+
+; CLOCK ; PIN_P2   ; 64      ; Global Clock         ; GCLK3            ; --                        ;
+; RESET ; PIN_P1   ; 64      ; Global Clock         ; GCLK1            ; --                        ;
++-------+----------+---------+----------------------+------------------+---------------------------+
+
+
 +---------------------------------+
 ; Non-Global High Fan-Out Signals ;
-+-------------+-------------------+
-; Name        ; Fan-Out           ;
-+-------------+-------------------+
-; Sel         ; 64                ;
-; ENTRADA[31] ; 2                 ;
-; ENTRADA[30] ; 2                 ;
-; ENTRADA[29] ; 2                 ;
-; ENTRADA[28] ; 2                 ;
-; ENTRADA[27] ; 2                 ;
-; ENTRADA[26] ; 2                 ;
-; ENTRADA[25] ; 2                 ;
-; ENTRADA[24] ; 2                 ;
-; ENTRADA[23] ; 2                 ;
-; ENTRADA[22] ; 2                 ;
-; ENTRADA[21] ; 2                 ;
-; ENTRADA[20] ; 2                 ;
-; ENTRADA[19] ; 2                 ;
-; ENTRADA[18] ; 2                 ;
-; ENTRADA[17] ; 2                 ;
-; ENTRADA[16] ; 2                 ;
-; ENTRADA[15] ; 2                 ;
-; ENTRADA[14] ; 2                 ;
-; ENTRADA[13] ; 2                 ;
-; ENTRADA[12] ; 2                 ;
-; ENTRADA[11] ; 2                 ;
-; ENTRADA[10] ; 2                 ;
-; ENTRADA[9]  ; 2                 ;
-; ENTRADA[8]  ; 2                 ;
-; ENTRADA[7]  ; 2                 ;
-; ENTRADA[6]  ; 2                 ;
-; ENTRADA[5]  ; 2                 ;
-; ENTRADA[4]  ; 2                 ;
-; ENTRADA[3]  ; 2                 ;
-; ENTRADA[2]  ; 2                 ;
-; ENTRADA[1]  ; 2                 ;
-; ENTRADA[0]  ; 2                 ;
-; SAIDA_2~31  ; 1                 ;
-; SAIDA_2~30  ; 1                 ;
-; SAIDA_2~29  ; 1                 ;
-; SAIDA_2~28  ; 1                 ;
-; SAIDA_2~27  ; 1                 ;
-; SAIDA_2~26  ; 1                 ;
-; SAIDA_2~25  ; 1                 ;
-; SAIDA_2~24  ; 1                 ;
-; SAIDA_2~23  ; 1                 ;
-; SAIDA_2~22  ; 1                 ;
-; SAIDA_2~21  ; 1                 ;
-; SAIDA_2~20  ; 1                 ;
-; SAIDA_2~19  ; 1                 ;
-; SAIDA_2~18  ; 1                 ;
-; SAIDA_2~17  ; 1                 ;
-; SAIDA_2~16  ; 1                 ;
-; SAIDA_2~15  ; 1                 ;
-; SAIDA_2~14  ; 1                 ;
-; SAIDA_2~13  ; 1                 ;
-; SAIDA_2~12  ; 1                 ;
-; SAIDA_2~11  ; 1                 ;
-; SAIDA_2~10  ; 1                 ;
-; SAIDA_2~9   ; 1                 ;
-; SAIDA_2~8   ; 1                 ;
-; SAIDA_2~7   ; 1                 ;
-; SAIDA_2~6   ; 1                 ;
-; SAIDA_2~5   ; 1                 ;
-; SAIDA_2~4   ; 1                 ;
-; SAIDA_2~3   ; 1                 ;
-; SAIDA_2~2   ; 1                 ;
-; SAIDA_2~1   ; 1                 ;
-; SAIDA_2~0   ; 1                 ;
-; SAIDA_1~31  ; 1                 ;
-; SAIDA_1~30  ; 1                 ;
-; SAIDA_1~29  ; 1                 ;
-; SAIDA_1~28  ; 1                 ;
-; SAIDA_1~27  ; 1                 ;
-; SAIDA_1~26  ; 1                 ;
-; SAIDA_1~25  ; 1                 ;
-; SAIDA_1~24  ; 1                 ;
-; SAIDA_1~23  ; 1                 ;
-; SAIDA_1~22  ; 1                 ;
-; SAIDA_1~21  ; 1                 ;
-; SAIDA_1~20  ; 1                 ;
-; SAIDA_1~19  ; 1                 ;
-; SAIDA_1~18  ; 1                 ;
-; SAIDA_1~17  ; 1                 ;
-; SAIDA_1~16  ; 1                 ;
-; SAIDA_1~15  ; 1                 ;
-; SAIDA_1~14  ; 1                 ;
-; SAIDA_1~13  ; 1                 ;
-; SAIDA_1~12  ; 1                 ;
-; SAIDA_1~11  ; 1                 ;
-; SAIDA_1~10  ; 1                 ;
-; SAIDA_1~9   ; 1                 ;
-; SAIDA_1~8   ; 1                 ;
-; SAIDA_1~7   ; 1                 ;
-; SAIDA_1~6   ; 1                 ;
-; SAIDA_1~5   ; 1                 ;
-; SAIDA_1~4   ; 1                 ;
-; SAIDA_1~3   ; 1                 ;
-; SAIDA_1~2   ; 1                 ;
-; SAIDA_1~1   ; 1                 ;
-; SAIDA_1~0   ; 1                 ;
-+-------------+-------------------+
++------------------+--------------+
+; Name             ; Fan-Out      ;
++------------------+--------------+
+; SEL              ; 64           ;
+; ENTRADA[31]      ; 2            ;
+; ENTRADA[30]      ; 2            ;
+; ENTRADA[29]      ; 2            ;
+; ENTRADA[28]      ; 2            ;
+; ENTRADA[27]      ; 2            ;
+; ENTRADA[26]      ; 2            ;
+; ENTRADA[25]      ; 2            ;
+; ENTRADA[24]      ; 2            ;
+; ENTRADA[23]      ; 2            ;
+; ENTRADA[22]      ; 2            ;
+; ENTRADA[21]      ; 2            ;
+; ENTRADA[20]      ; 2            ;
+; ENTRADA[19]      ; 2            ;
+; ENTRADA[18]      ; 2            ;
+; ENTRADA[17]      ; 2            ;
+; ENTRADA[16]      ; 2            ;
+; ENTRADA[15]      ; 2            ;
+; ENTRADA[14]      ; 2            ;
+; ENTRADA[13]      ; 2            ;
+; ENTRADA[12]      ; 2            ;
+; ENTRADA[11]      ; 2            ;
+; ENTRADA[10]      ; 2            ;
+; ENTRADA[9]       ; 2            ;
+; ENTRADA[8]       ; 2            ;
+; ENTRADA[7]       ; 2            ;
+; ENTRADA[6]       ; 2            ;
+; ENTRADA[5]       ; 2            ;
+; ENTRADA[4]       ; 2            ;
+; ENTRADA[3]       ; 2            ;
+; ENTRADA[2]       ; 2            ;
+; ENTRADA[1]       ; 2            ;
+; ENTRADA[0]       ; 2            ;
+; SAIDA_2~31       ; 1            ;
+; SAIDA_2~30       ; 1            ;
+; SAIDA_2~29       ; 1            ;
+; SAIDA_2~28       ; 1            ;
+; SAIDA_2~27       ; 1            ;
+; SAIDA_2~26       ; 1            ;
+; SAIDA_2~25       ; 1            ;
+; SAIDA_2~24       ; 1            ;
+; SAIDA_2~23       ; 1            ;
+; SAIDA_2~22       ; 1            ;
+; SAIDA_2~21       ; 1            ;
+; SAIDA_2~20       ; 1            ;
+; SAIDA_2~19       ; 1            ;
+; SAIDA_2~18       ; 1            ;
+; SAIDA_2~17       ; 1            ;
+; SAIDA_2~16       ; 1            ;
+; SAIDA_2~15       ; 1            ;
+; SAIDA_2~14       ; 1            ;
+; SAIDA_2~13       ; 1            ;
+; SAIDA_2~12       ; 1            ;
+; SAIDA_2~11       ; 1            ;
+; SAIDA_2~10       ; 1            ;
+; SAIDA_2~9        ; 1            ;
+; SAIDA_2~8        ; 1            ;
+; SAIDA_2~7        ; 1            ;
+; SAIDA_2~6        ; 1            ;
+; SAIDA_2~5        ; 1            ;
+; SAIDA_2~4        ; 1            ;
+; SAIDA_2~3        ; 1            ;
+; SAIDA_2~2        ; 1            ;
+; SAIDA_2~1        ; 1            ;
+; SAIDA_2~0        ; 1            ;
+; SAIDA_1~31       ; 1            ;
+; SAIDA_1~30       ; 1            ;
+; SAIDA_1~29       ; 1            ;
+; SAIDA_1~28       ; 1            ;
+; SAIDA_1~27       ; 1            ;
+; SAIDA_1~26       ; 1            ;
+; SAIDA_1~25       ; 1            ;
+; SAIDA_1~24       ; 1            ;
+; SAIDA_1~23       ; 1            ;
+; SAIDA_1~22       ; 1            ;
+; SAIDA_1~21       ; 1            ;
+; SAIDA_1~20       ; 1            ;
+; SAIDA_1~19       ; 1            ;
+; SAIDA_1~18       ; 1            ;
+; SAIDA_1~17       ; 1            ;
+; SAIDA_1~16       ; 1            ;
+; SAIDA_1~15       ; 1            ;
+; SAIDA_1~14       ; 1            ;
+; SAIDA_1~13       ; 1            ;
+; SAIDA_1~12       ; 1            ;
+; SAIDA_1~11       ; 1            ;
+; SAIDA_1~10       ; 1            ;
+; SAIDA_1~9        ; 1            ;
+; SAIDA_1~8        ; 1            ;
+; SAIDA_1~7        ; 1            ;
+; SAIDA_1~6        ; 1            ;
+; SAIDA_1~5        ; 1            ;
+; SAIDA_1~4        ; 1            ;
+; SAIDA_1~3        ; 1            ;
+; SAIDA_1~2        ; 1            ;
+; SAIDA_1~1        ; 1            ;
+; SAIDA_1~0        ; 1            ;
+; SAIDA_2[31]~reg0 ; 1            ;
+; SAIDA_2[30]~reg0 ; 1            ;
+; SAIDA_2[29]~reg0 ; 1            ;
+; SAIDA_2[28]~reg0 ; 1            ;
+; SAIDA_2[27]~reg0 ; 1            ;
+; SAIDA_2[26]~reg0 ; 1            ;
+; SAIDA_2[25]~reg0 ; 1            ;
+; SAIDA_2[24]~reg0 ; 1            ;
+; SAIDA_2[23]~reg0 ; 1            ;
+; SAIDA_2[22]~reg0 ; 1            ;
+; SAIDA_2[21]~reg0 ; 1            ;
+; SAIDA_2[20]~reg0 ; 1            ;
+; SAIDA_2[19]~reg0 ; 1            ;
+; SAIDA_2[18]~reg0 ; 1            ;
+; SAIDA_2[17]~reg0 ; 1            ;
+; SAIDA_2[16]~reg0 ; 1            ;
+; SAIDA_2[15]~reg0 ; 1            ;
+; SAIDA_2[14]~reg0 ; 1            ;
+; SAIDA_2[13]~reg0 ; 1            ;
+; SAIDA_2[12]~reg0 ; 1            ;
+; SAIDA_2[11]~reg0 ; 1            ;
+; SAIDA_2[10]~reg0 ; 1            ;
+; SAIDA_2[9]~reg0  ; 1            ;
+; SAIDA_2[8]~reg0  ; 1            ;
+; SAIDA_2[7]~reg0  ; 1            ;
+; SAIDA_2[6]~reg0  ; 1            ;
+; SAIDA_2[5]~reg0  ; 1            ;
+; SAIDA_2[4]~reg0  ; 1            ;
+; SAIDA_2[3]~reg0  ; 1            ;
+; SAIDA_2[2]~reg0  ; 1            ;
+; SAIDA_2[1]~reg0  ; 1            ;
+; SAIDA_2[0]~reg0  ; 1            ;
+; SAIDA_1[31]~reg0 ; 1            ;
+; SAIDA_1[30]~reg0 ; 1            ;
+; SAIDA_1[29]~reg0 ; 1            ;
+; SAIDA_1[28]~reg0 ; 1            ;
+; SAIDA_1[27]~reg0 ; 1            ;
+; SAIDA_1[26]~reg0 ; 1            ;
+; SAIDA_1[25]~reg0 ; 1            ;
+; SAIDA_1[24]~reg0 ; 1            ;
+; SAIDA_1[23]~reg0 ; 1            ;
+; SAIDA_1[22]~reg0 ; 1            ;
+; SAIDA_1[21]~reg0 ; 1            ;
+; SAIDA_1[20]~reg0 ; 1            ;
+; SAIDA_1[19]~reg0 ; 1            ;
+; SAIDA_1[18]~reg0 ; 1            ;
+; SAIDA_1[17]~reg0 ; 1            ;
+; SAIDA_1[16]~reg0 ; 1            ;
+; SAIDA_1[15]~reg0 ; 1            ;
+; SAIDA_1[14]~reg0 ; 1            ;
+; SAIDA_1[13]~reg0 ; 1            ;
+; SAIDA_1[12]~reg0 ; 1            ;
+; SAIDA_1[11]~reg0 ; 1            ;
+; SAIDA_1[10]~reg0 ; 1            ;
+; SAIDA_1[9]~reg0  ; 1            ;
+; SAIDA_1[8]~reg0  ; 1            ;
+; SAIDA_1[7]~reg0  ; 1            ;
+; SAIDA_1[6]~reg0  ; 1            ;
+; SAIDA_1[5]~reg0  ; 1            ;
+; SAIDA_1[4]~reg0  ; 1            ;
+; SAIDA_1[3]~reg0  ; 1            ;
+; SAIDA_1[2]~reg0  ; 1            ;
+; SAIDA_1[1]~reg0  ; 1            ;
+; SAIDA_1[0]~reg0  ; 1            ;
++------------------+--------------+
 
 
 +------------------------------------------------------+
@@ -1474,13 +1568,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
 ; Block interconnects         ; 100 / 94,460 ( < 1 % ) ;
-; C16 interconnects           ; 3 / 3,315 ( < 1 % )    ;
+; C16 interconnects           ; 2 / 3,315 ( < 1 % )    ;
 ; C4 interconnects            ; 93 / 60,840 ( < 1 % )  ;
-; Direct links                ; 6 / 94,460 ( < 1 % )   ;
-; Global clocks               ; 0 / 16 ( 0 % )         ;
+; Direct links                ; 7 / 94,460 ( < 1 % )   ;
+; Global clocks               ; 2 / 16 ( 13 % )        ;
 ; Local interconnects         ; 0 / 33,216 ( 0 % )     ;
-; R24 interconnects           ; 6 / 3,091 ( < 1 % )    ;
-; R4 interconnects            ; 54 / 81,294 ( < 1 % )  ;
+; R24 interconnects           ; 5 / 3,091 ( < 1 % )    ;
+; R4 interconnects            ; 57 / 81,294 ( < 1 % )  ;
 +-----------------------------+------------------------+
 
 
@@ -1508,10 +1602,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+-----------------------------+
 
 
++------------------------------------------------------------------+
+; LAB-wide Signals                                                 ;
++------------------------------------+-----------------------------+
+; LAB-wide Signals  (Average = 2.00) ; Number of LABs  (Total = 4) ;
++------------------------------------+-----------------------------+
+; 1 Async. clear                     ; 4                           ;
+; 1 Clock                            ; 4                           ;
++------------------------------------+-----------------------------+
+
+
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 16.00) ; Number of LABs  (Total = 4) ;
+; Number of Signals Sourced  (Average = 32.00) ; Number of LABs  (Total = 4) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 0                           ;
@@ -1529,7 +1633,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 13                                           ; 0                           ;
 ; 14                                           ; 0                           ;
 ; 15                                           ; 0                           ;
-; 16                                           ; 4                           ;
+; 16                                           ; 0                           ;
+; 17                                           ; 0                           ;
+; 18                                           ; 0                           ;
+; 19                                           ; 0                           ;
+; 20                                           ; 0                           ;
+; 21                                           ; 0                           ;
+; 22                                           ; 0                           ;
+; 23                                           ; 0                           ;
+; 24                                           ; 0                           ;
+; 25                                           ; 0                           ;
+; 26                                           ; 0                           ;
+; 27                                           ; 0                           ;
+; 28                                           ; 0                           ;
+; 29                                           ; 0                           ;
+; 30                                           ; 0                           ;
+; 31                                           ; 0                           ;
+; 32                                           ; 4                           ;
 +----------------------------------------------+-----------------------------+
 
 
@@ -1558,22 +1678,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------+-----------------------------+
 
 
-+---------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                       ;
-+---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 9.00) ; Number of LABs  (Total = 4) ;
-+---------------------------------------------+-----------------------------+
-; 0                                           ; 0                           ;
-; 1                                           ; 0                           ;
-; 2                                           ; 0                           ;
-; 3                                           ; 0                           ;
-; 4                                           ; 0                           ;
-; 5                                           ; 0                           ;
-; 6                                           ; 0                           ;
-; 7                                           ; 0                           ;
-; 8                                           ; 0                           ;
-; 9                                           ; 4                           ;
-+---------------------------------------------+-----------------------------+
++----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                        ;
++----------------------------------------------+-----------------------------+
+; Number of Distinct Inputs  (Average = 11.00) ; Number of LABs  (Total = 4) ;
++----------------------------------------------+-----------------------------+
+; 0                                            ; 0                           ;
+; 1                                            ; 0                           ;
+; 2                                            ; 0                           ;
+; 3                                            ; 0                           ;
+; 4                                            ; 0                           ;
+; 5                                            ; 0                           ;
+; 6                                            ; 0                           ;
+; 7                                            ; 0                           ;
+; 8                                            ; 0                           ;
+; 9                                            ; 0                           ;
+; 10                                           ; 0                           ;
+; 11                                           ; 4                           ;
++----------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -1621,7 +1743,7 @@ Info (169124): Fitter converted 3 user pins into dedicated programming pins
     Info (169125): Pin ~ASDO~ is reserved at location E3
     Info (169125): Pin ~nCSO~ is reserved at location D3
     Info (169125): Pin ~LVDS150p/nCEO~ is reserved at location AE24
-Critical Warning (169085): No exact pin location assignment(s) for 97 pins of 97 total pins
+Critical Warning (169085): No exact pin location assignment(s) for 99 pins of 99 total pins
     Info (169086): Pin SAIDA_1[0] not assigned to an exact location on the device
     Info (169086): Pin SAIDA_1[1] not assigned to an exact location on the device
     Info (169086): Pin SAIDA_1[2] not assigned to an exact location on the device
@@ -1687,7 +1809,9 @@ Critical Warning (169085): No exact pin location assignment(s) for 97 pins of 97
     Info (169086): Pin SAIDA_2[30] not assigned to an exact location on the device
     Info (169086): Pin SAIDA_2[31] not assigned to an exact location on the device
     Info (169086): Pin ENTRADA[0] not assigned to an exact location on the device
-    Info (169086): Pin Sel not assigned to an exact location on the device
+    Info (169086): Pin SEL not assigned to an exact location on the device
+    Info (169086): Pin CLOCK not assigned to an exact location on the device
+    Info (169086): Pin RESET not assigned to an exact location on the device
     Info (169086): Pin ENTRADA[1] not assigned to an exact location on the device
     Info (169086): Pin ENTRADA[2] not assigned to an exact location on the device
     Info (169086): Pin ENTRADA[3] not assigned to an exact location on the device
@@ -1721,9 +1845,11 @@ Critical Warning (169085): No exact pin location assignment(s) for 97 pins of 97
     Info (169086): Pin ENTRADA[31] not assigned to an exact location on the device
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Demux.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
+Info (176353): Automatically promoted node CLOCK (placed in PIN P2 (CLK2, LVDSCLK1p, Input))
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
+Info (176353): Automatically promoted node RESET (placed in PIN P1 (CLK3, LVDSCLK1n, Input))
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G1
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
@@ -1732,7 +1858,7 @@ Info (176214): Statistics of I/O pins that need to be placed that use the same V
         Info (176212): I/O standards used: 3.3-V LVTTL.
 Info (176215): I/O bank details before I/O pin placement
     Info (176214): Statistics of I/O banks
-        Info (176213): I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  64 pins available
+        Info (176213): I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 2 total pin(s) used --  62 pins available
         Info (176213): I/O bank number 2 does not use VREF pins and has undetermined VCCIO pins. 2 total pin(s) used --  57 pins available
         Info (176213): I/O bank number 3 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  56 pins available
         Info (176213): I/O bank number 4 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  58 pins available
@@ -1740,7 +1866,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  58 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  58 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  56 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -1753,7 +1879,7 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.11 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.08 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 64 output pins without output pin load capacitance assignment
     Info (306007): Pin "SAIDA_1[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1826,10 +1952,10 @@ Info (306005): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Users/lucas/Documents/Projetos/LABSD/DEMUX/output_files/Demux.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4877 megabytes
-    Info: Processing ended: Thu Jun 29 19:55:32 2023
-    Info: Elapsed time: 00:00:04
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4871 megabytes
+    Info: Processing ended: Thu Jun 29 20:30:20 2023
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:04
 
 
