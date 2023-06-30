@@ -4,22 +4,22 @@ use ieee.numeric_std.all;
 
 entity Equacao is
 	generic (
-		N : integer := 12
+		W : integer := 12
 	);
 	port (
 		CLOCK : in std_logic;
 		RESET : in std_logic;
-		Sph : in std_logic_vector(N-1 downto 0);
-		Kph : in std_logic_vector(N-1 downto 0);
-		Vph : in std_logic_vector(N-1 downto 0);
-		Te : in std_logic_vector((2*N)-1 downto 0);
-		Teo : out std_logic_vector((2*N)-1 downto 0)
+		Sph : in std_logic_vector(W-1 downto 0);
+		Kph : in std_logic_vector(W-1 downto 0);
+		Vph : in std_logic_vector(W-1 downto 0);
+		Te : in std_logic_vector((2*W)-1 downto 0);
+		Teo : out std_logic_vector((2*W)-1 downto 0)
 	);
 end Equacao;
 
 architecture Main of Equacao is
-	signal sub1 : signed(N-1 downto 0);
-	signal mult1 : signed((2*N)-1 downto 0);
+	signal sub1 : signed(W-1 downto 0);
+	signal mult1 : signed((2*W)-1 downto 0);
 begin
 	process(CLOCK, RESET, Sph, Kph, Vph, Te)
 	begin

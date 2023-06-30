@@ -1,10 +1,11 @@
 library ieee;
-use ieee.std_logic_1164;
-use ieee.numeric_std;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity Datapath is
 	port(
 		CLOCK		:	in		std_logic;
+		RESET		:	in		std_logic;
 	
 		Sph		:	in		std_logic_vector(15 downto 0);
 		Su			:	in		std_logic_vector(15 downto 0);
@@ -33,7 +34,6 @@ entity Datapath is
 		Ter		:	in		std_logic_vector(31 downto 0);
 		Tir		:	in		std_logic_vector(31 downto 0);
 		
-		resetS	:	in		std_logic;
 		loadS		:	in		std_logic;
 		Auto		:	in		std_logic;
 		ResetCTi	:	in 	std_logic;
@@ -45,7 +45,9 @@ entity Datapath is
 		Te			:	out	std_logic;
 		Ta			:	out	std_logic;
 		
-		I			:	out	std_logic
+		I_I		:	out	std_logic;
+		I_E		:	out	std_logic;
+		I_A		:	out	std_logic
 	);
 end Datapath;
 
@@ -118,6 +120,7 @@ architecture Main of Datapath is
 			TiR								:   in	std_logic_vector((2*W-1) downto 0);
 			Ti									:   out	std_logic_vector((2*W-1) downto 0)
 		);
+	end component;
 	
 	component DivisorClock is
 		port (
@@ -135,7 +138,8 @@ architecture Main of Datapath is
 			CLOCK : in std_logic;
 			RESET : in std_logic;
 			FINAL_VALUE : in std_logic_vector (W-1 downto 0);
-			DONE : out std_logic
+			DONE : out std_logic;
+			I : out std_logic
 		);
 	end component;
 	
@@ -143,28 +147,56 @@ architecture Main of Datapath is
 	signal	fio_Vph, fio_Vu, fio_Vt, fio_Vrs, fio_Vk, fio_Vn, fio_Vp	:	std_logic_vector(15 downto 0);
 	signal	fio_Kph, fio_Ku, fio_Kt, fio_Krs, fio_Kk, fio_Kn, fio_Kp	:	std_logic_vector(15 downto 0);
 	
+	signal fio_TeR, fio_Eq_E, fio_TiR, fio_Eq_I	:	std_logic_vector(31 downto 0);
+	
+	signal fio_Mux_I, fio_Mux_E	:	std_logic_vector(31 downto 0);
+	
+	signal fio_input_A, fio_output_A	:	std_logic_vector(31 downto 0);
+	
 begin
-	Reg_Sph	:	Reg_W	generic map	(16)	port map	(CLOCK, resetS, loadS, Sph, fio_Sph);
-	Reg_Su	:	Reg_W	generic map	(16)	port map	(CLOCK, resetS, loadS, Su, fio_Su);
-	Reg_St	:	Reg_W	generic map	(16)	port map	(CLOCK, resetS, loadS, St, fio_St);
-	Reg_Srs	:	Reg_W	generic map	(16)	port map	(CLOCK, resetS, loadS, Srs, fio_Srs);
-	Reg_Sk	:	Reg_W	generic map	(16)	port map	(CLOCK, resetS, loadS, Sk, fio_Sk);
-	Reg_Sn	:	Reg_W	generic map	(16)	port map	(CLOCK, resetS, loadS, Sn, fio_Sn);
-	Reg_Sp	:	Reg_W	generic map	(16)	port map	(CLOCK, resetS, loadS, Sp, fio_Sp);
+	Reg_Sph	:	Reg_W	generic map	(16)	port map	(CLOCK, RESET, loadS, Sph, fio_Sph);
+	Reg_Su	:	Reg_W	generic map	(16)	port map	(CLOCK, RESET, loadS, Su, fio_Su);
+	Reg_St	:	Reg_W	generic map	(16)	port map	(CLOCK, RESET, loadS, St, fio_St);
+	Reg_Srs	:	Reg_W	generic map	(16)	port map	(CLOCK, RESET, loadS, Srs, fio_Srs);
+	Reg_Sk	:	Reg_W	generic map	(16)	port map	(CLOCK, RESET, loadS, Sk, fio_Sk);
+	Reg_Sn	:	Reg_W	generic map	(16)	port map	(CLOCK, RESET, loadS, Sn, fio_Sn);
+	Reg_Sp	:	Reg_W	generic map	(16)	port map	(CLOCK, RESET, loadS, Sp, fio_Sp);
 	
-	Reg_Vph	:	Reg_W	generic map	(16)	port map	(CLOCK, resetS, loadS, Vph, fio_Vph);
-	Reg_Vu	:	Reg_W	generic map	(16)	port map	(CLOCK, resetS, loadS, Vu, fio_Vu);
-	Reg_Vt	:	Reg_W	generic map	(16)	port map	(CLOCK, resetS, loadS, Vt, fio_Vt);
-	Reg_Vrs	:	Reg_W	generic map	(16)	port map	(CLOCK, resetS, loadS, Vrs, fio_Vrs);
-	Reg_Vk	:	Reg_W	generic map	(16)	port map	(CLOCK, resetS, loadS, Vk, fio_Vk);
-	Reg_Vn	:	Reg_W	generic map	(16)	port map	(CLOCK, resetS, loadS, Vn, fio_Vn);
-	Reg_Vp	:	Reg_W	generic map	(16)	port map	(CLOCK, resetS, loadS, Vp, fio_Vp);
+	Reg_Vph	:	Reg_W	generic map	(16)	port map	(CLOCK, RESET, loadS, Vph, fio_Vph);
+	Reg_Vu	:	Reg_W	generic map	(16)	port map	(CLOCK, RESET, loadS, Vu, fio_Vu);
+	Reg_Vt	:	Reg_W	generic map	(16)	port map	(CLOCK, RESET, loadS, Vt, fio_Vt);
+	Reg_Vrs	:	Reg_W	generic map	(16)	port map	(CLOCK, RESET, loadS, Vrs, fio_Vrs);
+	Reg_Vk	:	Reg_W	generic map	(16)	port map	(CLOCK, RESET, loadS, Vk, fio_Vk);
+	Reg_Vn	:	Reg_W	generic map	(16)	port map	(CLOCK, RESET, loadS, Vn, fio_Vn);
+	Reg_Vp	:	Reg_W	generic map	(16)	port map	(CLOCK, RESET, loadS, Vp, fio_Vp);
 	
-	Reg_Kph	:	Reg_W	generic map	(16)	port map	(CLOCK, resetS, loadS, Kph, fio_Kph);
-	Reg_Ku	:	Reg_W	generic map	(16)	port map	(CLOCK, resetS, loadS, Ku, fio_Ku);
-	Reg_Kt	:	Reg_W	generic map	(16)	port map	(CLOCK, resetS, loadS, Kt, fio_Kt);
-	Reg_Krs	:	Reg_W	generic map	(16)	port map	(CLOCK, resetS, loadS, Krs, fio_Krs);
-	Reg_Kk	:	Reg_W	generic map	(16)	port map	(CLOCK, resetS, loadS, Kk, fio_Kk);
-	Reg_Kn	:	Reg_W	generic map	(16)	port map	(CLOCK, resetS, loadS, Kn, fio_Kn);
-	Reg_Kp	:	Reg_W	generic map	(16)	port map	(CLOCK, resetS, loadS, Kp, fio_Kp);
+	Reg_Kph	:	Reg_W	generic map	(16)	port map	(CLOCK, RESET, loadS, Kph, fio_Kph);
+	Reg_Ku	:	Reg_W	generic map	(16)	port map	(CLOCK, RESET, loadS, Ku, fio_Ku);
+	Reg_Kt	:	Reg_W	generic map	(16)	port map	(CLOCK, RESET, loadS, Kt, fio_Kt);
+	Reg_Krs	:	Reg_W	generic map	(16)	port map	(CLOCK, RESET, loadS, Krs, fio_Krs);
+	Reg_Kk	:	Reg_W	generic map	(16)	port map	(CLOCK, RESET, loadS, Kk, fio_Kk);
+	Reg_Kn	:	Reg_W	generic map	(16)	port map	(CLOCK, RESET, loadS, Kn, fio_Kn);
+	Reg_Kp	:	Reg_W	generic map	(16)	port map	(CLOCK, RESET, loadS, Kp, fio_Kp);
+	
+	Reg_TER	:	Reg_W	generic map	(32)	port map	(CLOCK, RESET, loadS, TeR, fio_TeR);
+	Reg_TIR	:	Reg_W	generic map	(32)	port map	(CLOCK, RESET, loadS, TiR, fio_TiR);
+	
+	Equacao_Espera		:	Equacao 		generic map	(16)	port map	(CLOCK, RESET, Sph, Kph, Vph, fio_TeR, fio_Eq_E);
+	Equacao_Irrigacao	:	Equacao_2	generic map	(16)	port map	(
+																			CLOCK, RESET,
+																			Su, St, Srs, Sk, Sn, Sp,
+																			Ku, Kt, Krs, Kk, Kn, Kp,
+																			Vu, Vt, Vrs, Vk, Vn, Vp,
+																			fio_TiR, fio_Eq_I
+																		);
+	
+	Mux_I	:	Mux	generic map	(32)	port map(CLOCK, RESET, Auto, fio_Eq_I, fio_TiR, fio_Mux_I);
+	Mux_E	:	Mux	generic map	(32)	port map(CLOCK, RESET, Auto, fio_Eq_E, fio_TeR, fio_Mux_E);
+	
+	Contador_I	:	Contador	generic map	(32)	port map	(CLOCK, ResetCTi, fio_Mux_I, Ti, I_I);
+	Contador_E	:	Contador	generic map	(32)	port map	(CLOCK, ResetCTe, fio_Mux_E, Te, I_E);
+	
+	Divisor_A	:	Divisor	generic map	(32)	port map	(CLOCK, RESET, fio_TeR, fio_Input_A);
+	Reg_Ta		:	Reg_W		generic map	(32)	port map	(CLOCK, RESET, LoadTa, fio_input_A, fio_output_A);
+	Contador_A	:	Contador	generic map	(32)	port map	(CLOCK, ResetCTa, fio_output_A, Ta, I_A);
 end Main;
