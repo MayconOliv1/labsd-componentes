@@ -21,7 +21,7 @@ entity Controladora is port(
 end Controladora;
 
 architecture arch of Controladora is
-    type estado is (s0, s1, s2, s3, s4, s5, s6, s7, s8, s9);
+    type estado is (s0, s1, s2, s3, s4, s5, s6, s7, s8);
     signal estado_atual, estado_proximo : estado;
 
     begin

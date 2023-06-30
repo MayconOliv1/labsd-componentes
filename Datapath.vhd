@@ -148,6 +148,8 @@ architecture Main of Datapath is
 	
 	signal fio_input_A, fio_output_A	:	std_logic_vector(31 downto 0);
 	
+	signal fio_CLOCK	:	std_logic;
+	
 begin
 	Reg_Sph	:	Reg_W	generic map	(16)	port map	(CLOCK, RESET, loadS, Sph, fio_Sph);
 	Reg_Su	:	Reg_W	generic map	(16)	port map	(CLOCK, RESET, loadS, Su, fio_Su);
@@ -188,10 +190,12 @@ begin
 	Mux_I	:	Mux	generic map	(32)	port map(CLOCK, RESET, Auto, fio_Eq_I, fio_TiR, fio_Mux_I);
 	Mux_E	:	Mux	generic map	(32)	port map(CLOCK, RESET, Auto, fio_Eq_E, fio_TeR, fio_Mux_E);
 	
-	Contador_I	:	Contador	generic map	(32)	port map	(CLOCK, ResetCTi, fio_Mux_I, Ti);
-	Contador_E	:	Contador	generic map	(32)	port map	(CLOCK, ResetCTe, fio_Mux_E, Te);
+	Clock_Segundo	:	DivisorClock	port map(CLOCK, RESET, fio_CLOCK);
+	
+	Contador_I	:	Contador	generic map	(32)	port map	(fio_CLOCK, ResetCTi, fio_Mux_I, Ti);
+	Contador_E	:	Contador	generic map	(32)	port map	(fio_CLOCK, ResetCTe, fio_Mux_E, Te);
 	
 	Divisor_A	:	Divisor	generic map	(32)	port map	(CLOCK, RESET, fio_TeR, fio_Input_A);
 	Reg_Ta		:	Reg_W		generic map	(32)	port map	(CLOCK, RESET, LoadTa, fio_input_A, fio_output_A);
-	Contador_A	:	Contador	generic map	(32)	port map	(CLOCK, ResetCTa, fio_output_A, Ta);
+	Contador_A	:	Contador	generic map	(32)	port map	(fio_CLOCK, ResetCTa, fio_output_A, Ta);
 end Main;
