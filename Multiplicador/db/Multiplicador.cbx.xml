@@ -1,6 +1,0 @@
-<?xml version="1.0" ?>
-<LOG_ROOT>
-	<PROJECT NAME="Multiplicador">
-		<CBX_INST_ENTRY INSTANCE_NAME="|Multiplicador|lpm_mult:Mult0" CBX_FILE_NAME="mult_m8t.tdf"/>
-	</PROJECT>
-</LOG_ROOT>
