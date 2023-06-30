@@ -43,11 +43,7 @@ entity Datapath is
 		
 		Ti			:	out	std_logic;
 		Te			:	out	std_logic;
-		Ta			:	out	std_logic;
-		
-		I_I		:	out	std_logic;
-		I_E		:	out	std_logic;
-		I_A		:	out	std_logic
+		Ta			:	out	std_logic
 	);
 end Datapath;
 
@@ -138,8 +134,7 @@ architecture Main of Datapath is
 			CLOCK : in std_logic;
 			RESET : in std_logic;
 			FINAL_VALUE : in std_logic_vector (W-1 downto 0);
-			DONE : out std_logic;
-			I : out std_logic
+			DONE : out std_logic
 		);
 	end component;
 	
@@ -193,10 +188,10 @@ begin
 	Mux_I	:	Mux	generic map	(32)	port map(CLOCK, RESET, Auto, fio_Eq_I, fio_TiR, fio_Mux_I);
 	Mux_E	:	Mux	generic map	(32)	port map(CLOCK, RESET, Auto, fio_Eq_E, fio_TeR, fio_Mux_E);
 	
-	Contador_I	:	Contador	generic map	(32)	port map	(CLOCK, ResetCTi, fio_Mux_I, Ti, I_I);
-	Contador_E	:	Contador	generic map	(32)	port map	(CLOCK, ResetCTe, fio_Mux_E, Te, I_E);
+	Contador_I	:	Contador	generic map	(32)	port map	(CLOCK, ResetCTi, fio_Mux_I, Ti);
+	Contador_E	:	Contador	generic map	(32)	port map	(CLOCK, ResetCTe, fio_Mux_E, Te);
 	
 	Divisor_A	:	Divisor	generic map	(32)	port map	(CLOCK, RESET, fio_TeR, fio_Input_A);
 	Reg_Ta		:	Reg_W		generic map	(32)	port map	(CLOCK, RESET, LoadTa, fio_input_A, fio_output_A);
-	Contador_A	:	Contador	generic map	(32)	port map	(CLOCK, ResetCTa, fio_output_A, Ta, I_A);
+	Contador_A	:	Contador	generic map	(32)	port map	(CLOCK, ResetCTa, fio_output_A, Ta);
 end Main;
