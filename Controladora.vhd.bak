@@ -15,7 +15,7 @@ entity Controladora is port(
     LoadTa      : out std_logic;
     ResetCte    : out std_logic;
     ResetCti    : out std_logic;
-    ResetCta    : out std_logic;
+    ResetCta     : out std_logic;
     I           : out std_logic
 );
 end Controladora;

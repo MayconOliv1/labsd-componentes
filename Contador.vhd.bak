@@ -10,7 +10,8 @@ entity Contador is
 		CLOCK : in std_logic;
 		RESET : in std_logic;
 		FINAL_VALUE : in std_logic_vector (W-1 downto 0);
-		DONE : out std_logic
+		DONE : out std_logic;
+		I : out std_logic
 	);
 end entity Contador;
 
@@ -22,12 +23,15 @@ begin
 		if RESET = '1' then
 			COUNT <= (others => '0');
 			DONE <= '0';
+			I <= '0';
 		elsif rising_edge(CLOCK) then
 			if COUNT < unsigned(FINAL_VALUE) then
 				DONE <= '0';
+				I <= '0';
 				COUNT <= COUNT + 1;
 			else
 				DONE <= '1';
+				I <= '1';
 			end if;
 		end if;
 	end process;
