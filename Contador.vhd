@@ -9,6 +9,7 @@ entity Contador is
 	port(
 		CLOCK : in std_logic;
 		RESET : in std_logic;
+		LOAD : in std_logic;
 		FINAL_VALUE : in std_logic_vector (W-1 downto 0);
 		DONE : out std_logic
 	);
@@ -24,7 +25,9 @@ begin
 		elsif rising_edge(CLOCK) then
 			if COUNT < unsigned(FINAL_VALUE) then
 				DONE <= '0';
-				COUNT <= COUNT + 1;
+				if LOAD = '1' then
+					COUNT <= COUNT + 1;
+				end if;
 			else
 				DONE <= '1';
 			end if;
