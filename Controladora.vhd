@@ -60,8 +60,8 @@ architecture arch of Controladora is
                 estado_proximo <= s3;
 
             when s3 =>
+					ResetCti    <= '1';
                 if (Te = '0') then
-                    ResetCti    <= '1';
                     estado_proximo <= s5;
                 else
                     estado_proximo <= s4;
@@ -72,8 +72,8 @@ architecture arch of Controladora is
 
             when s5 =>
                 I <= '1';
+					 ResetCta    <= '1';
                 if (Ti = '0') then
-                    ResetCta    <= '1';
                     estado_proximo <= s7;
                 else
                     estado_proximo <= s6;
